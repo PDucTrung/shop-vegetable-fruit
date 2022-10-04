@@ -1,2 +1,632 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-mali {
+  font-family: "Mali", cursive;
+}
+
+/* preloader */
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  transition: 0.3s all ease;
+}
+
+.preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-body {
+  text-align: center;
+}
+
+.preloader-body .logo-load {
+  position: relative;
+  top: 10px;
+}
+
+.cssload-container {
+  width: 100%;
+  height: 36px;
+  text-align: center;
+}
+
+.cssload-speeding-wheel {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+  border: 3px solid #41a451;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  animation: cssload-spin 0.88s infinite linear;
+}
+
+@-webkit-keyframes cssload-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cssload-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* page */
+.page {
+  height: 725px;
+}
+
+/* heading header */
+.rd-navbar-brand .icon {
+  font-size: 30px;
+  color: black;
+}
+
+.rd-navbar-brand .icon:hover {
+  color: #dc143c;
+  cursor: pointer;
+}
+
+.heading-header select {
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.heading-header .address:hover,
+.heading-header .phone:hover {
+  color: #41a451;
+  cursor: pointer;
+}
+
+.heading-header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  width: 100%;
+}
+
+.heading-header .icon {
+  font-size: 15px;
+  color: #41a451;
+}
+
+.i-per {
+  font-size: 25px;
+  color: #41a451;
+  cursor: pointer;
+}
+
+/* header */
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+/* modal sign in */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 360px;
+}
+
+.modal-content img {
+  width: 127px;
+  height: 42px;
+  margin: 0 auto;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* modal sign up */
+
+/* The Modal (background) */
+.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content 2 */
+.modal-content2 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 360px;
+  border-radius: 10px;
+}
+
+.modal-content2 img {
+  width: 127px;
+  height: 42px;
+  margin: 0 auto;
+}
+
+/* The Close Button */
+.close2 {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* modal search */
+
+/* The Modal (background) */
+.modal3 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content 3 */
+.modal-content3 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.search-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 50px;
+  height: 50px;
+  background: #f5ab1e;
+  border: 1px solid #f5ab1e;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.search-icon i {
+  font-size: 22px;
+  color: white;
+}
+
+.search-icon i:hover {
+  color: #000;
+}
+
+.search-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 50px;
+  padding-left: 20px;
+  width: 100%;
+  height: 50px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border: 1px solid #f5ab1e;
+}
+
+.search-box {
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.close3 {
+  color: #aaaaaa;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close3:hover,
+.close3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* modal menu */
+
+/* The Modal (background) */
+.modal4 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content 4 */
+.modal-content4 {
+  left: 0;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height: 100%;
+}
+
+/* The Close Button */
+.close4 {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close4:hover,
+.close4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* form validate sign in/sign up */
+
+.form {
+  width: 300px;
+  min-height: 100px;
+  text-align: center;
+  background: #fff;
+  border-radius: 2px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  align-self: center;
+  margin: 0 auto;
+}
+.form .heading {
+  font-size: 30px;
+  font-weight: 500;
+}
+.form .desc {
+  text-align: center;
+  color: #636d77;
+  font-size: 1 rem;
+  font-weight: lighter;
+  line-height: 2.4rem;
+  font-weight: 300;
+}
+
+.form-group {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+.form-label,
+.form-message {
+  text-align: left;
+}
+
+.form-label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding-bottom: 6px;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+
+.form-control {
+  font-family: "Poppins", sans-serif;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-control:hover {
+  border-color: #1dbfaf;
+}
+
+.form-group.invalid .form-control {
+  border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.form-message {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  padding: 4px 0 0;
+}
+
+.form-submit {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  background-color: #41a451;
+  margin-top: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.form-submit:hover {
+  background-color: #41a451;
+}
+
+.spacer {
+  margin-top: 36px;
+}
+
+.link {
+  text-decoration: none;
+  color: gray;
+}
+
+.reg {
+  color: orange;
+  cursor: pointer;
+}
+
+.reg:hover {
+  text-decoration: underline;
+}
+
+.loginWith {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.loginWith .icon {
+  font-size: 25px;
+  color: orange;
+  cursor: pointer;
+}
+
+/* narbar */
+
+.navigation {
+  background-color: white;
+}
+
+.rd-navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.rd-nav-item {
+  display: inline-block;
+  padding: 0 10px;
+  max-width: fit-content;
+}
+
+.rd-nav-link {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 30px 28px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
+}
+.rd-nav-link:hover {
+  color: #dc143c;
+  text-decoration: none;
+}
+
+.rd-nav-link:before,
+.rd-nav-link:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  bottom: 0px;
+  background: #dc143c;
+  border-radius: 5px;
+}
+
+.rd-nav-link:before {
+  left: 0;
+}
+.rd-nav-link:after {
+  right: 0;
+  background: #dc143c;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.rd-nav-link:hover:before {
+  background: #dc143c;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.rd-nav-link:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+.page-header {
+  transition: top 0.3s;
+}
+
+.rd-nav-item.active a {
+  color: #dc143c;
+}
+
+.heading-header {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+}
+.icon {
+  color: #777777;
+  font-size: 15px;
+}
+
+.i {
+  font-size: 25px;
+}
+
+.i:hover {
+  color: #dc143c;
+}
+
+.number {
+  color: #dc143c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 7px 2px;
+  gap: 10px;
+  font-size: 12.5px;
+  position: absolute;
+  width: 15px;
+  height: 17px;
+  left: 22px;
+  top: 0px;
+  border: 1.5px solid #dc143c;
+  border-radius: 10px;
+}
+
+.phone,
+.address,
+.user,
+.select,
+.cart,
+.search {
+  cursor: pointer;
+}
+
+.phone:hover,
+.address:hover,
+.user:hover,
+.select:hover {
+  color: #dc143c;
+}
+
+/* animate scroll */
+.animate__animated.animate__bounce {
+  --animate-duration: 3s;
+}
+
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 1s;
+}
+
+.animate__animated.animate__fadeInRight {
+  --animate-duration: 1s;
+}
+
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 1s;
+}
+
+.animate__animated.animate__backInLeft {
+  --animate-duration: 1s;
+}
+
+.animate__animated.animate__flash {
+  --animate-duration: 1s;
+}
+

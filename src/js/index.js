@@ -239,7 +239,7 @@ $slider_ini.on("afterChange", function (event, slick, currentSlide) {
 });
 
 // timedown ///////////////////////////////////////////////////////////////////////////////////////////////
-let countDownDate = new Date("July 11, 2023 15:37:25").getTime();
+let countDownDate = new Date("october 30, 2022 23:59:59").getTime();
 
 let x = setInterval(function () {
   let now = new Date().getTime();
@@ -266,6 +266,50 @@ let x = setInterval(function () {
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("timedown").innerHTML = "EXPIRED";
+    document.getElementById("timedown").innerHTML = "End Deal";
+    document.getElementById("timedown2").innerHTML = "End Deal";
+    document.getElementById("days").innerHTML = "End Deal";
+    document.getElementById("hours").innerHTML = "End Deal";
+    document.getElementById("minutes").innerHTML = "End Deal";
+    document.getElementById("seconds").innerHTML = "End Deal";
   }
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+  document.getElementById("timedown2").innerHTML =
+    days +
+    "d " +
+    " : " +
+    hours +
+    "h " +
+    " : " +
+    minutes +
+    "m " +
+    " : " +
+    seconds +
+    "s ";
 }, 1000);
+
+//count
+const counters = document.querySelectorAll(".count");
+const speed = 1000;
+
+counters.forEach((counter) => {
+  const animate = () => {
+    const value = +counter.getAttribute("number");
+    const data = +counter.innerText;
+
+    const time = value / speed;
+    if (data < value) {
+      counter.innerText = Math.ceil(data + time);
+      setTimeout(animate, 1);
+    } else {
+      counter.innerText = value;
+    }
+  };
+
+  animate();
+});
