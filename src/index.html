@@ -2,14 +2,452 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Tfruit</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <i class="bi bi-x"></i>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <div class="logo-load">
+          <img src="/img/logoloading.png" alt="ss" />
+        </div>
+      </div>
+    </div>
+
+    <!-- page -->
+    <div class="page position-relative">
+      <!-- page header -->
+      <header class="seaction page-header position-fixed">
+        <div class="heading-header bg-dark text-white">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center gap-lg-3">
+                <div
+                  class="phone animate__animated animate__pulse animate__delay-1s"
+                >
+                  <span class="icon bi bi-telephone-fill"></span> +84
+                  081-953-791
+                </div>
+                <div
+                  class="address m-lg-2 animate__animated animate__pulse animate__delay-2s d-none d-md-block"
+                >
+                  <span class="icon bi bi-geo-alt-fill"></span> 298 Đ. Cầu Diễn,
+                  Minh Khai, Bắc Từ Liêm, Hà Nội
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="user">
+                  <span
+                    id="userBtn"
+                    class="i-per bi bi-person-circle hvr-bounce-in"
+                  ></span>
+                  <!-- The Modal user -->
+                  <div id="userModal" class="modal">
+                    <!-- Modal content -->
+                    <div
+                      class="modal-content text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                    >
+                      <div class="close">
+                        <i class="bi bi-x-circle float-end"></i>
+                      </div>
+                      <br />
+                      <img src="/img/logo.png" alt="lg" />
+
+                      <!-- form sign in -->
+
+                      <form action="" method="POST" class="form" id="form-2">
+                        <p class="heading font-mali">SIGN IN</p>
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <a href="#" class="link">Forward your password ?</a>
+
+                        <button class="form-submit">Sign in</button>
+
+                        <p>
+                          Do you have an account?
+                          <span class="reg" id="regBtn">Register now </span>
+                        </p>
+
+                        <p class="text-center text-black">OR</p>
+
+                        <div class="loginWith d-flex justify-content-between">
+                          <i class="icon bi bi-facebook hvr-bob"></i>
+                          <i class="icon bi bi-google hvr-bob"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- The Modal reg -->
+                  <div id="regModal" class="modal2">
+                    <!-- Modal content -->
+                    <div
+                      class="modal-content2 text-black animate__animated animate__fadeInRight animate__delay-0s"
+                    >
+                      <div class="close2">
+                        <i class="bi bi-x-circle float-end"></i>
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <!-- form sign up -->
+                      <form action="" method="POST" class="form" id="form-1">
+                        <h3 class="heading font-mali">Sign up</h3>
+
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="fullname" class="form-label font-poppins"
+                            >Full name</label
+                          >
+                          <input
+                            id="fullname"
+                            name="fullname"
+                            type="text"
+                            placeholder="VD: sunsan"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Mật khẩu</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password_confirmation" class="form-label"
+                            >Nhập lại mật khẩu</label
+                          >
+                          <input
+                            id="password_confirmation"
+                            name="password_confirmation"
+                            placeholder="Confirm password"
+                            type="password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <button class="form-submit">Sign up</button>
+
+                        <p class="text-center text-black">OR</p>
+
+                        <div class="loginWith d-flex justify-content-between">
+                          <i class="icon bi bi-facebook hvr-bob"></i>
+                          <i class="icon bi bi-google hvr-bob"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="select m-2">
+                  <select name="language" class="bg-dark">
+                    <option>VN</option>
+                    <option>EN</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- navbar -->
+
+        <div class="rd-navbar-wrap navigation shadow-bottom font-poppins">
+          <nav>
+            <div class="container">
+              <div class="rd-navbar-main">
+                <div class="row d-flex align-items-center">
+                  <div class="col-6 col-xl-3">
+                    <!-- RD Navbar -->
+                    <div class="rd-navbar-brand">
+                      <a class="brand d-none d-xl-block" href="index.html"
+                        ><img src="/img/logo.png" alt="ss"
+                      /></a>
+                      <div>
+                        <i
+                          id="menuBtn"
+                          class="icon bi bi-list d-xl-none hvr-grow-rotate"
+                        ></i>
+                        <!-- The Modal -->
+                        <div id="menuModal" class="modal4 d-xl-none">
+                          <!-- Modal content -->
+                          <div
+                            class="modal-content4 text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                          >
+                            <div class="close4">
+                              <i class="bi bi-x-circle float-end"></i>
+                            </div>
+                            <br />
+                            <div class="text-black">
+                              <!-- RD Navbar Nav-->
+                              <ul class="rd-navbar-nav d-flex flex-column">
+                                <li class="rd-nav-item active">
+                                  <a class="rd-nav-link">Home</a>
+                                </li>
+                                <li class="rd-nav-item">
+                                  <a class="rd-nav-link">Shop</a>
+                                </li>
+                                <li class="rd-nav-item">
+                                  <a class="rd-nav-link">About</a>
+                                </li>
+                                <li class="rd-nav-item">
+                                  <a class="rd-nav-link">Blog</a>
+                                </li>
+                                <li class="rd-nav-item">
+                                  <a class="rd-nav-link">Contact</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 d-none d-xl-block">
+                    <div class="text-center">
+                      <!-- RD Navbar Nav-->
+                      <ul class="rd-navbar-nav d-flex">
+                        <li class="rd-nav-item active">
+                          <a class="rd-nav-link">Home</a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link">Shop</a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link">About</a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link">Blog</a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-xl-3">
+                    <div
+                      class="d-flex justify-content-end align-items-center gap-4"
+                    >
+                      <div class="cart position-relative">
+                        <div class="number position-absolute">2</div>
+                        <span class="i bi bi-basket hvr-grow-rotate"></span>
+                      </div>
+                      <div class="search wrapper">
+                        <div
+                          class="i bi bi-search hvr-grow-rotate"
+                          id="searchBtn"
+                        ></div>
+                        <!-- The Modal reg -->
+                        <div id="searchModal" class="modal3">
+                          <!-- Modal content -->
+                          <div
+                            class="modal-content3 text-black animate__animated animate__fadeInUp animate__delay-0s"
+                          >
+                            <div class="close3">
+                              <i class="bi bi-x-circle float-end"></i>
+                            </div>
+                            <div
+                              class="searchBox d-flex align-content-lg-center"
+                            >
+                              <div>
+                                <input
+                                  type="search"
+                                  name="search"
+                                  id=""
+                                  placeholder="Search..."
+                                  class="search-text"
+                                />
+                              </div>
+                              <div class="search-icon">
+                                <i class="bi bi-search"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- slider -->
+      <div class="Advance-Slider">
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="/img/slide-1.jpg" alt="" />
+            <div class="contain-wrapper">
+              <div class="dots-contain">
+                <img class="dots-img" src="/img/slide-1.jpg" alt="" />
+              </div>
+              <div class="info">
+                <div>
+                  <h3 class="font-mali">Organic Food</h3>
+                  <h5 class="font-poppins">
+                    Tfruit provides local citizens and guests of our town with
+                    quality organic fruits, vegetables, and other products.
+                  </h5>
+                  <div class="btn-slider font-poppins">
+                    <div>
+                      <a
+                        class="click-btn btn-style1"
+                        href="#"
+                        data-hover="Click me!"
+                        >Read more</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // Item -->
+
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="/img//slide-2.jpg" alt="" />
+            <div class="contain-wrapper">
+              <div class="dots-contain">
+                <img class="dots-img" src="/img/slide-2.jpg" alt="" />
+              </div>
+              <div class="info">
+                <div>
+                  <h3 class="font-mali">Quality Control</h3>
+                  <h5 class="font-poppins">
+                    We control the process of farming at Herber to deliver the
+                    best organic products to our customers throughout the state.
+                  </h5>
+                  <div class="btn-slider font-poppins">
+                    <div>
+                      <a
+                        class="click-btn btn-style1"
+                        href="#"
+                        data-hover="Click me!"
+                        >Read more</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // Item -->
+
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="/img/slide-6.jpg" alt="" />
+            <div class="contain-wrapper">
+              <div class="dots-contain">
+                <img class="dots-img" src="/img/slide-6.jpg" alt="" />
+              </div>
+              <div class="info">
+                <div>
+                  <h3 class="font-mali">Eco-Friendly</h3>
+                  <h5 class="font-poppins">
+                    As the leading organic farm, we maintain an eco-friendly
+                    policy of growing and selling healthy food without any
+                    additives.
+                  </h5>
+                </div>
+                <div class="btn-slider font-poppins">
+                  <div>
+                    <a
+                      class="click-btn btn-style1"
+                      href="#"
+                      data-hover="Click me!"
+                      >Read more</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // Item -->
+      </div>
+    </div>
+
+    <!-- offer -->
+    <section class="section-offer font-poppins">
+      <div class="container">
+        <div class="list-offer">
+          <div class="offer">
+            <div></div>
+            <div class="timeDown" id="timedown">1</div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="offer"></div>
+        </div>
+      </div>
+    </section>
+
     <script type="module" src="js/index.js"></script>
-    <i class="fa-solid fa-house hvr-grow"></i>
+    <script type="module" src="js/validator.js"></script>
   </body>
 </html>
