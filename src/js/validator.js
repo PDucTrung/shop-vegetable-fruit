@@ -1,7 +1,5 @@
-import "../css/index.css";
-import "../css/global.css";
 
-function Validator(options) {
+export const Validator = function Validator(options) {
   function getParent(element, selector) {
     while (element.parentElement) {
       if (element.parentElement.matches(selector)) {
@@ -137,8 +135,6 @@ function Validator(options) {
   }
 }
 
-// 1. lỗi =>  message lỗi
-// 2. hợp lệ => undefined
 Validator.isRequired = function (selector, message) {
   return {
     selector: selector,

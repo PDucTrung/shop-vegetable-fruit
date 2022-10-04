@@ -7,6 +7,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "animate.css/animate.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick.min.js";
+import {Validator} from "./validator";
 import "../css/index.css";
 import "../css/global.css";
 
@@ -159,8 +160,8 @@ $slider_ini.on("init", function (event, slick, currentSlide, nextSlide) {
   $("button.slick-arrow").append('<div class="thumb"></div>');
   total_slide = slick.slideCount;
   console.log(total_slide);
-  next_img = $(slick.$slides[1]).find("img").attr("src");
-  prev_img = $(slick.$slides[total_slide - 1])
+  let next_img = $(slick.$slides[1]).find("img").attr("src");
+  let prev_img = $(slick.$slides[total_slide - 1])
     .find("img")
     .attr("src");
   $("button.slick-next .thumb").append('<img src="' + next_img + '">');
@@ -200,10 +201,10 @@ $("button.slick-arrow , .Advance-Slider ul.slick-dots li button").hover(
 $slider_ini.on("afterChange", function (event, slick, currentSlide) {
   console.log("afterChange: " + currentSlide);
 
-  prev_img = $(slick.$slides[currentSlide - 1])
+  let prev_img = $(slick.$slides[currentSlide - 1])
     .find("img")
     .attr("src");
-  next_img = $(slick.$slides[currentSlide + 1])
+  let next_img = $(slick.$slides[currentSlide + 1])
     .find("img")
     .attr("src");
 
