@@ -12,43 +12,41 @@ export const Validator = function Validator(options) {
   var selectorRules = {};
 
   // Hàm validate
-  function validate(inputElement, rule) {
-    var errorElement = getParent(
-      inputElement,
-      options.formGroupSelector
-    ).querySelector(options.errorSelector);
-    var errorMessage;
+function validate(inputElement, rule) {
+  var errorElement = getParent(
+    inputElement,
+    options.formGroupSelector
+  ).querySelector(options.errorSelector);
+  var errorMessage;
 
-    var rules = selectorRules[rule.selector];
+  var rules = selectorRules[rule.selector];
 
-    for (var i = 0; i < rules.length; ++i) {
-      switch (inputElement.type) {
-        case "radio":
-        case "checkbox":
-          errorMessage = rules[i](
-            formElement.querySelector(rule.selector + ":checked")
-          );
-          break;
-        default:
-          errorMessage = rules[i](inputElement.value);
-      }
-      if (errorMessage) break;
+  for (var i = 0; i < rules.length; ++i) {
+    switch (inputElement.type) {
+      case "radio":
+      case "checkbox":
+        errorMessage = rules[i](
+          formElement.querySelector(rule.selector + ":checked")
+        );
+        break;
+      default:
+        errorMessage = rules[i](inputElement.value);
     }
-
-    if (errorMessage) {
-      errorElement.innerText = errorMessage;
-      getParent(inputElement, options.formGroupSelector).classList.add(
-        "invalid"
-      );
-    } else {
-      errorElement.innerText = "";
-      getParent(inputElement, options.formGroupSelector).classList.remove(
-        "invalid"
-      );
-    }
-
-    return !errorMessage;
+    if (errorMessage) break;
   }
+
+  if (errorMessage) {
+    errorElement.innerText = errorMessage;
+    getParent(inputElement, options.formGroupSelector).classList.add("invalid");
+  } else {
+    errorElement.innerText = "";
+    getParent(inputElement, options.formGroupSelector).classList.remove(
+      "invalid"
+    );
+  }
+
+  return !errorMessage;
+};
 
   // element validate
   var formElement = document.querySelector(options.form);

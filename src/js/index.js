@@ -7,7 +7,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "animate.css/animate.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick.min.js";
-import {Validator} from "./validator";
+import { Validator } from "./validator";
 import "../css/index.css";
 import "../css/global.css";
 
@@ -126,7 +126,9 @@ document.addEventListener("DOMContentLoaded", function () {
     errorSelector: ".form-message",
     rules: [
       Validator.isRequired("#fullname", "Please enter your full name"),
+      Validator.isRequired("#email"),
       Validator.isEmail("#email"),
+      Validator.isRequired("#password"),
       Validator.minLength("#password", 6),
       Validator.isRequired("#password_confirmation"),
       Validator.isConfirmed(
@@ -146,7 +148,12 @@ document.addEventListener("DOMContentLoaded", function () {
     form: "#form-2",
     formGroupSelector: ".form-group",
     errorSelector: ".form-message",
-    rules: [Validator.isEmail("#email"), Validator.minLength("#password", 6)],
+    rules: [
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+      Validator.isRequired("#password"),
+      Validator.minLength("#password", 6),
+    ],
     onSubmit: function (data) {
       console.log(data);
     },
