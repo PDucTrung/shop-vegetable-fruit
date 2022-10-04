@@ -1,0 +1,32 @@
+{
+  "name": "shop-vegetable-fruit",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
+    "hover.css": "^2.3.2",
+    "jquery": "^3.6.1",
+    "react-hover-css": "^1.1.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^8.4.2"
+  },
+  "description": "web ban hoa qua",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "tfruit-shop"
+  },
+  "author": "trung",
+  "license": "ISC"
+}
