@@ -165,10 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form: "#form-3",
     formGroupSelector: ".form-group",
     errorSelector: ".form-message",
-    rules: [
-      Validator.isRequired("#email"),
-      Validator.isEmail("#email"),
-    ],
+    rules: [Validator.isRequired("#email"), Validator.isEmail("#email")],
     onSubmit: function (data) {
       console.log(data);
     },
@@ -407,4 +404,3 @@ $(".slider-partners").slick({
     },
   ],
 });
-
