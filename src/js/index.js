@@ -7,6 +7,8 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "animate.css/animate.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick.min.js";
+import "aos/dist/aos.css";
+import AOS from "aos";
 import { Validator } from "./validator";
 import "../css/index.css";
 import "../css/global.css";
@@ -176,13 +178,13 @@ $slider_ini.on("init", function (event, slick, currentSlide, nextSlide) {
 });
 $slider_ini.slick({
   autoplay: true,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 3000,
   speed: 1000,
   slidesToShow: 1,
   slidesToScroll: 1,
   dots: true,
   pauseOnHover: false,
-  infinite: false,
+  infinite: true,
   customPaging: function (slider, i) {
     var thumb = $(slider.$slides[i]).find(".dots-img").attr("src");
     console.log(thumb);
@@ -192,6 +194,14 @@ $slider_ini.slick({
       '"></a></div></button>'
     );
   },
+  // responsive: [
+  //   {
+  //     breakpoint: 1200,
+  //     settings: {    
+  //       dots: true,
+  //     },
+  //   },
+  // ],
 });
 
 $("button.slick-arrow , .Advance-Slider ul.slick-dots li button").hover(
@@ -294,22 +304,52 @@ let x = setInterval(function () {
 }, 1000);
 
 //count
-const counters = document.querySelectorAll(".count");
-const speed = 1000;
+var a = 0;
+$(window).scroll(function () {
+  var oTop = $("#counter").offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $(".counter").each(function () {
+      var $this = $(this),
+        countTo = $this.attr("number");
+      $({
+        countNum: $this.text(),
+      }).animate(
+        {
+          countNum: countTo,
+        },
 
-counters.forEach((counter) => {
-  const animate = () => {
-    const value = +counter.getAttribute("number");
-    const data = +counter.innerText;
+        {
+          duration: 2000,
+          easing: "swing",
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+            //alert('finished');
+          },
+        }
+      );
+    });
+    a = 1;
+  }
+});
 
-    const time = value / speed;
-    if (data < value) {
-      counter.innerText = Math.ceil(data + time);
-      setTimeout(animate, 1);
-    } else {
-      counter.innerText = value;
-    }
-  };
+// aos
+AOS.init({
+  offset: 200,
+  duration: 1000,
+});
 
-  animate();
+// slider home ////////////////////////////////////////////////////////
+$(".slider-home").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 1000,
+  dots: true,
+  fade: true,
+  cssEase: "linear",
 });
