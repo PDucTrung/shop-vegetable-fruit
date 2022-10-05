@@ -160,6 +160,19 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(data);
     },
   });
+
+  Validator({
+    form: "#form-3",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+    ],
+    onSubmit: function (data) {
+      console.log(data);
+    },
+  });
 });
 
 // slider ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -197,7 +210,7 @@ $slider_ini.slick({
   // responsive: [
   //   {
   //     breakpoint: 1200,
-  //     settings: {    
+  //     settings: {
   //       dots: true,
   //     },
   //   },
@@ -353,3 +366,45 @@ $(".slider-home").slick({
   fade: true,
   cssEase: "linear",
 });
+
+// slider partner ////////////////////////////////////////////////////////
+$(".slider-partners").slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 1000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+

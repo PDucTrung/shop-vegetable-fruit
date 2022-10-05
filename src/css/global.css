@@ -134,7 +134,6 @@ header {
   z-index: 999;
 }
 
-
 /* modal sign in */
 
 /* The Modal (background) */
@@ -605,6 +604,106 @@ header {
   color: #dc143c;
 }
 
+/* footer */
+
+footer {
+  width: 100%;
+  height: max-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.text-gray-fo {
+  color: #808080;
+}
+
+.gird-footer1 p {
+  font-style: 16px;
+  font-weight: 400;
+}
+
+.line {
+  width: 260px;
+  border-bottom: 2px solid gray;
+  margin: 0 auto;
+  height: 0;
+  margin-bottom: 10px;
+}
+
+.gird-footer1 form {
+  height: max-content;
+}
+
+.gird-footer1 form .form-group {
+  height: max-content;
+}
+
+.gird-footer1 form .form-submit {
+  height: max-content;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  background-color: white;
+  color: #000;
+  font-size: 16px;
+}
+
+.gird-footer1 form .form-submit:hover {
+  color: white;
+  background-color: #f5ab1e;
+  transition: all 0.3s linear;
+}
+
+.gird-footer1 form .form-control {
+  height: max-content;
+  border-radius: 0px;
+  background-color: #41403e;
+  color: white !important;
+}
+
+.form-footer {
+  padding: 0px;
+  height: max-content;
+}
+
+.gird-footer1 i:hover{
+  color: #f5ab1e;
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+  .ft-3 {
+    margin-top: 40px;
+  }
+
+  .ft-2 {
+    margin-top: 8.5px;
+  }
+
+  .ft-2 p {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .ft-3 {
+    margin-top: 8.5px;
+  }
+
+  .ft-2 {
+    margin-top: 8.5px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+@media screen and (min-width: 1400px) {
+}
+
 /* animate scroll */
 .animate__animated.animate__bounce {
   --animate-duration: 3s;
@@ -629,4 +728,3 @@ header {
 .animate__animated.animate__flash {
   --animate-duration: 1s;
 }
-
