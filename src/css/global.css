@@ -9,7 +9,6 @@
 
 body {
   overflow-x: hidden;
-  max-width: 100%;
 }
 
 img {
@@ -86,8 +85,11 @@ img {
 }
 
 /* page */
+
 .page {
   height: 725px;
+  width: 100%;
+  overflow: hidden;
   max-width: 100%;
 }
 
@@ -124,6 +126,7 @@ img {
   font-size: 15px;
   padding: 10px;
   max-width: 100%;
+  width: 100%;
 }
 
 .heading-header .icon {
@@ -143,6 +146,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 999;
+  max-width: 100%;
 }
 
 /* modal sign in */
@@ -493,6 +497,7 @@ header {
   background-color: white;
   max-width: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .rd-navbar-nav {
@@ -560,6 +565,7 @@ header {
 .page-header {
   transition: top 0.3s;
   max-width: 100%;
+  width: 100%;
 }
 
 .rd-nav-item.active a {
@@ -742,12 +748,36 @@ footer {
   color: orange;
 }
 
+.fw-300{
+  font-weight: 300;
+}
+
 .fw-400 {
   font-weight: 400;
 }
 
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fs-16{
+  font-size: 16px;
+}
+
 .fs-24 {
   font-size: 24px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.text-green{
+  color: #006400;
 }
 
 /* animate scroll */

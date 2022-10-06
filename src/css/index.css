@@ -248,13 +248,15 @@
   margin-top: 16px;
   text-transform: capitalize;
   text-align: left;
-  width: 300px;
+  width: 80%;
+  margin: 0 auto;
   line-height: 1.5;
   font-size: 16px;
   text-align: center;
 }
 .Advance-Slider .item .contain-wrapper .info {
   max-width: 1200px;
+  gap: 10px;
 }
 
 .Advance-Slider .item h3 {
@@ -407,16 +409,6 @@
   animation: fadeInUp 1s both 1.5s;
 }
 
-@media screen and (max-width: 576px) {
-  .Advance-Slider button.slick-prev {
-    display: none;
-  }
-
-  .Advance-Slider button.slick-next {
-    display: none;
-  }
-}
-
 /* reponsive */
 
 @media screen and (min-width: 576px) {
@@ -437,7 +429,6 @@
   .Advance-Slider .item h5 {
     font-size: 16px;
     text-align: center;
-    width: 500px;
   }
 }
 
@@ -1281,6 +1272,7 @@
 .cmt-home .section-slider-cmt-home .slider-home .slick-dots li {
   list-style-type: none;
 }
+
 .img-cmt {
   width: 100%;
   height: 500px;
