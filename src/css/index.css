@@ -9,8 +9,11 @@
 }
 
 .Advance-Slider .info {
-  padding-left: 108px;
-  padding-right: 108px;
+  margin-top: -10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .Advance-Slider button.slick-arrow {
   position: absolute;
@@ -72,7 +75,7 @@
 
 .Advance-Slider ul.slick-dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 5%;
   left: 0;
   width: 100%;
   margin: 0;
@@ -82,7 +85,7 @@
 .Advance-Slider ul.slick-dots li {
   display: inline-block;
   height: auto;
-  padding: 0 5px;
+  padding: 0 10px;
   line-height: 0px;
 }
 .Advance-Slider ul.slick-dots li button {
@@ -335,7 +338,7 @@
   border-bottom-right-radius: 10%;
   position: absolute;
   z-index: 1;
-  margin-left: 20px;
+  margin-left: 1%;
 }
 
 .Advance-Slider button.slick-next {
@@ -346,7 +349,7 @@
   border-bottom-right-radius: 50%;
   position: absolute;
   z-index: 1;
-  margin-right: 20px;
+  margin-right: 1%;
 }
 
 .btn-style1 {
@@ -592,6 +595,7 @@
 .offer img {
   width: 360px;
   height: 350px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 576px) {
@@ -899,18 +903,16 @@
 }
 
 .text-big-img {
-  left: 0px;
-  right: 0px;
-  margin: 0px auto;
-  top: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: max-content;
 }
 
 .title-pig-img {
-  left: 0px;
-  right: 0px;
-  margin: 0px auto;
-  top: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .or {
@@ -1216,6 +1218,7 @@
   padding: 0;
   height: max-content;
   width: 100%;
+  overflow: hidden;
 }
 
 .section-slider-cmt-home {
@@ -1281,6 +1284,7 @@
 .img-cmt {
   width: 100%;
   height: 500px;
+  object-fit: cover;
 }
 
 .bg-cm-home-1 {
@@ -1300,8 +1304,8 @@
   font-size: 40px;
   font-weight: 500;
   left: 50%;
-  transform: translateX(-50%);
-  top: 5px;
+  transform: translate(-50%);
+  top: 1%;
 }
 
 .box-cmt {
@@ -1316,17 +1320,17 @@
 }
 
 .text-cmthome-1 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
 
 .text-cmthome-2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .text-cmthome-3 {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: rgba(128, 128, 128, 0.705);
 }
@@ -1334,6 +1338,21 @@
 @media screen and (min-width: 576px) {
   .img-cmt {
     height: 550px;
+  }
+  .text-cmthome-1 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .text-cmthome-2 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .text-cmthome-3 {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(128, 128, 128, 0.705);
   }
 }
 

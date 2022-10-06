@@ -28,6 +28,32 @@ page footer
   opacity: 0.5;
 }
 
+/*  */
+
+.page-fo .img-fill2 {
+  position: relative;
+  height: 100%;
+}
+.page-fo .img-fill2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  animation: myMove 10s linear infinite;
+}
+
+.page-fo .img-fill2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #15151552;
+  opacity: 0.5;
+}
+
+/*  */
+
 .page-fo {
   height: max-content;
   overflow: hidden;
