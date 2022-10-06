@@ -85,6 +85,10 @@ img {
   height: 725px;
 }
 
+.page-2 {
+  height: max-content;
+}
+
 /* heading header */
 .rd-navbar-brand .icon {
   font-size: 30px;
@@ -727,6 +731,18 @@ footer {
   background-color: #f5ab1e;
   transition: all 0.2s linear;
   opacity: 1;
+}
+
+.text-orange-fo{
+  color: orange;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fs-24 {
+  font-size: 24px;
 }
 
 /* animate scroll */

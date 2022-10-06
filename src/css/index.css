@@ -988,10 +988,9 @@
 }
 
 .content-sale {
-  left: 0px;
-  right: 0px;
-  margin: 0px auto;
-  top: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .p-sale-1 {
@@ -1220,10 +1219,10 @@
 }
 
 .section-slider-cmt-home {
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   width: 80%;
-  left: 10%;
   height: 75%;
 }
 
@@ -1292,21 +1291,8 @@
   height: 50%;
   background-color: white;
   left: 50%;
-  transform: translateX(-50%);
-  top: 5%;
-}
-
-.bg-cm-home-2 {
-  width: 90%;
-  border-top: 2px solid #f5f5f5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  height: 50%;
-  background-color: white;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  z-index: -1;
+  transform: translate(-50%, -9%);
+  top: 9%;
 }
 
 .tittle-cmt {

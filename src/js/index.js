@@ -12,6 +12,7 @@ import AOS from "aos";
 import { Validator } from "./validator";
 import "../css/index.css";
 import "../css/global.css";
+import "../css/product.css";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {
@@ -351,7 +352,7 @@ AOS.init({
   duration: 1000,
 });
 
-// slider home ////////////////////////////////////////////////////////
+// slider about ////////////////////////////////////////////////////////
 $(".slider-home").slick({
   infinite: true,
   slidesToShow: 1,
