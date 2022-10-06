@@ -13,6 +13,7 @@ import { Validator } from "./validator";
 import "../css/index.css";
 import "../css/global.css";
 import "../css/product.css";
+import "../css/cart.css";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {
@@ -423,36 +424,34 @@ $(".slider-fruit").slick({
 });
 
 // filter range ////////////////////////////////////////////////////////////////////////////////////////////////////
-var lowerSlider = document.querySelector("#lower");
-var upperSlider = document.querySelector("#upper");
 
-document.querySelector("#two").value = upperSlider.value;
-document.querySelector("#one").value = lowerSlider.value;
+// quanlity /////////////////////////////////////////////////////////////////////////////////////////////////////
+let counter = 0;
 
-var lowerVal = parseInt(lowerSlider.value);
-var upperVal = parseInt(upperSlider.value);
+function increment() {
+  counter++;
+}
 
-upperSlider.oninput = function () {
-  lowerVal = parseInt(lowerSlider.value);
-  upperVal = parseInt(upperSlider.value);
+function decrement() {
+  counter--;
+}
 
-  if (upperVal < lowerVal + 4) {
-    lowerSlider.value = upperVal - 4;
-    if (lowerVal == lowerSlider.min) {
-      upperSlider.value = 4;
-    }
+function get() {
+  return counter;
+}
+
+const inc = document.getElementById("increment");
+const input = document.getElementById("input");
+const dec = document.getElementById("decrement");
+
+inc.addEventListener("click", () => {
+  increment();
+  input.value = get();
+});
+
+dec.addEventListener("click", () => {
+  if (input.value > 0) {
+    decrement();
   }
-  document.querySelector("#two").value = this.value;
-};
-
-lowerSlider.oninput = function () {
-  lowerVal = parseInt(lowerSlider.value);
-  upperVal = parseInt(upperSlider.value);
-  if (lowerVal > upperVal - 4) {
-    upperSlider.value = lowerVal + 4;
-    if (upperVal == upperSlider.max) {
-      lowerSlider.value = parseInt(upperSlider.max) - 4;
-    }
-  }
-  document.querySelector("#one").value = this.value;
-};
+  input.value = get();
+});

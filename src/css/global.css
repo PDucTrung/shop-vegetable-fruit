@@ -780,6 +780,14 @@ footer {
   color: #006400;
 }
 
+.name-pr-fr a:hover{
+  color: orange !important;
+}
+
+.cart a{
+  color: #000;
+}
+
 /* animate scroll */
 .animate__animated.animate__bounce {
   --animate-duration: 3s;
