@@ -343,7 +343,7 @@ $(window).scroll(function () {
 // aos
 AOS.init({
   offset: 200,
-  duration: 1000,
+  duration: 500,
 });
 
 // slider about ////////////////////////////////////////////////////////
