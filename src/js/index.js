@@ -455,7 +455,7 @@ if (window.document.location.pathname === "/product.html") {
 }
 
 // quanlity /////////////////////////////////////////////////////////////////////////////////////////////////////
-if (window.document.location.pathname === "/cart.html") {
+if (window.document.location.pathname == "/cart.html") {
   let counter = 0;
 
   function increment() {
