@@ -309,41 +309,36 @@ setInterval(function () {
 
 //count
 
-if (
-  window.location.href == "http://127.0.0.1:5173/index.html" ||
-  window.location.href == "http://127.0.0.1:5173/"
-) {
-  let a = 0;
-  $(window).scroll(function () {
-    let oTop = $("#counter").offset().top - window.innerHeight;
-    if (a == 0 && $(window).scrollTop() > oTop) {
-      $(".counter").each(function () {
-        let $this = $(this),
-          countTo = $this.attr("number");
-        $({
-          countNum: $this.text(),
-        }).animate(
-          {
-            countNum: countTo,
-          },
+let a = 0;
+$(window).scroll(function () {
+  let oTop = $("#counter").offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $(".counter").each(function () {
+      let $this = $(this),
+        countTo = $this.attr("number");
+      $({
+        countNum: $this.text(),
+      }).animate(
+        {
+          countNum: countTo,
+        },
 
-          {
-            duration: 2000,
-            easing: "swing",
-            step: function () {
-              $this.text(Math.floor(this.countNum));
-            },
-            complete: function () {
-              $this.text(this.countNum);
-              //alert('finished');
-            },
-          }
-        );
-      });
-      a = 1;
-    }
-  });
-}
+        {
+          duration: 2000,
+          easing: "swing",
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+            //alert('finished');
+          },
+        }
+      );
+    });
+    a = 1;
+  }
+});
 
 // aos
 AOS.init({
