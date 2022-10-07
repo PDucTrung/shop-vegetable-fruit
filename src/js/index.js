@@ -418,83 +418,87 @@ $(".slider-fruit").slick({
 
 // filter range ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var lowerSlider = document.querySelector("#lower");
-var upperSlider = document.querySelector("#upper");
+if (window.document.location.pathname === "/product.html") {
+  var lowerSlider = document.querySelector("#lower");
+  var upperSlider = document.querySelector("#upper");
 
-document.querySelector("#two").value = upperSlider.value;
-document.querySelector("#one").value = lowerSlider.value;
+  document.querySelector("#two").value = upperSlider.value;
+  document.querySelector("#one").value = lowerSlider.value;
 
-var lowerVal = parseInt(lowerSlider.value);
-var upperVal = parseInt(upperSlider.value);
+  var lowerVal = parseInt(lowerSlider.value);
+  var upperVal = parseInt(upperSlider.value);
 
-upperSlider.oninput = function () {
-  lowerVal = parseInt(lowerSlider.value);
-  upperVal = parseInt(upperSlider.value);
+  upperSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
 
-  if (upperVal < lowerVal + 4) {
-    lowerSlider.value = upperVal - 4;
-    if (lowerVal == lowerSlider.min) {
-      upperSlider.value = 4;
+    if (upperVal < lowerVal + 4) {
+      lowerSlider.value = upperVal - 4;
+      if (lowerVal == lowerSlider.min) {
+        upperSlider.value = 4;
+      }
     }
-  }
-  document.querySelector("#two").value = this.value;
-};
+    document.querySelector("#two").value = this.value;
+  };
 
-lowerSlider.oninput = function () {
-  lowerVal = parseInt(lowerSlider.value);
-  upperVal = parseInt(upperSlider.value);
-  if (lowerVal > upperVal - 4) {
-    upperSlider.value = lowerVal + 4;
-    if (upperVal == upperSlider.max) {
-      lowerSlider.value = parseInt(upperSlider.max) - 4;
+  lowerSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+    if (lowerVal > upperVal - 4) {
+      upperSlider.value = lowerVal + 4;
+      if (upperVal == upperSlider.max) {
+        lowerSlider.value = parseInt(upperSlider.max) - 4;
+      }
     }
-  }
-  document.querySelector("#one").value = this.value;
-};
+    document.querySelector("#one").value = this.value;
+  };
+}
 
 // quanlity /////////////////////////////////////////////////////////////////////////////////////////////////////
-let counter = 0;
+if (window.document.location.pathname === "/cart.html") {
+  let counter = 0;
 
-function increment() {
-  counter++;
-}
-
-function decrement() {
-  counter--;
-}
-
-function get() {
-  return counter;
-}
-
-const inc = document.getElementById("increment");
-const input = document.getElementById("input");
-const dec = document.getElementById("decrement");
-let price = document.getElementById("price").textContent;
-let total = document.getElementById("total").textContent;
-const but = document.querySelector(".butt");
-
-inc.addEventListener("click", () => {
-  increment();
-  input.value = get();
-  total = input.value * price;
-  document.getElementById("total").innerHTML = total;
-});
-
-dec.addEventListener("click", () => {
-  if (input.value > 0) {
-    decrement();
+  function increment() {
+    counter++;
   }
-  input.value = get();
-  total = input.value * price;
-  document.getElementById("total").innerHTML = total;
-});
 
-but.addEventListener("click", () => {
-  let total1 = document.getElementById("total");
-  let total2 = document.getElementById("total-2");
+  function decrement() {
+    counter--;
+  }
 
-  let sum = total1.textContent + total2.textContent;
+  function get() {
+    return counter;
+  }
 
-  document.getElementById("total-sum").innerHTML = sum;
-});
+  const inc = document.getElementById("increment");
+  const input = document.getElementById("input");
+  const dec = document.getElementById("decrement");
+  let price = document.getElementById("price").textContent;
+  let total = document.getElementById("total").textContent;
+  const but = document.querySelector(".butt");
+
+  inc.addEventListener("click", () => {
+    increment();
+    input.value = get();
+    total = input.value * price;
+    document.getElementById("total").innerHTML = total;
+  });
+
+  dec.addEventListener("click", () => {
+    if (input.value > 0) {
+      decrement();
+    }
+    input.value = get();
+    total = input.value * price;
+    document.getElementById("total").innerHTML = total;
+  });
+
+  but.addEventListener("click", () => {
+    let total1 = document.getElementById("total");
+    let total2 = document.getElementById("total-2");
+
+    let sum = total1.textContent + total2.textContent;
+
+    document.getElementById("total-sum").innerHTML = sum;
+  });
+}
