@@ -206,14 +206,6 @@ $slider_ini.slick({
       '"></a></div></button>'
     );
   },
-  // responsive: [
-  //   {
-  //     breakpoint: 1200,
-  //     settings: {
-  //       dots: true,
-  //     },
-  //   },
-  // ],
 });
 
 $("button.slick-arrow , .Advance-Slider ul.slick-dots li button").hover(
@@ -263,89 +255,102 @@ $slider_ini.on("afterChange", function (event, slick, currentSlide) {
 // timedown ///////////////////////////////////////////////////////////////////////////////////////////////
 let countDownDate = new Date("october 30, 2022 23:59:59").getTime();
 
-let x = setInterval(function () {
-  let now = new Date().getTime();
+if (
+  window.location.href == "http://127.0.0.1:5173/index.html" ||
+  window.location.href == "http://127.0.0.1:5173/"
+) {
+  setInterval(function () {
+    let now = new Date().getTime();
 
-  let distance = countDownDate - now;
+    let distance = countDownDate - now;
 
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("timedown").innerHTML =
-    days +
-    "d " +
-    " : " +
-    hours +
-    "h " +
-    " : " +
-    minutes +
-    "m " +
-    " : " +
-    seconds +
-    "s ";
+    document.getElementById("timedown").innerHTML =
+      days +
+      "d " +
+      " : " +
+      hours +
+      "h " +
+      " : " +
+      minutes +
+      "m " +
+      " : " +
+      seconds +
+      "s ";
 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timedown").innerHTML = "End Deal";
-    document.getElementById("timedown2").innerHTML = "End Deal";
-    document.getElementById("days").innerHTML = "End Deal";
-    document.getElementById("hours").innerHTML = "End Deal";
-    document.getElementById("minutes").innerHTML = "End Deal";
-    document.getElementById("seconds").innerHTML = "End Deal";
-  }
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("timedown").innerHTML = "End Deal";
+      document.getElementById("timedown2").innerHTML = "End Deal";
+      document.getElementById("days").innerHTML = "End Deal";
+      document.getElementById("hours").innerHTML = "End Deal";
+      document.getElementById("minutes").innerHTML = "End Deal";
+      document.getElementById("seconds").innerHTML = "End Deal";
+    }
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
-  document.getElementById("timedown2").innerHTML =
-    days +
-    "d " +
-    " : " +
-    hours +
-    "h " +
-    " : " +
-    minutes +
-    "m " +
-    " : " +
-    seconds +
-    "s ";
-}, 1000);
+    document.getElementById("timedown2").innerHTML =
+      days +
+      "d " +
+      " : " +
+      hours +
+      "h " +
+      " : " +
+      minutes +
+      "m " +
+      " : " +
+      seconds +
+      "s ";
+  }, 1000);
+}
 
 //count
-var a = 0;
-$(window).scroll(function () {
-  var oTop = $("#counter").offset().top - window.innerHeight;
-  if (a == 0 && $(window).scrollTop() > oTop) {
-    $(".counter").each(function () {
-      var $this = $(this),
-        countTo = $this.attr("number");
-      $({
-        countNum: $this.text(),
-      }).animate(
-        {
-          countNum: countTo,
-        },
 
-        {
-          duration: 2000,
-          easing: "swing",
-          step: function () {
-            $this.text(Math.floor(this.countNum));
+if (
+  window.location.href == "http://127.0.0.1:5173/index.html" ||
+  window.location.href == "http://127.0.0.1:5173/"
+) {
+  let a = 0;
+  $(window).scroll(function () {
+    let oTop = $("#counter").offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+      $(".counter").each(function () {
+        let $this = $(this),
+          countTo = $this.attr("number");
+        $({
+          countNum: $this.text(),
+        }).animate(
+          {
+            countNum: countTo,
           },
-          complete: function () {
-            $this.text(this.countNum);
-            //alert('finished');
-          },
-        }
-      );
-    });
-    a = 1;
-  }
-});
+
+          {
+            duration: 2000,
+            easing: "swing",
+            step: function () {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+              $this.text(this.countNum);
+              //alert('finished');
+            },
+          }
+        );
+      });
+      a = 1;
+    }
+  });
+}
 
 // aos
 AOS.init({
@@ -425,33 +430,89 @@ $(".slider-fruit").slick({
 
 // filter range ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+if (window.location.href == "http://127.0.0.1:5173/product.html") {
+  var lowerSlider = document.querySelector("#lower");
+  var upperSlider = document.querySelector("#upper");
+
+  document.querySelector("#two").value = upperSlider.value;
+  document.querySelector("#one").value = lowerSlider.value;
+
+  var lowerVal = parseInt(lowerSlider.value);
+  var upperVal = parseInt(upperSlider.value);
+
+  upperSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+
+    if (upperVal < lowerVal + 4) {
+      lowerSlider.value = upperVal - 4;
+      if (lowerVal == lowerSlider.min) {
+        upperSlider.value = 4;
+      }
+    }
+    document.querySelector("#two").value = this.value;
+  };
+
+  lowerSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+    if (lowerVal > upperVal - 4) {
+      upperSlider.value = lowerVal + 4;
+      if (upperVal == upperSlider.max) {
+        lowerSlider.value = parseInt(upperSlider.max) - 4;
+      }
+    }
+    document.querySelector("#one").value = this.value;
+  };
+}
+
 // quanlity /////////////////////////////////////////////////////////////////////////////////////////////////////
-let counter = 0;
 
-function increment() {
-  counter++;
-}
+if (window.location.href == "http://127.0.0.1:5173/cart.html") {
+  let counter = 0;
 
-function decrement() {
-  counter--;
-}
-
-function get() {
-  return counter;
-}
-
-const inc = document.getElementById("increment");
-const input = document.getElementById("input");
-const dec = document.getElementById("decrement");
-
-inc.addEventListener("click", () => {
-  increment();
-  input.value = get();
-});
-
-dec.addEventListener("click", () => {
-  if (input.value > 0) {
-    decrement();
+  function increment() {
+    counter++;
   }
-  input.value = get();
-});
+
+  function decrement() {
+    counter--;
+  }
+
+  function get() {
+    return counter;
+  }
+
+  const inc = document.getElementById("increment");
+  const input = document.getElementById("input");
+  const dec = document.getElementById("decrement");
+  let price = document.getElementById("price").textContent;
+  let total = document.getElementById("total").textContent;
+  const but = document.querySelector(".butt");
+
+  inc.addEventListener("click", () => {
+    increment();
+    input.value = get();
+    total = input.value * price;
+    document.getElementById("total").innerHTML = total;
+  });
+
+  dec.addEventListener("click", () => {
+    if (input.value > 0) {
+      decrement();
+    }
+    input.value = get();
+    total = input.value * price;
+    document.getElementById("total").innerHTML = total;
+  });
+
+  but.addEventListener("click", () => {
+    let total1 = document.getElementById("total");
+    let total2 = document.getElementById("total-2");
+
+    let sum = total1.textContent + total2.textContent;
+
+    document.getElementById("total-sum").innerHTML = sum;
+  });
+
+}
