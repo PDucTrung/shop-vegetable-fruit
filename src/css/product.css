@@ -14,7 +14,7 @@ page footer
   height: 100%;
   width: 100%;
   object-fit: cover;
-  animation: myMove 10s linear infinite;
+  animation: Move 6s linear infinite;
 }
 
 .page-fo .img-fill:after {
@@ -38,7 +38,7 @@ page footer
   height: 100%;
   width: 100%;
   object-fit: cover;
-  animation: myMove 10s linear infinite;
+  animation: Move 6s linear infinite;
 }
 
 .page-fo .img-fill2:after {
@@ -354,7 +354,7 @@ page footer
   background-color: green;
 }
 
-.price-title:hover{
+.price-title:hover {
   background-color: orange;
   cursor: pointer;
 }

@@ -39,7 +39,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  animation: myMove 10s linear infinite;
+  animation: Move 6s linear infinite;
 }
 .Advance-Slider .item {
   height: 100vh;
@@ -145,13 +145,13 @@
   transform: translateX(-100%);
 }
 .Advance-Slider button.slick-prev {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .Advance-Slider button.slick-next:hover {
   transform: translateX(100%);
 }
 .Advance-Slider button.slick-next {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .Advance-Slider ul.slick-dots li button img {
   height: 0;
@@ -186,7 +186,7 @@
 }
 .Advance-Slider ul.slick-dots li button:hover a {
   width: 140px;
-  transition: all 0.3s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 .Advance-Slider ul.slick-dots li button:hover {
   opacity: 1;
@@ -233,7 +233,6 @@
 }
 .Advance-Slider .item h3 {
   margin: 0px;
-  color: #fff;
   font-weight: 600;
   text-transform: capitalize;
   font-size: 48px;
@@ -260,25 +259,25 @@
 }
 
 .Advance-Slider .item h3 {
-  animation: fadeOutRight 1s both;
+  animation: fadeOutRight 0.5s both;
 }
 .Advance-Slider .item.slick-active h3 {
-  animation: fadeInDown 1s both 1s;
+  animation: fadeInDown 0.5s both 0.5s;
 }
 .Advance-Slider .item h5 {
-  animation: fadeOutLeft 1s both;
+  animation: fadeOutLeft 0.5s both;
 }
 .Advance-Slider .item.slick-active h5 {
-  animation: fadeInLeft 1s both 1.5s;
+  animation: fadeInLeft 0.5s both 1s;
 }
 
-@keyframes myMove {
+@keyframes Move {
   from {
     transform: scale(1, 1);
     transform-origin: 50% 50%;
   }
   to {
-    transform: scale(1.8, 1.9);
+    transform: scale(1.4, 1.5);
     transform-origin: 50% 0%;
   }
 }
@@ -356,8 +355,8 @@
 
 .btn-style1 {
   position: relative;
-  border-color: #ff4500;
-  color: #ff4500;
+  border-color: rgba(0, 128, 0, 0.5);
+  color: orange;
   overflow: hidden;
 }
 .btn-style1::before {
@@ -366,7 +365,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  background-color: #ff4500;
+  background-color: orange;
   transform: rotateZ(-45deg) translate(-50%, -50%);
   transition: all 0.3s;
   content: "";
@@ -395,18 +394,18 @@
   border-radius: 5px;
   text-align: center;
   font-size: 16px;
-  color: #ff4500;
+  color: orange;
   text-decoration: none;
   transition: all 0.35s;
 }
 
 .Advance-Slider .item .btn-slider {
   padding-top: 32px;
-  animation: fadeInDown 1s both 1s;
+  animation: fadeInDown 0.5s both;
 }
 
 .Advance-Slider .item.slick-active .btn-slider {
-  animation: fadeInUp 1s both 1.5s;
+  animation: fadeInUp 0.5s both 1.5s;
 }
 
 /* reponsive */
@@ -1039,9 +1038,15 @@
 }
 
 .text-orange {
-  color: #ff8c00;
+  color: #ff8c00eb;
   font-size: 55px;
   margin-left: 20px;
+}
+
+.text-gradient {
+  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .counter {

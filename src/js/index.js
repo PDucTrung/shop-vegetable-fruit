@@ -343,7 +343,8 @@ $(window).scroll(function () {
 // aos
 AOS.init({
   offset: 200,
-  duration: 500,
+  duration: 300,
+  once: true,
 });
 
 // slider about ////////////////////////////////////////////////////////
@@ -475,7 +476,7 @@ if (window.document.location.pathname == "/cart.html") {
   const dec = document.getElementById("decrement");
   let price = document.getElementById("price").textContent;
   let total = document.getElementById("total").textContent;
-  const but = document.querySelector(".butt");
+  const but = document.querySelector(".btn-coupon");
 
   inc.addEventListener("click", () => {
     increment();
@@ -497,7 +498,7 @@ if (window.document.location.pathname == "/cart.html") {
     let total1 = document.getElementById("total");
     let total2 = document.getElementById("total-2");
 
-    let sum = total1.textContent + total2.textContent;
+    let sum = Number(total1.textContent) + Number(total2.textContent);
 
     document.getElementById("total-sum").innerHTML = sum;
   });

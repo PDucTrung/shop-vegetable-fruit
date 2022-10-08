@@ -16,7 +16,21 @@
 }
 
 /* quanlity */
-.list-but-cart{
+.list-but-cart {
   margin: 0 auto;
   width: fit-content;
+}
+
+/* coupon code*/
+.coupon-code {
+  padding: 15px 10px;
+  width: 250px;
+}
+
+.apply-coupon .btn-coupon {
+  padding: 15px 10px;
+  border: 1px solid orange;
+  background-color: orange;
+  color: white;
+  width: 250px;
 }
