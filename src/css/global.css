@@ -7,6 +7,10 @@
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img {
   vertical-align: middle;
   max-width: 100%;
@@ -82,15 +86,10 @@ img {
 }
 
 /* page */
-body {
-  overflow-x: hidden;
-}
 
 .page {
   height: 725px;
   width: 100%;
-  overflow: hidden;
-  max-width: 100%;
 }
 
 .page-2 {
@@ -475,14 +474,12 @@ header {
   background-color: white;
   max-width: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .rd-navbar-nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .rd-nav-item {
