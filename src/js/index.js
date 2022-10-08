@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       Validator.isRequired("#email"),
       Validator.isEmail("#email"),
       Validator.isRequired("#password"),
-      Validator.minLength("#password", 6),
+      // Validator.minLength("#password", 8),
       Validator.isRequired("#password_confirmation"),
       Validator.isConfirmed(
         "#password_confirmation",
@@ -157,7 +157,8 @@ document.addEventListener("DOMContentLoaded", function () {
       Validator.isRequired("#email"),
       Validator.isEmail("#email"),
       Validator.isRequired("#password"),
-      Validator.minLength("#password", 6),
+      Validator.isPasstext("#password"),
+      // Validator.minLength("#password", 8),
     ],
     onSubmit: function (data) {
       console.log(data);
@@ -169,6 +170,26 @@ document.addEventListener("DOMContentLoaded", function () {
     formGroupSelector: ".form-group",
     errorSelector: ".form-message",
     rules: [Validator.isRequired("#email"), Validator.isEmail("#email")],
+    onSubmit: function (data) {
+      console.log(data);
+    },
+  });
+
+  Validator({
+    form: "#form-4",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#firstname"),
+      Validator.isRequired("#lastname"),
+      Validator.isRequired("#phone"),
+      Validator.isPhone("#phone"),
+      Validator.isRequired("#city"),
+      Validator.isRequired("#district"),
+      Validator.isRequired("#address"),
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+    ],
     onSubmit: function (data) {
       console.log(data);
     },
@@ -502,5 +523,32 @@ if (window.document.location.pathname == "/cart.html") {
     let sum = Number(total1.textContent) + Number(total2.textContent);
 
     document.getElementById("total-sum").innerHTML = sum;
+  });
+}
+
+// check payment block
+if (window.document.location.pathname == "/checkout.html") {
+  $("#check-pay").change(function () {
+    if ($(this).is(":checked")) {
+      $(".content-check").removeClass("check-none");
+    } else {
+      $(".content-check").addClass("check-none");
+    }
+  });
+
+  $("#check-pay2").change(function () {
+    if ($(this).is(":checked")) {
+      $(".content-check2").removeClass("check-none");
+    } else {
+      $(".content-check2").addClass("check-none");
+    }
+  });
+
+  $("#check-pay3").change(function () {
+    if ($(this).is(":checked")) {
+      $(".content-check3").removeClass("check-none");
+    } else {
+      $(".content-check3").addClass("check-none");
+    }
   });
 }

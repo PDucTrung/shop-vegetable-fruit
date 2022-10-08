@@ -2,11 +2,132 @@
 .section-address {
   width: 100%;
   padding-top: 100px;
+  padding-bottom: 50px;
+}
+.section-pay{
   padding-bottom: 100px;
 }
 
-.shopping{
-    padding: 10px;
+.shopping {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  width: max-content;
+}
+
+.name-customer {
+  width: 100%;
+}
+
+.list-infomation form {
+  width: 350px;
+}
+
+.form-payment .check-pay {
+  width: 25px;
+  height: 25px;
+}
+
+.check-none {
+  display: none;
+}
+
+.content-check,
+.content-check2,
+.content-check3 {
+  padding: 10px 0px;
+}
+
+.content-check .visa,
+.content-check2 .visa,
+.content-check3 .visa {
+  width: 100px;
+  font-size: 12px;
+}
+
+.content-check select,
+.content-check2 select,
+.content-check3 select {
+  font-size: 12px;
+}
+
+.content-check .add-card-visa button,
+.content-check2 .add-card-visa button,
+.content-check3 .add-card-visa button {
+  padding: 2px 5px;
+  font-size: 12px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+.content-check .add-card-visa button:hover,
+.content-check2 .add-card-visa button:hover,
+.content-check3 .add-card-visa button:hover {
+  background-color: orange;
+  transition: all 0.2s linear;
+}
+
+.payment-method {
+  width: 360px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.cart-totals {
+  width: 360px;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.cart-sub-totals,
+.shipping,
+.totals {
+  padding: 20px 0px;
+  border-bottom: 1px solid gray;
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+  .list-infomation form {
+    width: 500px;
+  }
+
+  .payment-method {
+    width: 450px;
     border: 1px solid gray;
-    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .cart-totals {
+    width: 450px;
+    border: 1px solid gray;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-infomation form {
+    width: 600px;
+  }
+  .payment-method {
+    width: 500px;
+    border: 1px solid gray;
+    padding: 10px;
+  }
+
+  .cart-totals {
+    width: 500px;
+    border: 1px solid gray;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
 }

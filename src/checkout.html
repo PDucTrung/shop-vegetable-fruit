@@ -349,13 +349,111 @@
     </div>
 
     <!-- adress billing -->
-    <section class="section-address">
+    <section class="section-address font-poppins">
       <div class="container">
-        <div class="d-flex gap-5 justify-content-center align-items-center">
+        <div
+          class="d-flex justify-content-center gap-5 flex-column justify-content-center align-items-center flex-md-row align-items-md-start"
+        >
           <!-- adress -->
           <div class="adress-customer">
-            <div class="list-infomation"></div>
+            <div><p class="fs-24 fw-500">Billing Address</p></div>
+            <div class="list-infomation">
+              <form action="" method="POST" class="form" id="form-4">
+                <div class="name-customer d-flex gap-3">
+                  <!-- fist name -->
+                  <div class="form-group">
+                    <label for="firstname" class="form-label font-poppins"
+                      >First name</label
+                    >
+                    <input
+                      id="firstname"
+                      name="firstname"
+                      type="text"
+                      placeholder="Ex: Pham"
+                      class="form-control"
+                    />
+                    <span class="form-message"></span>
+                  </div>
+                  <!-- last name -->
+                  <div class="form-group">
+                    <label for="lastname" class="form-label font-poppins"
+                      >Last name</label
+                    >
+                    <input
+                      id="lastname"
+                      name="lastname"
+                      type="text"
+                      placeholder="Ex: Trung"
+                      class="form-control"
+                    />
+                    <span class="form-message"></span>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="text"
+                    placeholder="Ex: email@domain.com"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="city" class="form-label">City</label>
+                  <input
+                    id="city"
+                    name="city"
+                    type="text"
+                    placeholder="Ex: Ha Noi"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="district" class="form-label">District</label>
+                  <input
+                    id="district"
+                    name="district"
+                    type="text"
+                    placeholder="Ex: Hoai Duc"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="address" class="form-label">Adress</label>
+                  <input
+                    id="address"
+                    name="address"
+                    type="text"
+                    placeholder="Address"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="adress" class="form-label">Phone number</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="text"
+                    placeholder="EX: 0981953791"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+              </form>
+            </div>
           </div>
+
           <!-- shopping cart -->
           <div class="shopping-cart">
             <div class="shopping fs-16 fw-400 d-flex flex-column gap-3">
@@ -366,7 +464,7 @@
 
               <!--  -->
               <div
-                class="product-in-cart d-flex align-items-center justify-content-between"
+                class="product-in-cart d-flex align-items-center justify-content-between gap-4"
               >
                 <div
                   class="pr-cart d-flex justify-content-between align-items-center gap-3"
@@ -385,7 +483,7 @@
 
               <!--  -->
               <div
-                class="product-in-cart d-flex align-items-center justify-content-between"
+                class="product-in-cart d-flex align-items-center justify-content-between gap-4"
               >
                 <div
                   class="pr-cart d-flex justify-content-between align-items-center gap-3"
@@ -406,7 +504,9 @@
               <div
                 class="product-in-cart d-flex align-items-center justify-content-between"
               >
-                <div class="total-checkout font-mali fs-16 fw-600"><p>Total:</p></div>
+                <div class="total-checkout font-mali fs-16 fw-600">
+                  <p>Total:</p>
+                </div>
                 <div class="total-cart">
                   <p class="font-mali fs-16 fw-600">
                     $ <span id="total-sum">7.25</span>
@@ -420,9 +520,222 @@
     </section>
 
     <!-- pay -->
-    <section class="section-pay">
+    <section class="section-pay font-poppins">
       <div class="container">
-        <div class="pay"></div>
+        <div
+          class="pay d-flex justify-content-center gap-5 flex-column justify-content-center align-items-center flex-md-row align-items-md-start"
+        >
+          <!-- payment methods -->
+          <div class="payment-method">
+            <div><p class="fs-24 fw-500">Payment methods</p></div>
+            <div class="payment d-flex flex-column justify-content-center gap-4">
+              <div
+                class="form-payment d-flex justify-content-center align-items-start flex-column"
+              >
+                <!-- check -->
+                <div
+                  class="d-flex justify-content-center gap-2 align-items-center"
+                >
+                  <input
+                    class="check-pay"
+                    type="checkbox"
+                    name="check-pay"
+                    id="check-pay"
+                  />
+                  <label for="check-pay">Visa/Master card</label>
+                </div>
+
+                <!-- content -->
+                <div class="content-check">
+                  <p class="fs-16 fw-400 text-green">
+                    Enter your card information:
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-4"
+                  >
+                    <!--  -->
+                    <div class="name-visa">
+                      <input type="text" class="visa" name="name-visa" id="name-visa" placeholder="Name of card">
+                    </div>
+
+                    <!--  -->
+                    <div class="number-visa">
+                      <input type="text" class="visa" name="number-visa" id="number-visa" placeholder="Card number">
+                    </div>
+
+                    <!--  -->
+                    <div>
+                      <p class="text-center fs-14 text-gray-fo">Expiration date</p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <div class="month-visa">
+                          <select name="month-visa">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                        </div>
+                        <div class="year-visa">
+                          <select name="month-visa">
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="add-card-visa"><button>Add your cart</button></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="form-payment d-flex justify-content-center align-items-start flex-column"
+              >
+                <!-- check -->
+                <div
+                  class="d-flex justify-content-center gap-2 align-items-center"
+                >
+                  <input
+                    class="check-pay"
+                    type="checkbox"
+                    name="check-pay2"
+                    id="check-pay2"
+                  />
+                  <label for="check-pay">PAYPAL</label>
+                </div>
+
+                <!-- content -->
+                <div class="content-check2">
+                  <p class="fs-16 fw-400 text-green">
+                    Enter your card information:
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-4"
+                  >
+                    <!--  -->
+                    <div class="name-visa">
+                      <input type="text" class="visa" name="name-visa" id="name-visa" placeholder="Name of card">
+                    </div>
+
+                    <!--  -->
+                    <div class="number-visa">
+                      <input type="text" class="visa" name="number-visa" id="number-visa" placeholder="Card number">
+                    </div>
+
+                    <!--  -->
+                    <div>
+                      <p class="text-center fs-14">Expiration date</p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <div class="month-visa">
+                          <select name="month-visa">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                        </div>
+                        <div class="year-visa">
+                          <select name="month-visa">
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="add-card-visa"><button>Add your cart</button></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="form-payment d-flex justify-content-center align-items-start flex-column"
+              >
+                <!-- check -->
+                <div
+                  class="d-flex justify-content-center gap-2 align-items-center"
+                >
+                  <input
+                    class="check-pay"
+                    type="checkbox"
+                    name="check-pay3"
+                    id="check-pay3"
+                  />
+                  <label for="check-pay">DIRECT BANK TRANSFER</label>
+                </div>
+
+                <!-- content -->
+                <div class="content-check3">
+                  <p class="fs-16 fw-400 text-green">
+                    Enter your card information:
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-4"
+                  >
+                    <!--  -->
+                    <div class="name-visa">
+                      <input type="text" class="visa" name="name-visa" id="name-visa" placeholder="Name of card">
+                    </div>
+
+                    <!--  -->
+                    <div class="number-visa">
+                      <input type="text" class="visa" name="number-visa" id="number-visa" placeholder="Card number">
+                    </div>
+
+                    <!--  -->
+                    <div>
+                      <p class="text-center fs-14">Expiration date</p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <div class="month-visa">
+                          <select name="month-visa">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                        </div>
+                        <div class="year-visa">
+                          <select name="month-visa">
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="add-card-visa"><button>Add your cart</button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- cart totals -->
+          <div class="cart-totals d-flex flex-column justify-content-between">
+            <div class="cart-sub-totals d-flex justify-content-between">
+              <div><p>CART SUBTOTAL</p></div>
+              <div>$7.25</div>
+            </div>
+            <div class="shipping d-flex justify-content-between">
+              <div><p>SHIPPING</p></div>
+              <div><p>FREE</p></div>
+            </div>
+            <div class="totals d-flex justify-content-between">
+              <div><p>TOTAL</p></div>
+              <div><p>$800</p></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
