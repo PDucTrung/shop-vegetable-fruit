@@ -531,24 +531,30 @@ if (window.document.location.pathname == "/checkout.html") {
   $("#check-pay").change(function () {
     if ($(this).is(":checked")) {
       $(".content-check").removeClass("check-none");
+      $(".content-check").addClass("check-block");
     } else {
       $(".content-check").addClass("check-none");
+      $(".content-check").removeClass("check-block");
     }
   });
 
   $("#check-pay2").change(function () {
     if ($(this).is(":checked")) {
       $(".content-check2").removeClass("check-none");
+      $(".content-check2").addClass("check-block");
     } else {
       $(".content-check2").addClass("check-none");
+      $(".content-check2").removeClass("check-block");
     }
   });
 
   $("#check-pay3").change(function () {
     if ($(this).is(":checked")) {
       $(".content-check3").removeClass("check-none");
+      $(".content-check3").addClass("check-block");
     } else {
       $(".content-check3").addClass("check-none");
+      $(".content-check3").removeClass("check-block");
     }
   });
 }
