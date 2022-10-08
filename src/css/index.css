@@ -145,13 +145,13 @@
   transform: translateX(-100%);
 }
 .Advance-Slider button.slick-prev {
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 .Advance-Slider button.slick-next:hover {
   transform: translateX(100%);
 }
 .Advance-Slider button.slick-next {
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 .Advance-Slider ul.slick-dots li button img {
   height: 0;
@@ -186,7 +186,7 @@
 }
 .Advance-Slider ul.slick-dots li button:hover a {
   width: 140px;
-  transition: all 0.2s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .Advance-Slider ul.slick-dots li button:hover {
   opacity: 1;
