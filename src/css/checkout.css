@@ -1,0 +1,12 @@
+/*  */
+.section-address {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.shopping{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+}

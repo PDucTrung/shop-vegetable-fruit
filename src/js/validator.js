@@ -1,4 +1,3 @@
-
 export const Validator = function Validator(options) {
   function getParent(element, selector) {
     while (element.parentElement) {
@@ -12,41 +11,43 @@ export const Validator = function Validator(options) {
   var selectorRules = {};
 
   // Hàm validate
-function validate(inputElement, rule) {
-  var errorElement = getParent(
-    inputElement,
-    options.formGroupSelector
-  ).querySelector(options.errorSelector);
-  var errorMessage;
+  function validate(inputElement, rule) {
+    var errorElement = getParent(
+      inputElement,
+      options.formGroupSelector
+    ).querySelector(options.errorSelector);
+    var errorMessage;
 
-  var rules = selectorRules[rule.selector];
+    var rules = selectorRules[rule.selector];
 
-  for (var i = 0; i < rules.length; ++i) {
-    switch (inputElement.type) {
-      case "radio":
-      case "checkbox":
-        errorMessage = rules[i](
-          formElement.querySelector(rule.selector + ":checked")
-        );
-        break;
-      default:
-        errorMessage = rules[i](inputElement.value);
+    for (var i = 0; i < rules.length; ++i) {
+      switch (inputElement.type) {
+        case "radio":
+        case "checkbox":
+          errorMessage = rules[i](
+            formElement.querySelector(rule.selector + ":checked")
+          );
+          break;
+        default:
+          errorMessage = rules[i](inputElement.value);
+      }
+      if (errorMessage) break;
     }
-    if (errorMessage) break;
-  }
 
-  if (errorMessage) {
-    errorElement.innerText = errorMessage;
-    getParent(inputElement, options.formGroupSelector).classList.add("invalid");
-  } else {
-    errorElement.innerText = "";
-    getParent(inputElement, options.formGroupSelector).classList.remove(
-      "invalid"
-    );
-  }
+    if (errorMessage) {
+      errorElement.innerText = errorMessage;
+      getParent(inputElement, options.formGroupSelector).classList.add(
+        "invalid"
+      );
+    } else {
+      errorElement.innerText = "";
+      getParent(inputElement, options.formGroupSelector).classList.remove(
+        "invalid"
+      );
+    }
 
-  return !errorMessage;
-};
+    return !errorMessage;
+  }
 
   // element validate
   var formElement = document.querySelector(options.form);
@@ -131,7 +132,7 @@ function validate(inputElement, rule) {
       });
     });
   }
-}
+};
 
 Validator.isRequired = function (selector, message) {
   return {
@@ -142,6 +143,7 @@ Validator.isRequired = function (selector, message) {
   };
 };
 
+// email
 Validator.isEmail = function (selector, message) {
   return {
     selector: selector,
@@ -154,6 +156,20 @@ Validator.isEmail = function (selector, message) {
   };
 };
 
+// phone
+Validator.isPhone = function (selector, message) {
+  return {
+    selector: selector,
+    test: function (value) {
+      var regex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+      return regex.test(value)
+        ? undefined
+        : message || "This field must be phone number";
+    },
+  };
+};
+
+// pass
 Validator.minLength = function (selector, min, message) {
   return {
     selector: selector,
@@ -165,6 +181,7 @@ Validator.minLength = function (selector, min, message) {
   };
 };
 
+// re-pass
 Validator.isConfirmed = function (selector, getConfirmValue, message) {
   return {
     selector: selector,
