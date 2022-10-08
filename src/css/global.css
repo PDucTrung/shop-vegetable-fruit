@@ -7,10 +7,6 @@
   margin: 0;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 img {
   vertical-align: middle;
   max-width: 100%;
@@ -85,6 +81,9 @@ img {
 }
 
 /* page */
+body{
+  overflow-x: hidden;
+}
 
 .page {
   height: 725px;

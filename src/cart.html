@@ -358,81 +358,84 @@
 
     <!-- cart -->
     <section class="section-cart font-poppins">
-      <div class="cart-product">
-        <div
-          class="title-cart fs-20 fw-400 d-flex align-items-center justify-content-between"
-        >
-          <p>PRODUCT NAME</p>
-          <p>PRICE</p>
-          <p>QUANTITY</p>
-          <p>TOTAL</p>
-        </div>
-        <div class="content-cart fs-16 fw-400 d-flex flex-column gap-3">
-          <!--  -->
-          <div
-            class="product-in-cart d-flex align-items-center justify-content-between"
-          >
+      <div class="container">
+        <div class="cart-container">
+          <div class="cart-product">
             <div
-              class="pr-cart d-flex justify-content-between align-items-center gap-3"
+              class="title-cart fs-20 fw-400 d-flex align-items-center justify-content-between"
             >
-              <div class="img-thumbail-cart">
-                <img src="img/pr-fr-1.png" alt="ss" />
+              <p>PRODUCT NAME</p>
+              <p>PRICE</p>
+              <p>QUANTITY</p>
+              <p>TOTAL</p>
+            </div>
+            <div class="content-cart fs-16 fw-400 d-flex flex-column gap-3">
+              <!--  -->
+              <div
+                class="product-in-cart d-flex align-items-center justify-content-between"
+              >
+                <div
+                  class="pr-cart d-flex justify-content-between align-items-center gap-3"
+                >
+                  <div class="img-thumbail-cart">
+                    <img src="img/pr-fr-1.png" alt="ss" />
+                  </div>
+                  <div class="name-pr-cart"><p>Red cabbage</p></div>
+                </div>
+                <div class="price-cart">
+                  <p>$<span id="price">3.25</span></p>
+                </div>
+                <div class="qty-cart">
+                  <button class="minus" id="decrement"><i class="fas fa-minus"></i></button>
+                  <input class="number-qty" type="number" id="input" readonly />
+                  <button class="plus" id="increment"><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="total-cart">
+                  <p>$<span id="total">3.25</span></p>
+                </div>
               </div>
-              <div class="name-pr-cart"><p>Red cabbage</p></div>
-            </div>
-            <div class="price-cart">
-              <p>$<span id="price">3.25</span></p>
-            </div>
-            <div class="qty-cart">
-              <button class="minus" id="decrement"><i class="fas fa-minus"></i></button>
-              <input class="number-qty" type="number" id="input" readonly />
-              <button class="plus" id="increment"><i class="fas fa-plus"></i></button>
-            </div>
-            <div class="total-cart">
-              <p>$<span id="total">3.25</span></p>
-            </div>
-          </div>
-
-          <!--  -->
-          <div
-            class="product-in-cart d-flex align-items-center justify-content-between"
-          >
-            <div
-              class="pr-cart d-flex justify-content-between align-items-center gap-3"
-            >
-              <div class="img-thumbail-cart">
-                <img src="img/pr-fr-2.png" alt="ss" />
+              <!--  -->
+              <div
+                class="product-in-cart d-flex align-items-center justify-content-between"
+              >
+                <div
+                  class="pr-cart d-flex justify-content-between align-items-center gap-3"
+                >
+                  <div class="img-thumbail-cart">
+                    <img src="img/pr-fr-2.png" alt="ss" />
+                  </div>
+                  <div class="name-pr-cart"><p>pea</p></div>
+                </div>
+                <div class="price-cart">
+                  <p>$<span id="price-2">2.00</span></p>
+                </div>
+                <div class="qty-cart">
+                  <button class="minus" id="decrement"><i class="fas fa-minus"></i></button>
+                  <input class="number-qty" type="number" id="input" readonly />
+                  <button class="plus" id="increment"><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="total-cart">
+                  <p>$<span id="total-2">2.00</span></p>
+                </div>
               </div>
-              <div class="name-pr-cart"><p>pea</p></div>
-            </div>
-            <div class="price-cart">
-              <p>$<span id="price-2">2.00</span></p>
-            </div>
-            <div class="qty-cart">
-              <button class="minus" id="decrement"><i class="fas fa-minus"></i></button>
-              <input class="number-qty" type="number" id="input" readonly />
-              <button class="plus" id="increment"><i class="fas fa-plus"></i></button>
-            </div>
-            <div class="total-cart">
-              <p>$<span id="total-2">2.00</span></p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="spacer"></div>
-      <div class="list-but-cart d-flex flex-lg-row align-items-center justify-content-between">
-        <div class="box-coupon d-flex flex-column align-items-center gap-3">
-          <div class="coupon">
-            <input class="coupon-code fs-16 fw-400" id="coupon-code" name="coupon-code" placeholder="Coupon code" type="text">
+        <div class="spacer"></div>
+        <div class="list-but-cart d-flex flex-lg-row align-items-center justify-content-lg-between flex-column gap-5">
+          <div class="box-coupon d-flex flex-column align-items-center gap-3">
+            <div class="coupon">
+              <input class="coupon-code fs-16 fw-400" id="coupon-code" name="coupon-code" placeholder="Coupon code" type="text">
+            </div>
+            <div class="apply-coupon">
+              <button class="btn-coupon fs-16 fw-400 fw-400 text-uppercase">Apply coupon</button>
+            </div>
           </div>
-          <div class="apply-coupon">
-            <button class="btn-coupon fs-16 fw-400 fw-400 text-uppercase">Apply coupon</button>
-          </div>
-        </div>
-        <div class="box-total d-flex flex-column align-items-start gap-3">
-          <div class="total-sum"><p>Total: <span class="fs-20">$</span><span class="font-mali fs-24 fw-500" id="total-sum"></span></p></div>
-          <div class="cart-check">
-            <button class="btn-next-to-checkout fw-400 text-uppercase"><a class="text-decoration-none" href="checkout.html">Proceed to checkout</a></button>
+          <div class="box-total d-flex flex-column align-items-start gap-3">
+            <div class="total-sum"><p>Total: <span class="fs-20">$</span><span class="font-mali fs-24 fw-500" id="total-sum"></span></p></div>
+            <div class="cart-check">
+              <button class="btn-next-to-checkout fw-400 text-uppercase"><a class="text-decoration-none" href="checkout.html">Proceed to checkout</a></button>
+            </div>
           </div>
         </div>
       </div>
