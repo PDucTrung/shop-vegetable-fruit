@@ -243,9 +243,7 @@
                                   >
                                 </li>
                                 <li class="rd-nav-item active">
-                                  <a
-                                    href="product.html"
-                                    class="rd-nav-link"
+                                  <a href="product.html" class="rd-nav-link"
                                     >Shop</a
                                   >
                                 </li>
@@ -273,11 +271,7 @@
                           <a href="index.html" class="rd-nav-link">Home</a>
                         </li>
                         <li class="rd-nav-item active">
-                          <a
-                            href="product.html"
-                            class="rd-nav-link"
-                            >Shop</a
-                          >
+                          <a href="product.html" class="rd-nav-link">Shop</a>
                         </li>
                         <li class="rd-nav-item">
                           <a class="rd-nav-link">About</a>
@@ -309,14 +303,12 @@
                         <div id="searchModal" class="modal3">
                           <!-- Modal content -->
                           <div
-                            class="modal-content3 text-black animate__animated animate__fadeInUp animate__delay-0s"
+                            class="modal-content3 text-black animate__animated animate__fadeInUp animate__delay-0s position-relative"
                           >
-                            <div class="close3">
+                            <div class="close3 position-absolute">
                               <i class="bi bi-x-circle float-end"></i>
                             </div>
-                            <div
-                              class="searchBox d-flex align-content-lg-center"
-                            >
+                            <div class="searchBox d-flex align-content-center">
                               <div>
                                 <input
                                   type="search"
@@ -325,9 +317,6 @@
                                   placeholder="Search..."
                                   class="search-text"
                                 />
-                              </div>
-                              <div class="search-icon">
-                                <i class="bi bi-search"></i>
                               </div>
                             </div>
                           </div>
@@ -386,9 +375,13 @@
                   <p>$<span id="price">3.25</span></p>
                 </div>
                 <div class="qty-cart">
-                  <button class="minus" id="decrement"><i class="fas fa-minus"></i></button>
+                  <button class="minus" id="decrement">
+                    <i class="fas fa-minus"></i>
+                  </button>
                   <input class="number-qty" type="number" id="input" readonly />
-                  <button class="plus" id="increment"><i class="fas fa-plus"></i></button>
+                  <button class="plus" id="increment">
+                    <i class="fas fa-plus"></i>
+                  </button>
                 </div>
                 <div class="total-cart">
                   <p>$<span id="total">3.25</span></p>
@@ -410,9 +403,13 @@
                   <p>$<span id="price-2">2.00</span></p>
                 </div>
                 <div class="qty-cart">
-                  <button class="minus" id="decrement"><i class="fas fa-minus"></i></button>
+                  <button class="minus" id="decrement">
+                    <i class="fas fa-minus"></i>
+                  </button>
                   <input class="number-qty" type="number" id="input" readonly />
-                  <button class="plus" id="increment"><i class="fas fa-plus"></i></button>
+                  <button class="plus" id="increment">
+                    <i class="fas fa-plus"></i>
+                  </button>
                 </div>
                 <div class="total-cart">
                   <p>$<span id="total-2">2.00</span></p>
@@ -422,19 +419,38 @@
           </div>
         </div>
         <div class="spacer"></div>
-        <div class="list-but-cart d-flex flex-lg-row align-items-center justify-content-lg-between flex-column gap-5">
+        <div
+          class="list-but-cart d-flex flex-lg-row align-items-center justify-content-lg-between flex-column gap-5"
+        >
           <div class="box-coupon d-flex flex-column align-items-center gap-3">
             <div class="coupon">
-              <input class="coupon-code fs-16 fw-400" id="coupon-code" name="coupon-code" placeholder="Coupon code" type="text">
+              <input
+                class="coupon-code fs-16 fw-400"
+                id="coupon-code"
+                name="coupon-code"
+                placeholder="Coupon code"
+                type="text"
+              />
             </div>
             <div class="apply-coupon">
-              <button class="btn-coupon fs-16 fw-400 fw-400 text-uppercase">Apply coupon</button>
+              <button class="btn-coupon fs-16 fw-400 fw-400 text-uppercase">
+                Apply coupon
+              </button>
             </div>
           </div>
           <div class="box-total d-flex flex-column align-items-start gap-3">
-            <div class="total-sum"><p>Total: <span class="fs-20">$</span><span class="font-mali fs-24 fw-500" id="total-sum"></span></p></div>
+            <div class="total-sum">
+              <p>
+                Total: <span class="fs-20">$</span
+                ><span class="font-mali fs-24 fw-500" id="total-sum"></span>
+              </p>
+            </div>
             <div class="cart-check">
-              <button class="btn-next-to-checkout fw-400 text-uppercase"><a class="text-decoration-none" href="checkout.html">Proceed to checkout</a></button>
+              <button class="btn-next-to-checkout fw-400 text-uppercase">
+                <a class="text-decoration-none" href="checkout.html"
+                  >Proceed to checkout</a
+                >
+              </button>
             </div>
           </div>
         </div>
