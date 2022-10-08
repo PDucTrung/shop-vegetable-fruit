@@ -14,6 +14,7 @@ import "../css/index.css";
 import "../css/global.css";
 import "../css/product.css";
 import "../css/cart.css";
+import "../css/checkout.css";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {

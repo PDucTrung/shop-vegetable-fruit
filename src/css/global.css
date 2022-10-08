@@ -788,6 +788,10 @@ footer {
   color: #000;
 }
 
+.text-uppercase{
+  text-transform: uppercase;
+}
+
 /* animate scroll */
 .animate__animated.animate__bounce {
   --animate-duration: 3s;

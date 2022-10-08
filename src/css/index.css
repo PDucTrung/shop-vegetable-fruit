@@ -237,6 +237,7 @@
   text-transform: capitalize;
   font-size: 48px;
   text-align: center;
+  padding: 10px;
 }
 .Advance-Slider .item {
   color: #fff;

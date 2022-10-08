@@ -360,7 +360,7 @@
     <section class="section-cart font-poppins">
       <div class="cart-product">
         <div
-          class="title-cart fs-20 fw-400 d-flex align-items-center justify-content-between gap-10"
+          class="title-cart fs-20 fw-400 d-flex align-items-center justify-content-between"
         >
           <p>PRODUCT NAME</p>
           <p>PRICE</p>
@@ -384,9 +384,9 @@
               <p>$<span id="price">3.25</span></p>
             </div>
             <div class="qty-cart">
-              <button id="decrement"><i class="fas fa-minus"></i></button>
-              <input type="number" id="input" readonly />
-              <button id="increment"><i class="fas fa-plus"></i></button>
+              <button class="minus" id="decrement"><i class="fas fa-minus"></i></button>
+              <input class="number-qty" type="number" id="input" readonly />
+              <button class="plus" id="increment"><i class="fas fa-plus"></i></button>
             </div>
             <div class="total-cart">
               <p>$<span id="total">3.25</span></p>
@@ -409,29 +409,31 @@
               <p>$<span id="price-2">2.00</span></p>
             </div>
             <div class="qty-cart">
-              <button id="decrement"><i class="fas fa-minus"></i></button>
-              <input type="number" id="input" readonly />
-              <button id="increment"><i class="fas fa-plus"></i></button>
+              <button class="minus" id="decrement"><i class="fas fa-minus"></i></button>
+              <input class="number-qty" type="number" id="input" readonly />
+              <button class="plus" id="increment"><i class="fas fa-plus"></i></button>
             </div>
             <div class="total-cart">
-              <p>$<span id="total-2">4.00</span></p>
+              <p>$<span id="total-2">2.00</span></p>
             </div>
           </div>
         </div>
       </div>
       <div class="spacer"></div>
-      <div class="list-but-cart">
-        <div class="box-coupon">
+      <div class="list-but-cart d-flex flex-lg-row align-items-center justify-content-between">
+        <div class="box-coupon d-flex flex-column align-items-center gap-3">
           <div class="coupon">
             <input class="coupon-code fs-16 fw-400" id="coupon-code" name="coupon-code" placeholder="Coupon code" type="text">
           </div>
           <div class="apply-coupon">
-            <button class="btn-coupon fs-16 fw-400">Apply coupon</button>
+            <button class="btn-coupon fs-16 fw-400 fw-400 text-uppercase">Apply coupon</button>
           </div>
         </div>
-        <div class="box-total">
-          <div class="total-sum"><p class="">Total: $<span class="font-mali" id="total-sum"></span></p></div>
-          <div class="cart-check"></div>
+        <div class="box-total d-flex flex-column align-items-start gap-3">
+          <div class="total-sum"><p>Total: <span class="fs-20">$</span><span class="font-mali fs-24 fw-500" id="total-sum"></span></p></div>
+          <div class="cart-check">
+            <button class="btn-next-to-checkout fw-400 text-uppercase"><a class="text-decoration-none" href="checkout.html">Proceed to checkout</a></button>
+          </div>
         </div>
       </div>
     </section>

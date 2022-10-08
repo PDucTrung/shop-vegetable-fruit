@@ -1,3 +1,8 @@
+.section-cart {
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
 .cart-product {
   padding: 20px;
   border: 1px solid gray;
@@ -21,6 +26,22 @@
   width: fit-content;
 }
 
+.minus,
+.plus {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.number-qty {
+  border: 1px solid gray;
+  width: 50px;
+  height: 30px;
+  padding-left: 13px;
+  text-align: center;
+}
+
 /* coupon code*/
 .coupon-code {
   padding: 15px 10px;
@@ -29,8 +50,108 @@
 
 .apply-coupon .btn-coupon {
   padding: 15px 10px;
-  border: 1px solid orange;
+  border: 2px solid orange;
   background-color: orange;
   color: white;
   width: 250px;
+}
+
+.apply-coupon .btn-coupon:hover {
+  transition: all 0.2s linear;
+  background: white;
+  color: orange;
+}
+
+/* checkout */
+
+.cart-check .btn-next-to-checkout {
+  padding: 15px 10px;
+  border: 2px solid green;
+  background-color: green;
+  color: white !important;
+  width: 250px;
+}
+
+.cart-check .btn-next-to-checkout a{
+  font-weight: 400;
+  color: white;
+}
+
+.cart-check .btn-next-to-checkout:hover a{
+  color: green;
+}
+
+.cart-check .btn-next-to-checkout:hover {
+  transition: all 0.2s linear;
+  background: white;
+  color: green;
+}
+
+.pr-cart {
+  width: 270px;
+}
+
+.name-pr-cart {
+  width: 120px;
+}
+
+.cart-product {
+  width: 900px;
+}
+
+.qty-cart {
+  width: 330px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-cart,
+.price-cart {
+  width: 55px;
+  text-align: center;
+}
+
+.list-but-cart {
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .list-but-cart {
+    width: 900px;
+  }
+  .pr-cart {
+    width: 270px;
+  }
+
+  .name-pr-cart {
+    width: 120px;
+  }
+
+  .cart-product {
+    width: 900px;
+  }
+
+  .qty-cart {
+    width: 330px;
+  }
+
+  .total-cart,
+  .price-cart {
+    width: 55px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1400px) {
 }
