@@ -1,0 +1,41 @@
+.box-infor i {
+  font-size: 70px;
+  -webkit-animation: textfl 700ms infinite;
+  -moz-animation: textfl 700ms infinite;
+  -o-animation: textfl 700ms infinite;
+  animation: textfl 700ms infinite;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.box-infor {
+  border-radius: 15px;
+  border: 1px solid green;
+  padding: 20px;
+  width: 360px;
+}
+
+.section-contact-infor {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.seaction-cmt-contact {
+  padding: 50px 0px;
+}
+
+.map {
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.seaction-cmt-contact .add-cmt {
+  width: 80%;
+  margin: 0 auto;
+}
+

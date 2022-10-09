@@ -19,6 +19,7 @@ import "../css/productdetail.css";
 import "../css/about.css";
 import "../css/blog.css";
 import "../css/blogdetail.css";
+import "../css/contact.css"
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {

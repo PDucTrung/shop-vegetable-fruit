@@ -879,3 +879,48 @@ footer {
     box-shadow: 0 0 3px #006400;
   }
 }
+
+@-webkit-keyframes textfl {
+  0% {
+    color: green;
+  }
+  50% {
+    color: #32cd32;
+  }
+  100% {
+    color: green;
+  }
+}
+@-moz-keyframes textfl {
+  0% {
+    color: green;
+  }
+  50% {
+    color: #32cd32;
+  }
+  100% {
+    color: green;
+  }
+}
+@-o-keyframes textfl {
+  0% {
+    color: green;
+  }
+  50% {
+    color: #32cd32;
+  }
+  100% {
+    color: green;
+  }
+}
+@keyframes textfl {
+  0% {
+    color: green;
+  }
+  50% {
+    color: #32cd32;
+  }
+  100% {
+    color: green;
+  }
+}
