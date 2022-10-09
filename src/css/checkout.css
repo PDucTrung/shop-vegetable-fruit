@@ -4,7 +4,7 @@
   padding-top: 100px;
   padding-bottom: 50px;
 }
-.section-pay{
+.section-pay {
   padding-bottom: 100px;
 }
 
@@ -35,7 +35,6 @@
 .check-block {
   display: block;
 }
-
 
 .content-check,
 .content-check2,
@@ -93,6 +92,25 @@
   border-bottom: 1px solid gray;
 }
 
+.button-checkout {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-checkout {
+  padding: 10px 20px;
+  border: 2px solid green;
+  background-color: green;
+  color: white;
+}
+
+.btn-checkout:hover {
+  background-color: white;
+  color: green;
+  transition: all 0.3s linear;
+}
 
 @media screen and (min-width: 576px) {
 }

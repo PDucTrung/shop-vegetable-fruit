@@ -768,6 +768,10 @@ footer {
   font-size: 20px;
 }
 
+.fs-40{
+  font-size: 40px;
+}
+
 .text-green {
   color: #006400;
 }

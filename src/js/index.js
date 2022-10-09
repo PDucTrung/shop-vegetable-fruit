@@ -15,6 +15,7 @@ import "../css/global.css";
 import "../css/product.css";
 import "../css/cart.css";
 import "../css/checkout.css";
+import "../css/productdetail.css";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {
@@ -194,6 +195,20 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(data);
     },
   });
+
+    Validator({
+      form: "#form-5",
+      formGroupSelector: ".form-group",
+      errorSelector: ".form-message",
+      rules: [
+        Validator.isRequired("#fullname"),
+        Validator.isRequired("#email"),
+        Validator.isEmail("#email"),
+      ],
+      onSubmit: function (data) {
+        console.log(data);
+      },
+    });
 });
 
 // slider ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -557,4 +572,58 @@ if (window.document.location.pathname == "/checkout.html") {
       $(".content-check3").removeClass("check-block");
     }
   });
+}
+
+// slider detail product
+$(".slider-for").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: ".slider-nav",
+});
+$(".slider-nav").slick({
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 1500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: ".slider-for",
+  focusOnSelect: true,
+  arrows: false,
+  dots: false,
+});
+
+// quanlity product detail /////////////////////////////////////////////////////////////////////////////////////////////////////
+if (window.document.location.pathname == "/productdetail.html") {
+  let counter = 0;
+
+  function increment2() {
+    counter++;
+  }
+
+  function decrement2() {
+    counter--;
+  }
+
+  function get() {
+    return counter;
+  }
+
+  const inc = document.getElementById("increment2");
+  const input = document.getElementById("input");
+  const dec = document.getElementById("decrement2");
+
+  inc.addEventListener("click", () => {
+    increment2();
+    input.value = get();
+  });
+
+  dec.addEventListener("click", () => {
+    if (input.value > 0) {
+      decrement2();
+    }
+    input.value = get();
+  });
+
 }
