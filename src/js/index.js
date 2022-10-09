@@ -17,6 +17,7 @@ import "../css/cart.css";
 import "../css/checkout.css";
 import "../css/productdetail.css";
 import "../css/about.css";
+import "../css/blog.css";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {
@@ -696,4 +697,17 @@ $(".slider-team").slick({
       },
     },
   ],
+});
+
+// slider team /////////////////////////////////////////////////////////////////////
+$(".slider-list-blog").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 1000,
+  cssEase: "linear",
+  arrows: false,
+  dots: true,
 });

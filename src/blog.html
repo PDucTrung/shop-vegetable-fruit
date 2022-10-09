@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFruit</title>
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <div class="logo-load">
+          <img src="/img/logoloading.png" alt="ss" />
+        </div>
+      </div>
+    </div>
+
+    <!-- page -->
+    <div class="page-2">
+      <!-- page header -->
+      <header class="seaction page-header position-fixed">
+        <div class="heading-header bg-dark text-white">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center gap-lg-3">
+                <div
+                  class="phone animate__animated animate__pulse animate__delay-1s"
+                >
+                  <span class="icon bi bi-telephone-fill"></span> +84
+                  081-953-791
+                </div>
+                <div
+                  class="address m-lg-2 animate__animated animate__pulse animate__delay-2s d-none d-md-block"
+                >
+                  <span class="icon bi bi-geo-alt-fill"></span> 298 Đ. Cầu Diễn,
+                  Minh Khai, Bắc Từ Liêm, Hà Nội
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="user">
+                  <span
+                    id="userBtn"
+                    class="i-per bi bi-person-circle hvr-bounce-in"
+                  ></span>
+                  <!-- The Modal user -->
+                  <div id="userModal" class="modal">
+                    <!-- Modal content -->
+                    <div
+                      class="modal-content text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                    >
+                      <div class="close">
+                        <i class="bi bi-x-circle float-end"></i>
+                      </div>
+                      <br />
+                      <img src="/img/logo.png" alt="lg" />
+
+                      <!-- form sign in -->
+
+                      <form action="" method="POST" class="form" id="form-2">
+                        <p class="heading font-mali">SIGN IN</p>
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <a href="#" class="link">Forward your password ?</a>
+
+                        <button class="form-submit">Sign in</button>
+
+                        <p>
+                          Do you have an account?
+                          <span class="reg" id="regBtn">Register now </span>
+                        </p>
+
+                        <p class="text-center text-black">OR</p>
+
+                        <div class="loginWith d-flex justify-content-between">
+                          <i class="icon bi bi-facebook hvr-bob"></i>
+                          <i class="icon bi bi-google hvr-bob"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- The Modal reg -->
+                  <div id="regModal" class="modal2">
+                    <!-- Modal content -->
+                    <div
+                      class="modal-content2 text-black animate__animated animate__fadeInRight animate__delay-0s"
+                    >
+                      <div class="close2">
+                        <i class="bi bi-x-circle float-end"></i>
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <!-- form sign up -->
+                      <form action="" method="POST" class="form" id="form-1">
+                        <h3 class="heading font-mali">Sign up</h3>
+
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="fullname" class="form-label font-poppins"
+                            >Full name</label
+                          >
+                          <input
+                            id="fullname"
+                            name="fullname"
+                            type="text"
+                            placeholder="VD: sunsan"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Mật khẩu</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password_confirmation" class="form-label"
+                            >Nhập lại mật khẩu</label
+                          >
+                          <input
+                            id="password_confirmation"
+                            name="password_confirmation"
+                            placeholder="Confirm password"
+                            type="password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <button class="form-submit">Sign up</button>
+
+                        <p class="text-center text-black">OR</p>
+
+                        <div class="loginWith d-flex justify-content-between">
+                          <i class="icon bi bi-facebook hvr-bob"></i>
+                          <i class="icon bi bi-google hvr-bob"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="select m-2">
+                  <select name="language" class="bg-dark">
+                    <option>VN</option>
+                    <option>EN</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- navbar -->
+
+        <div class="rd-navbar-wrap navigation shadow-bottom font-poppins">
+          <div class="container">
+            <div class="rd-navbar-main">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="">
+                  <!-- RD Navbar -->
+                  <div class="rd-navbar-brand">
+                    <a class="brand d-none d-xl-block" href="index.html"
+                      ><img src="/img/logo.png" alt="ss"
+                    /></a>
+                    <div>
+                      <i
+                        id="menuBtn"
+                        class="icon bi bi-list d-xl-none hvr-grow-rotate"
+                      ></i>
+                      <!-- The Modal -->
+                      <div id="menuModal" class="modal4 d-xl-none">
+                        <!-- Modal content -->
+                        <div
+                          class="modal-content4 text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                        >
+                          <div class="close4">
+                            <i class="bi bi-x-circle float-end"></i>
+                          </div>
+                          <br />
+                          <div class="text-black">
+                            <!-- RD Navbar Nav-->
+                            <ul
+                              class="rd-navbar-nav d-flex flex-column align-items-center"
+                            >
+                              <li class="rd-nav-item">
+                                <a href="index.html" class="rd-nav-link"
+                                  >Home</a
+                                >
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="product.html" class="rd-nav-link"
+                                  >Shop</a
+                                >
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="about.html" class="rd-nav-link"
+                                  >About</a
+                                >
+                              </li>
+                              <li class="rd-nav-item active">
+                                <a href="blog.html" class="rd-nav-link">Blog</a>
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="contact.html" class="rd-nav-link"
+                                  >Contact</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-none d-xl-block">
+                  <div class="text-center">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav d-flex">
+                      <li class="rd-nav-item">
+                        <a href="index.html" class="rd-nav-link">Home</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="product.html" class="rd-nav-link">Shop</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="about.html" class="rd-nav-link">About</a>
+                      </li>
+                      <li class="rd-nav-item active">
+                        <a href="blog.html" class="rd-nav-link">Blog</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="contact.html" class="rd-nav-link">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="">
+                  <div
+                    class="d-flex justify-content-end align-items-center gap-4"
+                  >
+                    <div class="cart position-relative">
+                      <div class="number position-absolute">2</div>
+                      <a href="cart.html"
+                        ><i class="i bi bi-basket hvr-grow-rotate"></i
+                      ></a>
+                    </div>
+                    <div class="search wrapper">
+                      <div
+                        class="i bi bi-search hvr-grow-rotate"
+                        id="searchBtn"
+                      ></div>
+                      <!-- The Modal reg -->
+                      <div id="searchModal" class="modal3">
+                        <!-- Modal content -->
+                        <div
+                          class="modal-content3 text-black animate__animated animate__fadeInUp animate__delay-0s position-relative"
+                        >
+                          <div class="close3 position-absolute">
+                            <i class="bi bi-x-circle float-end"></i>
+                          </div>
+                          <div class="searchBox d-flex align-content-center">
+                            <div>
+                              <input
+                                type="search"
+                                name="search"
+                                id=""
+                                placeholder="Search..."
+                                class="search-text"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- page footer -->
+      <div class="section-page-for font-poppins position-relative">
+        <div class="page-fo">
+          <div class="img-fill"><img src="img/page-fo.jpg" alt="" /></div>
+        </div>
+        <div class="title-page-fo text-center text-white position-absolute">
+          <h1 class="font-mali">Blog</h1>
+          <p class="fz-24 fw-400">
+            Home <span class="text-orange-fo">/ Blog</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- list blog -->
+    <section class="section-list-blog font-poppins">
+      <div class="container">
+        <div class="slider-list-blog">
+          <!-- list blog -->
+          <div class="list-blog d-flex justify-content-center flex-wrap align-items-center gap-5">
+            <!-- blog 1-->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-1.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-1.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">1</div>
+            </div>
+
+            <!-- blog 2 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-2.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Kate Williams
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-2.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Everyday Dinner Choices for a Healthier, Happier You</div>
+              <div class="number-blog position-absolute fs-24">2</div>
+            </div>
+
+            <!-- blog 3 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-3.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Peter McMillan
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-3.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Standardizing the Organic Industry in the USA</div>
+              <div class="number-blog position-absolute fs-24">3</div>
+            </div>
+
+            <!-- blog 4 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-1.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-4.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">4</div>
+            </div>
+
+            <!-- blog 5 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-2.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-5.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">5</div>
+            </div>
+
+            <!-- blog 6-->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-3.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-6.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">6</div>
+            </div>
+          </div>
+
+          <!-- list blog 2-->
+          <div class="list-blog d-flex justify-content-center flex-wrap align-items-center gap-5">
+            <!-- blog 1-->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-1.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-6.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">7</div>
+            </div>
+
+            <!-- blog 2 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-2.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Kate Williams
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-5.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Everyday Dinner Choices for a Healthier, Happier You</div>
+              <div class="number-blog position-absolute fs-24">8</div>
+            </div>
+
+            <!-- blog 3 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-3.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Peter McMillan
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-4.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Standardizing the Organic Industry in the USA</div>
+              <div class="number-blog position-absolute fs-24">9</div>
+            </div>
+
+            <!-- blog 4 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-1.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-3.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">10</div>
+            </div>
+
+            <!-- blog 5 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-2.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-2.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">11</div>
+            </div>
+
+            <!-- blog 6-->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-3.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-1.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">12</div>
+            </div>
+          </div>
+
+          <!-- list blog 3 -->
+          <div class="list-blog d-flex justify-content-center flex-wrap align-items-center gap-5">
+            <!-- blog 1-->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-1.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-6.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">13</div>
+            </div>
+
+            <!-- blog 2 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-2.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Kate Williams
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-4.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Everyday Dinner Choices for a Healthier, Happier You</div>
+              <div class="number-blog position-absolute fs-24">14</div>
+            </div>
+
+            <!-- blog 3 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-3.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Peter McMillan
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-2.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Standardizing the Organic Industry in the USA</div>
+              <div class="number-blog position-absolute fs-24">15</div>
+            </div>
+
+            <!-- blog 4 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-1.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-5.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">16</div>
+            </div>
+
+            <!-- blog 5 -->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-2.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-3.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">17</div>
+            </div>
+
+            <!-- blog 6-->
+            <div class="blog-box d-flex flex-column gap-2 align-content-center justify-content-center position-relative">
+              <div
+                class="user-up-box d-flex align-items-center justify-content-between"
+              >
+                <div class="name-person-up-blog d-flex gap-2 align-items-center">
+                  <div class="img-thumbnail-user">
+                    <img src="img/i-user-up-3.jpg" alt="ss" />
+                  </div>
+                  <div class="name-per-up">
+                    <span class="text-gray-fo">by</span> Ann Smith
+                  </div>
+                </div>
+                <div class="time-up-blog text-orange-fo">May 17, 2018</div>
+              </div>
+              <div class="img-thumbnail-blog-box">
+                <img src="img/blog-1.jpg" alt="ds" />
+              </div>
+              <div class="name-blog-box fs-20 fw-400 text-green">Why Organic Farming Keeps Getting Popular Globally</div>
+              <div class="number-blog position-absolute fs-24">18</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-white font-poppins bg-dark">
+      <div class="container">
+        <div class="row gap-3 gap-md-0">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="gird-footer1 text-center d-flex flex-column gap-3">
+              <div><img src="img/logo2.png" alt="ss" /></div>
+              <p class="text-gray-fo">Weekdays: 08:00am - 08:00pm</p>
+              <p class="text-gray-fo">Weekends: 10:00am - 06:00pm</p>
+              <div class="line"></div>
+              <div class="list-icon-footer d-flex gap-5 justify-content-center">
+                <div>Follow Us:</div>
+                <div class="d-flex gap-3">
+                  <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                  ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 ft-2 col-lg-4">
+            <div class="gird-footer2 text-center d-flex flex-column gap-3">
+              <h4>CONTACTS</h4>
+              <p>
+                <span><i class="bi bi-phone"></i></span> &nbsp;
+                <span class="text-gray-fo">+ 84 981 953 791</span>
+              </p>
+              <p>
+                <span><i class="bi bi-geo-alt-fill"></i></span> &nbsp;
+                <span class="text-gray-fo">
+                  298 Đ. Cầu Diễn, Minh Khai, Bắc Từ Liêm, Hà Nội
+                </span>
+              </p>
+              <p>
+                <span><i class="bi bi-envelope"></i></span> &nbsp;
+                <span class="text-gray-fo">TFruit@gmail.com</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 ft-3 col-lg-4">
+            <div class="gird-footer1 text-center d-flex flex-column gap-3">
+              <h4>NEWSLETTER</h4>
+              <p class="text-gray-fo">
+                Join our email newsletter for news and tips.
+              </p>
+              <div class="form-footer">
+                <form action="" method="POST" class="form bg-dark" id="form-3">
+                  <div class="form-group">
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      placeholder="Enter your E-mail"
+                      class="form-control text-center"
+                    />
+                    <span class="form-message"></span>
+                  </div>
+                  <button class="form-submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="back-to-top text-white position-fixed hvr-grow-rotate">
+      <a class="text-none text-white" href="#"
+        ><i class="bi bi-box-arrow-up"></i
+      ></a>
+    </div>
+    <script type="module" src="js/validator.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

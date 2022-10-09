@@ -1,0 +1,87 @@
+.section-list-blog {
+  padding: 100px 0px;
+}
+
+.blog-box {
+  padding: 20px 0px;
+  width: max-content;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.blog-box:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.2s linear;
+}
+
+.blog-box:hover .img-thumbnail-blog-box img {
+  transform: scale(1.2);
+  transition: all 0.2s linear;
+}
+
+.img-thumbnail-blog-box {
+  overflow: hidden;
+}
+
+.img-thumbnail-blog-box img {
+  width: 360px;
+  height: 360px;
+}
+
+.img-thumbnail-user img {
+  border-radius: 50%;
+}
+
+.user-up-box {
+  padding: 0px 10px;
+}
+
+.name-blog-box {
+  max-width: 360px;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.number-blog {
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  color: white;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.slider-list-blog .slick-track {
+  padding: 40px 0px;
+}
+
+.slider-list-blog .slick-dots {
+  display: flex;
+  position: absolute;
+  gap: 0 20px;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 0;
+  left: 50%;
+  transform: translate(-50%, 20px);
+}
+
+.slider-list-blog .slick-dots button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: gainsboro;
+}
+
+.slider-list-blog .slick-dots .slick-active button {
+  background-color: #99ccff;
+  transition: all 0.2s linear;
+}
