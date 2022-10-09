@@ -708,6 +708,7 @@ footer {
   align-items: center;
   padding-bottom: 5px;
   opacity: 0.5;
+  z-index: 99;
 }
 
 .back-to-top i {
@@ -768,7 +769,7 @@ footer {
   font-size: 20px;
 }
 
-.fs-40{
+.fs-40 {
   font-size: 40px;
 }
 
@@ -811,4 +812,64 @@ footer {
 
 .animate__animated.animate__flash {
   --animate-duration: 1s;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #32cd32;
+    -webkit-box-shadow: 0 0 3px #32cd32;
+  }
+  50% {
+    background-color: green;
+    -webkit-box-shadow: 0 0 10px green;
+  }
+  100% {
+    background-color: #006400;
+    -webkit-box-shadow: 0 0 3px #006400;
+  }
+}
+
+@-moz-keyframes glowing {
+  0% {
+    background-color: #32cd32;
+    -moz-box-shadow: 0 0 3px #32cd32;
+  }
+  50% {
+    background-color: green;
+    -moz-box-shadow: 0 0 10px green;
+  }
+  100% {
+    background-color: #006400;
+    -moz-box-shadow: 0 0 3px #006400;
+  }
+}
+
+@-o-keyframes glowing {
+  0% {
+    background-color: #32cd32;
+    box-shadow: 0 0 3px #32cd32;
+  }
+  50% {
+    background-color: green;
+    box-shadow: 0 0 10px green;
+  }
+  100% {
+    background-color: #006400;
+    box-shadow: 0 0 3px #006400;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #32cd32;
+    box-shadow: 0 0 3px #32cd32;
+  }
+  50% {
+    background-color: green;
+    box-shadow: 0 0 10px green;
+  }
+  100% {
+    background-color: #006400;
+    box-shadow: 0 0 3px #006400;
+  }
 }

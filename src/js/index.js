@@ -16,6 +16,7 @@ import "../css/product.css";
 import "../css/cart.css";
 import "../css/checkout.css";
 import "../css/productdetail.css";
+import "../css/about.css";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {
@@ -196,19 +197,19 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-    Validator({
-      form: "#form-5",
-      formGroupSelector: ".form-group",
-      errorSelector: ".form-message",
-      rules: [
-        Validator.isRequired("#fullname"),
-        Validator.isRequired("#email"),
-        Validator.isEmail("#email"),
-      ],
-      onSubmit: function (data) {
-        console.log(data);
-      },
-    });
+  Validator({
+    form: "#form-5",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#fullname"),
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+    ],
+    onSubmit: function (data) {
+      console.log(data);
+    },
+  });
 });
 
 // slider ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -439,7 +440,6 @@ $(".slider-partners").slick({
 });
 
 // sldier list product /////////////////////////////////////////////////////////////////////////////////////////////////
-// slider about ////////////////////////////////////////////////////////
 $(".slider-fruit").slick({
   infinite: true,
   slidesToShow: 1,
@@ -625,5 +625,75 @@ if (window.document.location.pathname == "/productdetail.html") {
     }
     input.value = get();
   });
-
 }
+
+// slider history ////////////////////////////////////////////////////////
+$(".slider-history").slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 1000,
+  cssEase: "linear",
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+
+// slider team /////////////////////////////////////////////////////////////////////
+$(".slider-team").slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  speed: 1000,
+  cssEase: "linear",
+  arrows: false,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});

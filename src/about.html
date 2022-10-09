@@ -1,12 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    dsadasda
-</body>
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <div class="logo-load">
+          <img src="/img/logoloading.png" alt="ss" />
+        </div>
+      </div>
+    </div>
+
+    <!-- page -->
+    <div class="page-2">
+      <!-- page header -->
+      <header class="seaction page-header position-fixed">
+        <div class="heading-header bg-dark text-white">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center gap-lg-3">
+                <div
+                  class="phone animate__animated animate__pulse animate__delay-1s"
+                >
+                  <span class="icon bi bi-telephone-fill"></span> +84
+                  081-953-791
+                </div>
+                <div
+                  class="address m-lg-2 animate__animated animate__pulse animate__delay-2s d-none d-md-block"
+                >
+                  <span class="icon bi bi-geo-alt-fill"></span> 298 Đ. Cầu Diễn,
+                  Minh Khai, Bắc Từ Liêm, Hà Nội
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="user">
+                  <span
+                    id="userBtn"
+                    class="i-per bi bi-person-circle hvr-bounce-in"
+                  ></span>
+                  <!-- The Modal user -->
+                  <div id="userModal" class="modal">
+                    <!-- Modal content -->
+                    <div
+                      class="modal-content text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                    >
+                      <div class="close">
+                        <i class="bi bi-x-circle float-end"></i>
+                      </div>
+                      <br />
+                      <img src="/img/logo.png" alt="lg" />
+
+                      <!-- form sign in -->
+
+                      <form action="" method="POST" class="form" id="form-2">
+                        <p class="heading font-mali">SIGN IN</p>
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <a href="#" class="link">Forward your password ?</a>
+
+                        <button class="form-submit">Sign in</button>
+
+                        <p>
+                          Do you have an account?
+                          <span class="reg" id="regBtn">Register now </span>
+                        </p>
+
+                        <p class="text-center text-black">OR</p>
+
+                        <div class="loginWith d-flex justify-content-between">
+                          <i class="icon bi bi-facebook hvr-bob"></i>
+                          <i class="icon bi bi-google hvr-bob"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- The Modal reg -->
+                  <div id="regModal" class="modal2">
+                    <!-- Modal content -->
+                    <div
+                      class="modal-content2 text-black animate__animated animate__fadeInRight animate__delay-0s"
+                    >
+                      <div class="close2">
+                        <i class="bi bi-x-circle float-end"></i>
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <!-- form sign up -->
+                      <form action="" method="POST" class="form" id="form-1">
+                        <h3 class="heading font-mali">Sign up</h3>
+
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="fullname" class="form-label font-poppins"
+                            >Full name</label
+                          >
+                          <input
+                            id="fullname"
+                            name="fullname"
+                            type="text"
+                            placeholder="VD: sunsan"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Mật khẩu</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password_confirmation" class="form-label"
+                            >Nhập lại mật khẩu</label
+                          >
+                          <input
+                            id="password_confirmation"
+                            name="password_confirmation"
+                            placeholder="Confirm password"
+                            type="password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <button class="form-submit">Sign up</button>
+
+                        <p class="text-center text-black">OR</p>
+
+                        <div class="loginWith d-flex justify-content-between">
+                          <i class="icon bi bi-facebook hvr-bob"></i>
+                          <i class="icon bi bi-google hvr-bob"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="select m-2">
+                  <select name="language" class="bg-dark">
+                    <option>VN</option>
+                    <option>EN</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- navbar -->
+
+        <div class="rd-navbar-wrap navigation shadow-bottom font-poppins">
+          <div class="container">
+            <div class="rd-navbar-main">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="">
+                  <!-- RD Navbar -->
+                  <div class="rd-navbar-brand">
+                    <a class="brand d-none d-xl-block" href="index.html"
+                      ><img src="/img/logo.png" alt="ss"
+                    /></a>
+                    <div>
+                      <i
+                        id="menuBtn"
+                        class="icon bi bi-list d-xl-none hvr-grow-rotate"
+                      ></i>
+                      <!-- The Modal -->
+                      <div id="menuModal" class="modal4 d-xl-none">
+                        <!-- Modal content -->
+                        <div
+                          class="modal-content4 text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                        >
+                          <div class="close4">
+                            <i class="bi bi-x-circle float-end"></i>
+                          </div>
+                          <br />
+                          <div class="text-black">
+                            <!-- RD Navbar Nav-->
+                            <ul
+                              class="rd-navbar-nav d-flex flex-column align-items-center"
+                            >
+                              <li class="rd-nav-item">
+                                <a href="index.html" class="rd-nav-link"
+                                  >Home</a
+                                >
+                              </li>
+                              <li class="rd-nav-item active">
+                                <a href="product.html" class="rd-nav-link"
+                                  >Shop</a
+                                >
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="about.html" class="rd-nav-link"
+                                  >About</a
+                                >
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="blog.html" class="rd-nav-link">Blog</a>
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="contact.html" class="rd-nav-link"
+                                  >Contact</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-none d-xl-block">
+                  <div class="text-center">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav d-flex">
+                      <li class="rd-nav-item">
+                        <a href="index.html" class="rd-nav-link">Home</a>
+                      </li>
+                      <li class="rd-nav-item active">
+                        <a href="product.html" class="rd-nav-link">Shop</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="about.html" class="rd-nav-link">About</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="blog.html" class="rd-nav-link">Blog</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="contact.html" class="rd-nav-link">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="">
+                  <div
+                    class="d-flex justify-content-end align-items-center gap-4"
+                  >
+                    <div class="cart position-relative">
+                      <div class="number position-absolute">2</div>
+                      <a href="cart.html"
+                        ><i class="i bi bi-basket hvr-grow-rotate"></i
+                      ></a>
+                    </div>
+                    <div class="search wrapper">
+                      <div
+                        class="i bi bi-search hvr-grow-rotate"
+                        id="searchBtn"
+                      ></div>
+                      <!-- The Modal reg -->
+                      <div id="searchModal" class="modal3">
+                        <!-- Modal content -->
+                        <div
+                          class="modal-content3 text-black animate__animated animate__fadeInUp animate__delay-0s position-relative"
+                        >
+                          <div class="close3 position-absolute">
+                            <i class="bi bi-x-circle float-end"></i>
+                          </div>
+                          <div class="searchBox d-flex align-content-center">
+                            <div>
+                              <input
+                                type="search"
+                                name="search"
+                                id=""
+                                placeholder="Search..."
+                                class="search-text"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- page footer -->
+      <div class="section-page-for font-poppins position-relative">
+        <div class="page-fo">
+          <div class="img-fill"><img src="img/page-fo.jpg" alt="" /></div>
+        </div>
+        <div class="title-page-fo text-center text-white position-absolute">
+          <h1 class="font-mali">About Us</h1>
+          <p class="fz-24 fw-400">
+            Home <span class="text-orange-fo">/ About Us</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- tabs -->
+    <section class="section-tabs font-poppins">
+      <div class="container">
+        <div
+          class="tabs-body d-flex flex-column justify-content-center align-items-xl-start gap-5 align-items-center flex-xl-row"
+        >
+          <div class="img-thumbnail-tabs">
+            <img src="img/about-1.jpg" alt="sds" />
+          </div>
+          <div class="tabs-about">
+            <div class="pl-20">
+              <span class="font-mali fs-40 fw-500">Our Goals</span>
+            </div>
+            <div class="tabs-content">
+              <div class="wrapper3">
+                <div class="tabs d-flex justify-content-between">
+                  <div class="tab">
+                    <input
+                      type="radio"
+                      name="css-tabs"
+                      id="tab-1"
+                      checked
+                      class="tab-switch"
+                    />
+                    <label for="tab-1" class="tab-label fw-500"
+                      >Our Goals</label
+                    >
+                    <div class="tab-content">
+                      <div>
+                        <p>
+                          Customer satisfaction is our top priority, there is
+                          nothing more exciting to us than a repeat customer.
+                          With our price match policy along with guaranteed
+                          VNPost delivery, we have been regarded as one of most
+                          trusted online marijuana dispensaries.
+                        </p>
+                      </div>
+                      <button class="btn-submit">READ MORE</button>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <input
+                      type="radio"
+                      name="css-tabs"
+                      id="tab-2"
+                      class="tab-switch"
+                    />
+                    <label for="tab-2" class="tab-label fw-500"
+                      >Our Values</label
+                    >
+                    <div class="tab-content">
+                      <div>
+                        <p>
+                          Our products undergo strict quality assurance checks
+                          that include testing for molds and pesticides. We then
+                          put all of our products through our in-house analysis
+                          processes.
+                        </p>
+                      </div>
+                      <button class="btn-submit">READ MORE</button>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <input
+                      type="radio"
+                      name="css-tabs"
+                      id="tab-3"
+                      class="tab-switch"
+                    />
+                    <label for="tab-3" class="tab-label fw-500"
+                      >Our Mission</label
+                    >
+                    <div class="tab-content">
+                      <div>
+                        <p>
+                          Our mission is to bring our customers quality
+                          products, at the lowest price with the best service in
+                          the industry.
+                        </p>
+                      </div>
+                      <button class="btn-submit">READ MORE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our history -->
+    <section class="section-history font-poppins">
+      <div class="slider-history">
+        <!-- 1 -->
+        <div
+          class="history d-flex flex-column align-items-center align-content-center gap-3 position-relative"
+        >
+          <img src="img/about-2.png" alt="dsd" />
+          <div>Farm Establishment</div>
+          <div class="line-2"></div>
+          <div>2000</div>
+          <div class="dots-history position-absolute"></div>
+        </div>
+
+        <!-- 2 -->
+        <div
+          class="history d-flex flex-column align-items-center align-content-center gap-3 position-relative"
+        >
+          <img src="img/about-3.png" alt="dsd" />
+          <div>Partnering with Food Stores</div>
+          <div class="line-2"></div>
+          <div>2005</div>
+          <div class="dots-history position-absolute"></div>
+        </div>
+
+        <!-- 3 -->
+        <div
+          class="history d-flex flex-column align-items-center align-content-center gap-3 position-relative"
+        >
+          <img src="img/about-4.png" alt="dsd" />
+          <div>Introducing Farming Innovations</div>
+          <div class="line-2"></div>
+          <div>2010</div>
+          <div class="dots-history position-absolute"></div>
+        </div>
+
+        <!-- 4 -->
+        <div
+          class="history d-flex flex-column align-items-center align-content-center gap-3 position-relative"
+        >
+          <img src="img/about-5.png" alt="dsd" />
+          <div>Farm Establishment</div>
+          <div class="line-2"></div>
+          <div>2015</div>
+          <div class="dots-history position-absolute"></div>
+        </div>
+
+        <!-- 5 -->
+        <div
+          class="history d-flex flex-column align-items-center align-content-center gap-3 position-relative"
+        >
+          <img src="img/about-2.png" alt="dsd" />
+          <div>Farm Establishment</div>
+          <div class="line-2"></div>
+          <div>2000</div>
+          <div class="dots-history position-absolute"></div>
+        </div>
+
+        <!-- 6 -->
+        <div
+          class="history d-flex flex-column align-items-center align-content-center gap-3 position-relative"
+        >
+          <img src="img/about-3.png" alt="dsd" />
+          <div>Partnering with Food Stores</div>
+          <div class="line-2"></div>
+          <div>2005</div>
+          <div class="dots-history position-absolute"></div>
+        </div>
+
+        <!-- 7 -->
+        <div
+          class="history d-flex flex-column align-items-center align-content-center gap-3 position-relative"
+        >
+          <img src="img/about-4.png" alt="dsd" />
+          <div>Introducing Farming Innovations</div>
+          <div class="line-2"></div>
+          <div>2010</div>
+          <div class="dots-history position-absolute"></div>
+        </div>
+
+        <!-- 8 -->
+        <div
+          class="history d-flex flex-column align-items-center align-content-center gap-3 position-relative"
+        >
+          <img src="img/about-5.png" alt="dsd" />
+          <div>Farm Establishment</div>
+          <div class="line-2"></div>
+          <div>2015</div>
+          <div class="dots-history position-absolute"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our team -->
+    <section class="section-our-team font-poppins font-poppins">
+      <div><p class="fs-40 font-mali fw-500 text-center">Our team</p></div>
+      <div class="spacer"></div>
+      <div class="slider-team d-flex justify-content-center gap-3">
+        <!-- team -->
+        <div class="team-track">
+          <div class="team text-center d-flex flex-column gap-3">
+            <div class="img-team"><img src="img/team-1.jpg" alt="dsd" /></div>
+            <div class="name-team fs-24 fw-500">Peter Johnson</div>
+            <div class="text-team fs">
+              Sed viverra ipsum nunc aliquet bibendum enim vestibulum sed.
+            </div>
+            <div
+              class="list-icon-follow d-flex align-items-center justify-content-center"
+            >
+              <div class="d-flex gap-3 align-content-center">
+                <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- team -->
+        <div class="team-track">
+          <div class="team text-center d-flex flex-column gap-3">
+            <div class="img-team"><img src="img/team-2.jpg" alt="dsd" /></div>
+            <div class="name-team fs-24 fw-500">Caroline Lopez</div>
+            <div class="text-team">
+              Posuere morbi leo urna molestie at elementum sed gravida
+              hendrerit.
+            </div>
+            <div
+              class="list-icon-follow d-flex align-items-center justify-content-center"
+            >
+              <div class="d-flex gap-3 align-content-center">
+                <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- team -->
+        <div class="team-track">
+          <div class="team text-center d-flex flex-column gap-3">
+            <div class="img-team"><img src="img/team-3.jpg" alt="dsd" /></div>
+            <div class="name-team fs-24 fw-500">Martin Wilson</div>
+            <div class="text-team">
+              Molestie ac feugiat sed lectus vestibulum mattis ullamcorper
+              velit.
+            </div>
+            <div
+              class="list-icon-follow d-flex align-items-center justify-content-center"
+            >
+              <div class="d-flex gap-3 align-content-center">
+                <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- team -->
+        <div class="team-track">
+          <div class="team text-center d-flex flex-column gap-3">
+            <div class="img-team"><img src="img/team-4.jpg" alt="dsd" /></div>
+            <div class="name-team fs-24 fw-500">Peter Johnson</div>
+            <div class="text-team">
+              Sed viverra ipsum nunc aliquet bibendum enim vestibulum sed.
+            </div>
+            <div
+              class="list-icon-follow d-flex align-items-center justify-content-center"
+            >
+              <div class="d-flex gap-3 align-content-center">
+                <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- team -->
+        <div class="team-track">
+          <div class="team text-center d-flex flex-column gap-3">
+            <div class="img-team"><img src="img/team-5.jpg" alt="dsd" /></div>
+            <div class="name-team fs-24 fw-500">Caroline Lopez</div>
+            <div class="text-team">
+              Posuere morbi leo urna molestie at elementum sed gravida
+              hendrerit.
+            </div>
+            <div
+              class="list-icon-follow d-flex align-items-center justify-content-center"
+            >
+              <div class="d-flex gap-3 align-content-center">
+                <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-white font-poppins bg-dark">
+      <div class="container">
+        <div class="row gap-3 gap-md-0">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="gird-footer1 text-center d-flex flex-column gap-3">
+              <div><img src="img/logo2.png" alt="ss" /></div>
+              <p class="text-gray-fo">Weekdays: 08:00am - 08:00pm</p>
+              <p class="text-gray-fo">Weekends: 10:00am - 06:00pm</p>
+              <div class="line"></div>
+              <div class="list-icon-footer d-flex gap-5 justify-content-center">
+                <div>Follow Us:</div>
+                <div class="d-flex gap-3">
+                  <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                  ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 ft-2 col-lg-4">
+            <div class="gird-footer2 text-center d-flex flex-column gap-3">
+              <h4>CONTACTS</h4>
+              <p>
+                <span><i class="bi bi-phone"></i></span> &nbsp;
+                <span class="text-gray-fo">+ 84 981 953 791</span>
+              </p>
+              <p>
+                <span><i class="bi bi-geo-alt-fill"></i></span> &nbsp;
+                <span class="text-gray-fo">
+                  298 Đ. Cầu Diễn, Minh Khai, Bắc Từ Liêm, Hà Nội
+                </span>
+              </p>
+              <p>
+                <span><i class="bi bi-envelope"></i></span> &nbsp;
+                <span class="text-gray-fo">TFruit@gmail.com</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 ft-3 col-lg-4">
+            <div class="gird-footer1 text-center d-flex flex-column gap-3">
+              <h4>NEWSLETTER</h4>
+              <p class="text-gray-fo">
+                Join our email newsletter for news and tips.
+              </p>
+              <div class="form-footer">
+                <form action="" method="POST" class="form bg-dark" id="form-3">
+                  <div class="form-group">
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      placeholder="Enter your E-mail"
+                      class="form-control text-center"
+                    />
+                    <span class="form-message"></span>
+                  </div>
+                  <button class="form-submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="back-to-top text-white position-fixed hvr-grow-rotate">
+      <a class="text-none text-white" href="#"
+        ><i class="bi bi-box-arrow-up"></i
+      ></a>
+    </div>
+    <script type="module" src="js/validator.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
 </html>

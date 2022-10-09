@@ -1,0 +1,157 @@
+.section-tabs {
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.tabs-about {
+  width: 100%;
+  height: 400px;
+}
+
+/* tabs */
+.tabs-about .tab-content {
+  border: none;
+  padding: 20px;
+  width: 100%;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.tabs-about .tab-switch:checked + .tab-label {
+  border-bottom: 7px solid green;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: green;
+}
+
+.tabs-about .tabs {
+  margin: 0px;
+  width: 100%;
+}
+
+.slider-history {
+  width: 100%;
+  padding: 40px 0px;
+}
+
+/* history */
+.line-2 {
+  border-bottom: 2px solid green;
+  width: 100%;
+}
+
+.dots-history {
+  background-color: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 290px;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+  cursor: pointer;
+}
+
+.dots-history:hover {
+  border-radius: 0%;
+  transition: all 0.2s linear;
+}
+
+.history img {
+  cursor: pointer;
+}
+
+.history img:hover {
+  opacity: 0.6;
+}
+
+/* team */
+.list-icon-follow i {
+  color: black;
+  cursor: pointer;
+}
+
+.list-icon-follow i:hover {
+  color: orange;
+}
+
+.team {
+  width: max-content;
+  padding-bottom: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.team:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 20px;
+  transition: all 0.2s linear;
+  overflow: hidden;
+}
+
+.text-team {
+  width: 360px;
+}
+
+.section-our-team {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.slider-team .slick-track {
+  padding-bottom: 60px;
+  padding-top: 20px;
+}
+
+.slider-team img{
+    border-radius: 10px;
+}
+
+.slider-team .slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 580px);
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+}
+
+.slider-team .slick-dots button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  font-size: 0;
+  background-color: gainsboro;
+}
+
+.slider-team .slick-dots .slick-active button {
+  background-color: #99CCFF;
+  transition: all 0.2s linear;
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .tabs-about {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+}
