@@ -19,7 +19,7 @@ import "../css/productdetail.css";
 import "../css/about.css";
 import "../css/blog.css";
 import "../css/blogdetail.css";
-import "../css/contact.css"
+import "../css/contact.css";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {
@@ -701,7 +701,7 @@ $(".slider-team").slick({
   ],
 });
 
-// slider team /////////////////////////////////////////////////////////////////////
+// slider blog /////////////////////////////////////////////////////////////////////
 $(".slider-list-blog").slick({
   infinite: true,
   slidesToShow: 1,

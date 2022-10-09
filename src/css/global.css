@@ -797,27 +797,27 @@ footer {
 
 /* animate */
 .animate__animated.animate__bounce {
-  --animate-duration: 3s;
+  --animate-duration: 0.5s;
 }
 
 .animate__animated.animate__fadeInLeft {
-  --animate-duration: 1s;
+  --animate-duration: 0.5s;
 }
 
 .animate__animated.animate__fadeInRight {
-  --animate-duration: 1s;
+  --animate-duration: 0.5s;
 }
 
 .animate__animated.animate__fadeInUp {
-  --animate-duration: 1s;
+  --animate-duration: 0.5s;
 }
 
 .animate__animated.animate__backInLeft {
-  --animate-duration: 1s;
+  --animate-duration: 0.5s;
 }
 
 .animate__animated.animate__flash {
-  --animate-duration: 1s;
+  --animate-duration: 0.5s;
 }
 
 @-webkit-keyframes glowing {
