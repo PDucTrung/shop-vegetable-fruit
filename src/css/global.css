@@ -791,7 +791,11 @@ footer {
   text-transform: uppercase;
 }
 
-/* animate scroll */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* animate */
 .animate__animated.animate__bounce {
   --animate-duration: 3s;
 }
