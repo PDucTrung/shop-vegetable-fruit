@@ -68,14 +68,14 @@
   align-items: center;
   justify-content: center;
   list-style-type: none;
-  font-size: 0;
+  color: white;
   left: 50%;
   transform: translate(-50%, 20px);
 }
 
 .slider-list-blog .slick-dots button {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: none;
   background-color: gainsboro;
@@ -84,4 +84,13 @@
 .slider-list-blog .slick-dots .slick-active button {
   background-color: #99ccff;
   transition: all 0.2s linear;
+}
+
+.name-blog-box a {
+  color: black;
+  text-decoration: none;
+}
+
+.name-blog-box a:hover {
+  color: orange;
 }

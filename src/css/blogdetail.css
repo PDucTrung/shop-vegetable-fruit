@@ -1,0 +1,12 @@
+.section-blog-detail {
+  padding: 100px 0px;
+}
+
+.blog-post-left i:hover {
+  color: orange;
+}
+
+.box-cmt-blog {
+  padding: 20px 10px;
+  border-bottom: 1px solid gray;
+}

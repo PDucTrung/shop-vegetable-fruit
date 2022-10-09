@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFruit</title>
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <div class="logo-load">
+          <img src="/img/logoloading.png" alt="ss" />
+        </div>
+      </div>
+    </div>
+
+    <!-- page -->
+    <div class="page-2">
+      <!-- page header -->
+      <header class="seaction page-header position-fixed">
+        <div class="heading-header bg-dark text-white">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center gap-lg-3">
+                <div
+                  class="phone animate__animated animate__pulse animate__delay-1s"
+                >
+                  <span class="icon bi bi-telephone-fill"></span> +84
+                  081-953-791
+                </div>
+                <div
+                  class="address m-lg-2 animate__animated animate__pulse animate__delay-2s d-none d-md-block"
+                >
+                  <span class="icon bi bi-geo-alt-fill"></span> 298 Đ. Cầu Diễn,
+                  Minh Khai, Bắc Từ Liêm, Hà Nội
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="user">
+                  <span
+                    id="userBtn"
+                    class="i-per bi bi-person-circle hvr-bounce-in"
+                  ></span>
+                  <!-- The Modal user -->
+                  <div id="userModal" class="modal">
+                    <!-- Modal content -->
+                    <div
+                      class="modal-content text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                    >
+                      <div class="close">
+                        <i class="bi bi-x-circle float-end"></i>
+                      </div>
+                      <br />
+                      <img src="/img/logo.png" alt="lg" />
+
+                      <!-- form sign in -->
+
+                      <form action="" method="POST" class="form" id="form-2">
+                        <p class="heading font-mali">SIGN IN</p>
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <a href="#" class="link">Forward your password ?</a>
+
+                        <button class="form-submit">Sign in</button>
+
+                        <p>
+                          Do you have an account?
+                          <span class="reg" id="regBtn">Register now </span>
+                        </p>
+
+                        <p class="text-center text-black">OR</p>
+
+                        <div class="loginWith d-flex justify-content-between">
+                          <i class="icon bi bi-facebook hvr-bob"></i>
+                          <i class="icon bi bi-google hvr-bob"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- The Modal reg -->
+                  <div id="regModal" class="modal2">
+                    <!-- Modal content -->
+                    <div
+                      class="modal-content2 text-black animate__animated animate__fadeInRight animate__delay-0s"
+                    >
+                      <div class="close2">
+                        <i class="bi bi-x-circle float-end"></i>
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <!-- form sign up -->
+                      <form action="" method="POST" class="form" id="form-1">
+                        <h3 class="heading font-mali">Sign up</h3>
+
+                        <div class="spacer"></div>
+
+                        <div class="form-group">
+                          <label for="fullname" class="form-label font-poppins"
+                            >Full name</label
+                          >
+                          <input
+                            id="fullname"
+                            name="fullname"
+                            type="text"
+                            placeholder="VD: sunsan"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="VD: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password" class="form-label"
+                            >Mật khẩu</label
+                          >
+                          <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password_confirmation" class="form-label"
+                            >Nhập lại mật khẩu</label
+                          >
+                          <input
+                            id="password_confirmation"
+                            name="password_confirmation"
+                            placeholder="Confirm password"
+                            type="password"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+
+                        <button class="form-submit">Sign up</button>
+
+                        <p class="text-center text-black">OR</p>
+
+                        <div class="loginWith d-flex justify-content-between">
+                          <i class="icon bi bi-facebook hvr-bob"></i>
+                          <i class="icon bi bi-google hvr-bob"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="select m-2">
+                  <select name="language" class="bg-dark">
+                    <option>VN</option>
+                    <option>EN</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- navbar -->
+
+        <div class="rd-navbar-wrap navigation shadow-bottom font-poppins">
+          <div class="container">
+            <div class="rd-navbar-main">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="">
+                  <!-- RD Navbar -->
+                  <div class="rd-navbar-brand">
+                    <a class="brand d-none d-xl-block" href="index.html"
+                      ><img src="/img/logo.png" alt="ss"
+                    /></a>
+                    <div>
+                      <i
+                        id="menuBtn"
+                        class="icon bi bi-list d-xl-none hvr-grow-rotate"
+                      ></i>
+                      <!-- The Modal -->
+                      <div id="menuModal" class="modal4 d-xl-none">
+                        <!-- Modal content -->
+                        <div
+                          class="modal-content4 text-black animate__animated animate__fadeInLeft animate__delay-0s"
+                        >
+                          <div class="close4">
+                            <i class="bi bi-x-circle float-end"></i>
+                          </div>
+                          <br />
+                          <div class="text-black">
+                            <!-- RD Navbar Nav-->
+                            <ul
+                              class="rd-navbar-nav d-flex flex-column align-items-center"
+                            >
+                              <li class="rd-nav-item">
+                                <a href="index.html" class="rd-nav-link"
+                                  >Home</a
+                                >
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="product.html" class="rd-nav-link"
+                                  >Shop</a
+                                >
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="about.html" class="rd-nav-link"
+                                  >About</a
+                                >
+                              </li>
+                              <li class="rd-nav-item active">
+                                <a href="blog.html" class="rd-nav-link">Blog</a>
+                              </li>
+                              <li class="rd-nav-item">
+                                <a href="contact.html" class="rd-nav-link"
+                                  >Contact</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-none d-xl-block">
+                  <div class="text-center">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav d-flex">
+                      <li class="rd-nav-item">
+                        <a href="index.html" class="rd-nav-link">Home</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="product.html" class="rd-nav-link">Shop</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="about.html" class="rd-nav-link">About</a>
+                      </li>
+                      <li class="rd-nav-item active">
+                        <a href="blog.html" class="rd-nav-link">Blog</a>
+                      </li>
+                      <li class="rd-nav-item">
+                        <a href="contact.html" class="rd-nav-link">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="">
+                  <div
+                    class="d-flex justify-content-end align-items-center gap-4"
+                  >
+                    <div class="cart position-relative">
+                      <div class="number position-absolute">2</div>
+                      <a href="cart.html"
+                        ><i class="i bi bi-basket hvr-grow-rotate"></i
+                      ></a>
+                    </div>
+                    <div class="search wrapper">
+                      <div
+                        class="i bi bi-search hvr-grow-rotate"
+                        id="searchBtn"
+                      ></div>
+                      <!-- The Modal reg -->
+                      <div id="searchModal" class="modal3">
+                        <!-- Modal content -->
+                        <div
+                          class="modal-content3 text-black animate__animated animate__fadeInUp animate__delay-0s position-relative"
+                        >
+                          <div class="close3 position-absolute">
+                            <i class="bi bi-x-circle float-end"></i>
+                          </div>
+                          <div class="searchBox d-flex align-content-center">
+                            <div>
+                              <input
+                                type="search"
+                                name="search"
+                                id=""
+                                placeholder="Search..."
+                                class="search-text"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- page footer -->
+      <div class="section-page-for font-poppins position-relative">
+        <div class="page-fo">
+          <div class="img-fill"><img src="img/page-fo.jpg" alt="" /></div>
+        </div>
+        <div class="title-page-fo text-center text-white position-absolute">
+          <h1 class="font-mali">Blog</h1>
+          <p class="fz-24 fw-400">
+            Home
+            <span class="text-orange-fo"
+              >/ Blog / Why Organic Farming Keeps Getting Popular Globally</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- blog post -->
+    <section class="section-blog-detail font-poppins">
+      <div class="container">
+        <div class="blog-post-left">
+          <div class="fs-24">
+            <p>Why Organic Farming Keeps Getting Popular Globally</p>
+          </div>
+          <div class="d-flex gap-4">
+            <div>
+              <p>
+                <span class="text-gray-fo">BY </span
+                ><span class="text-green">KATE WILLIAMS</span>
+              </p>
+            </div>
+            <div class="d-flex gap-2">
+              <div><i class="bi bi-clock"></i></div>
+              <div><p>NOV 30, 2018</p></div>
+            </div>
+            <div class="d-flex gap-2">
+              <div><i class="bi bi-chat-dots"></i></div>
+              <div><p>14</p></div>
+            </div>
+          </div>
+          <p>
+            Pudding is a traditional English dish, which is prepared according
+            to the principle "what’s in the oven, then on the table swords." It
+            is made from anything: from meat to chocolate. The Briton will call
+            almost any jelly-like dish pudding.
+          </p>
+          <div class="img-thumbnail-blog-post">
+            <img src="img/img-blog-post-1.jpg" alt="dsd" />
+          </div>
+          <div>
+            <div><i class="bi bi-quote"></i></div>
+            <div>
+              <p>
+                Mention of pudding is very often found in English literature.
+                Agatha Christie called her Adventure of Christmas Pudding series
+                of stories. The heroes of Harry Potter books regularly feast on
+                pudding, and he is also mentioned in Dickens' Great Expectations
+                and Christmas Song in Prose, Charlotte Bronte's Jane Air, and
+                Carroll's Alice in Wonderland.
+              </p>
+            </div>
+          </div>
+          <p>
+            Pudding is a traditional English dish, which is prepared according
+            to the principle "what’s in the oven, then on the table swords." It
+            is made from anything: from meat to chocolate. The Briton will call
+            almost any jelly-like dish pudding.
+          </p>
+          <p>
+            In Russia, they learned about pudding relatively recently. In our
+            opinion, this is, first of all, an appetizing dessert, similar to
+            jelly and yogurt at the same time. We are used to buying it
+            ready-made or to make it from special mixtures.
+          </p>
+          <p>
+            However, initially it was far from a sweet and not so delicious
+            dish. According to one version, the pudding was made from oatmeal on
+            meat broth. Immediately after cooking, prunes, honey, nuts, bread
+            crumbs were added to it, and served literally from the heat, from
+            the heat.
+          </p>
+          <p>
+            Most likely, there were two types of “prapudding,” but over time,
+            the British preferred a sweeter version. The composition of this
+            peculiar dish gradually changed, and over time, the pudding became a
+            dish of flour, fat, sugar and fruit. By tradition, it is cooked in a
+            steam bath, and then left to infuse for a while (depending on the
+            recipe - from several hours to several days).
+          </p>
+          <div class="d-flex justify-content-between align-content-center">
+            <div>
+              <span class="text-gray-fo">NEWS, ORGANIC FOOD, TIPS</span>
+            </div>
+            <div
+              class="d-flex justify-content-center align-content-center gap-3"
+            >
+              <div>Share:</div>
+              <div class="d-flex gap-3 align-content-center">
+                <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+          <!-- cmt blog post -->
+          <div class="cmt-blog-post">
+            <div class="cmt-blog-user">
+              <div class="title-cmt-blog fs-24 fw-400">2 Comment</div>
+              <div class="box-cmt-blog d-flex gap-3 align-items-center">
+                <div class="img-thumbnail-cmt-blog">
+                  <img src="img/user-cmt-1.jpg" alt="dsd" />
+                </div>
+                <div class="content-cmt-blog-user d-flex flex-column gap-2">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                      <div class="text-gray-fo">John Doe</div>
+                      <div class="line-3">-</div>
+                      <div class="text-green">REPLY</div>
+                    </div>
+                    <div>NOV 30, 2020</div>
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip.
+                  </div>
+                </div>
+              </div>
+              <div class="box-cmt-blog d-flex gap-3 align-items-center">
+                <div class="img-thumbnail-cmt-blog">
+                  <img src="img/user-cmt-2.jpg" alt="dsd" />
+                </div>
+                <div class="content-cmt-blog-user d-flex flex-column gap-2">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                      <div class="text-gray-fo">Nick Stevens</div>
+                      <div class="line-3">-</div>
+                      <div class="text-green">REPLY</div>
+                    </div>
+                    <div>July 30, 2019</div>
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cmt-form-blog">
+              <div class="add-cmt">
+                  <div class="title-add-cmt fs-20 fw-400">
+                    <p>Add your comment</p>
+                  </div>
+                  <div class="content-add-cmt">
+                    <form action="" method="POST" class="form" id="form-5">
+                      <div class="name-customer d-flex gap-3">
+                        <!-- full name -->
+                        <div class="form-group">
+                          <label for="fullname" class="form-label font-poppins"
+                            >First name</label
+                          >
+                          <input
+                            id="fullname"
+                            name="fullname"
+                            type="text"
+                            placeholder="Ex: Pham"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+                        <!-- Email -->
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="text"
+                            placeholder="Ex: email@domain.com"
+                            class="form-control"
+                          />
+                          <span class="form-message"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="cmt" class="form-label">Comment</label>
+                        <textarea
+                          name="cmt"
+                          id=""
+                          cols="30"
+                          rows="10"
+                          placeholder="Your comment ..."
+                        ></textarea>
+                        <span class="form-message"></span>
+                      </div>
+
+                      <div><button class="btn-submit">SUBMIT</button></div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-post-right"></div>
+      </div>
+    </section>
+
+    <footer class="text-white font-poppins bg-dark">
+      <div class="container">
+        <div class="row gap-3 gap-md-0">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="gird-footer1 text-center d-flex flex-column gap-3">
+              <div><img src="img/logo2.png" alt="ss" /></div>
+              <p class="text-gray-fo">Weekdays: 08:00am - 08:00pm</p>
+              <p class="text-gray-fo">Weekends: 10:00am - 06:00pm</p>
+              <div class="line"></div>
+              <div class="list-icon-footer d-flex gap-5 justify-content-center">
+                <div>Follow Us:</div>
+                <div class="d-flex gap-3">
+                  <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i
+                  ><i class="bi bi-google"></i><i class="bi bi-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 ft-2 col-lg-4">
+            <div class="gird-footer2 text-center d-flex flex-column gap-3">
+              <h4>CONTACTS</h4>
+              <p>
+                <span><i class="bi bi-phone"></i></span> &nbsp;
+                <span class="text-gray-fo">+ 84 981 953 791</span>
+              </p>
+              <p>
+                <span><i class="bi bi-geo-alt-fill"></i></span> &nbsp;
+                <span class="text-gray-fo">
+                  298 Đ. Cầu Diễn, Minh Khai, Bắc Từ Liêm, Hà Nội
+                </span>
+              </p>
+              <p>
+                <span><i class="bi bi-envelope"></i></span> &nbsp;
+                <span class="text-gray-fo">TFruit@gmail.com</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 ft-3 col-lg-4">
+            <div class="gird-footer1 text-center d-flex flex-column gap-3">
+              <h4>NEWSLETTER</h4>
+              <p class="text-gray-fo">
+                Join our email newsletter for news and tips.
+              </p>
+              <div class="form-footer">
+                <form action="" method="POST" class="form bg-dark" id="form-3">
+                  <div class="form-group">
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      placeholder="Enter your E-mail"
+                      class="form-control text-center"
+                    />
+                    <span class="form-message"></span>
+                  </div>
+                  <button class="form-submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="back-to-top text-white position-fixed hvr-grow-rotate">
+      <a class="text-none text-white" href="#"
+        ><i class="bi bi-box-arrow-up"></i
+      ></a>
+    </div>
+    <script type="module" src="js/validator.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
