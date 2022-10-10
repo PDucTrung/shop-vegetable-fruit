@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.min.js";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { Validator } from "./validator";
+import axios from "axios";
 import "../css/index.css";
 import "../css/global.css";
 import "../css/product.css";
@@ -126,94 +127,6 @@ window.onclick = function (event) {
     modal4.style.display = "none";
   }
 };
-
-// validator form ///////////////////////////////////////////////////////////////////////////////////////////
-
-document.addEventListener("DOMContentLoaded", function () {
-  Validator({
-    form: "#form-1",
-    formGroupSelector: ".form-group",
-    errorSelector: ".form-message",
-    rules: [
-      Validator.isRequired("#fullname", "Please enter your full name"),
-      Validator.isRequired("#email"),
-      Validator.isEmail("#email"),
-      Validator.isRequired("#password"),
-      // Validator.minLength("#password", 8),
-      Validator.isRequired("#password_confirmation"),
-      Validator.isConfirmed(
-        "#password_confirmation",
-        function () {
-          return document.querySelector("#form-1 #password").value;
-        },
-        "Re-enter unknown password correctly"
-      ),
-    ],
-    onSubmit: function (data) {
-      console.log(data);
-    },
-  });
-
-  Validator({
-    form: "#form-2",
-    formGroupSelector: ".form-group",
-    errorSelector: ".form-message",
-    rules: [
-      Validator.isRequired("#email"),
-      Validator.isEmail("#email"),
-      Validator.isRequired("#password"),
-      Validator.isPasstext("#password"),
-      // Validator.minLength("#password", 8),
-    ],
-    onSubmit: function (data) {
-      console.log(data);
-    },
-  });
-
-  Validator({
-    form: "#form-3",
-    formGroupSelector: ".form-group",
-    errorSelector: ".form-message",
-    rules: [Validator.isRequired("#email"), Validator.isEmail("#email")],
-    onSubmit: function (data) {
-      console.log(data);
-    },
-  });
-
-  Validator({
-    form: "#form-4",
-    formGroupSelector: ".form-group",
-    errorSelector: ".form-message",
-    rules: [
-      Validator.isRequired("#firstname"),
-      Validator.isRequired("#lastname"),
-      Validator.isRequired("#phone"),
-      Validator.isPhone("#phone"),
-      Validator.isRequired("#city"),
-      Validator.isRequired("#district"),
-      Validator.isRequired("#address"),
-      Validator.isRequired("#email"),
-      Validator.isEmail("#email"),
-    ],
-    onSubmit: function (data) {
-      console.log(data);
-    },
-  });
-
-  Validator({
-    form: "#form-5",
-    formGroupSelector: ".form-group",
-    errorSelector: ".form-message",
-    rules: [
-      Validator.isRequired("#fullname"),
-      Validator.isRequired("#email"),
-      Validator.isEmail("#email"),
-    ],
-    onSubmit: function (data) {
-      console.log(data);
-    },
-  });
-});
 
 // slider ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let $slider_ini = $(".Advance-Slider");
@@ -666,7 +579,6 @@ $(".related-product-slider").slick({
   ],
 });
 
-
 // slider history ////////////////////////////////////////////////////////
 $(".slider-history").slick({
   infinite: true,
@@ -749,4 +661,159 @@ $(".slider-list-blog").slick({
   cssEase: "linear",
   arrows: false,
   dots: true,
+});
+
+// call api
+
+// const axios = require("axios");
+
+// const fieldUserName = document.getElementById("fullname").value;
+// const fieldUserEmail = document.getElementById("email").value;
+// const fieldUserPass = document.getElementById("password").value;
+
+// axios
+//   .post("https://trungapi-xuantiennn.vercel.app/api/login/register", {
+//     email: fieldUserEmail,
+//     password: fieldUserPass,
+//     userName: fieldUserName,
+//   })
+//   .then(function (response) {
+//     console.log("response");
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
+
+// validator form ///////////////////////////////////////////////////////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+  Validator({
+    form: "#form-1",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#fullname", "Please enter your full name"),
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+      Validator.isRequired("#password"),
+      // Validator.minLength("#password", 8),
+      Validator.isRequired("#password_confirmation"),
+      Validator.isConfirmed(
+        "#password_confirmation",
+        function () {
+          return document.querySelector("#form-1 #password").value;
+        },
+        "Re-enter unknown password correctly"
+      ),
+    ],
+    onSubmit: function (data) {
+      console.log(data);
+      // const fieldUserName = document.getElementById("fullname").value;
+      // const fieldUserEmail = document.getElementById("email").value;
+      // const fieldUserPass = document.getElementById("password").value;
+      // console.log({ fieldUserName, fieldUserEmail, fieldUserPass });
+      // axios
+      //   .post(
+      //     "https://trungapi-2n4lhu26h-xuantiennn.vercel.app/api/login/register",
+      //     {
+      //       // https://trungapi-2n4lhu26h-xuantiennn.vercel.app/api/login
+      //       email: fieldUserEmail,
+      //       password: fieldUserPass,
+      //       userName: fieldUserName,
+      //     }
+      //   )
+      //   .then(function (response) {
+      //     console.log(response);
+      //     if (typeof response === "object") {
+      //       window.location.href = "/";
+      //     }
+      //   })
+      //   .catch(function (error) {
+      //     console.log(error);
+      //   });
+    },
+  });
+
+  Validator({
+    form: "#form-2",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+      Validator.isRequired("#password"),
+      Validator.isPasstext("#password"),
+      // Validator.minLength("#password", 8),
+    ],
+    onSubmit: function (data) {
+      console.log(data);
+      // const fieldUserName = document.getElementById("fullname").value;
+      // const fieldUserEmail = document.getElementById("email").value;
+      // const fieldUserPass = document.getElementById("password").value;
+      // console.log({ fieldUserName, fieldUserEmail, fieldUserPass });
+      // axios
+      //   .post(
+      //     "https://trungapi-2n4lhu26h-xuantiennn.vercel.app/api/login/register",
+      //     {
+      //       // https://trungapi-2n4lhu26h-xuantiennn.vercel.app/api/login
+      //       email: fieldUserEmail,
+      //       password: fieldUserPass,
+      //       userName: fieldUserName,
+      //     }
+      //   )
+      //   .then(function (response) {
+      //     console.log(response);
+      //     if (typeof response === "object") {
+      //       window.location.href = "/";
+      //     }
+      //   })
+      //   .catch(function (error) {
+      //     console.log(error);
+      //   });
+    },
+  });
+
+  Validator({
+    form: "#form-3",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [Validator.isRequired("#email"), Validator.isEmail("#email")],
+    onSubmit: function (data) {
+      console.log(data);
+    },
+  });
+
+  Validator({
+    form: "#form-4",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#firstname"),
+      Validator.isRequired("#lastname"),
+      Validator.isRequired("#phone"),
+      Validator.isPhone("#phone"),
+      Validator.isRequired("#city"),
+      Validator.isRequired("#district"),
+      Validator.isRequired("#address"),
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+    ],
+    onSubmit: function (data) {
+      console.log(data);
+    },
+  });
+
+  Validator({
+    form: "#form-5",
+    formGroupSelector: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#fullname"),
+      Validator.isRequired("#email"),
+      Validator.isEmail("#email"),
+    ],
+    onSubmit: function (data) {
+      console.log(data);
+    },
+  });
 });
