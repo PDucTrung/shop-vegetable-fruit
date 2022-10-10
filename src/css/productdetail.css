@@ -164,6 +164,31 @@
   padding: 10px;
 }
 
+/* related pr */
+.section-related-product {
+  padding: 50px 0px;
+}
+.related-product {
+  width: max-content;
+  padding-bottom: 10px;
+}
+
+.related-product:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.related-product-slider .slick-track {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.related-product-slider .slick-slide {
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (min-width: 576px) {
 }
 
