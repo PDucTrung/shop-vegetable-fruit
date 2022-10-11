@@ -665,36 +665,27 @@ $(".slider-list-blog").slick({
 
 // Toast function
 
-// const add = document.getElementById("add");
-// let toast = document.querySelector(".toast");
-// let closeIcon = document.querySelector(".close-add");
-// let progress = document.querySelector(".progress");
+const button = document.getElementById("checkout");
+const toasts = document.getElementById("toasts");
+const deleteToast = document.querySelector(".delete-icon");
 
-// let timer1, timer2;
+button.addEventListener("click", () => createNotification());
 
-// add.addEventListener("click", () => {
-//   toast.classList.add("active");
-//   progress.classList.add("active");
+function createNotification() {
+  const notif = document.createElement("div");
+  notif.classList.add("toast");
 
-//   timer1 = setTimeout(() => {
-//     toast.classList.remove("active");
-//   }, 5000); //1s = 1000 milliseconds
+  notif.innerHTML = `<div>
+      <div><span><i class="text-green bi bi-bag-check"></i></span> Success</div>
+      <div class="delete-icon"><i class="bi bi-x"></i></div>
+    </div>`;
 
-//   timer2 = setTimeout(() => {
-//     progress.classList.remove("active");
-//   }, 5300);
-// });
+  toasts.appendChild(notif);
 
-// closeIcon.addEventListener("click", () => {
-//   toast.classList.remove("active");
-
-//   setTimeout(() => {
-//     progress.classList.remove("active");
-//   }, 300);
-
-//   clearTimeout(timer1);
-//   clearTimeout(timer2);
-// });
+  setTimeout(() => {
+    notif.remove();
+  }, 3000);
+}
 
 // call api
 

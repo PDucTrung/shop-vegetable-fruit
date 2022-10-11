@@ -23,7 +23,7 @@
   height: 50px;
   width: 50px;
   background: #fff;
-  z-index: 99999;
+  z-index: 1000;
   border: none;
   margin: auto;
   font-size: 0;

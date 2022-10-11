@@ -528,7 +528,9 @@
           <!-- payment methods -->
           <div class="payment-method">
             <div><p class="fs-24 fw-500">Payment methods</p></div>
-            <div class="payment d-flex flex-column justify-content-center gap-4">
+            <div
+              class="payment d-flex flex-column justify-content-center gap-4"
+            >
               <div
                 class="form-payment d-flex justify-content-center align-items-start flex-column"
               >
@@ -555,17 +557,31 @@
                   >
                     <!--  -->
                     <div class="name-visa">
-                      <input type="text" class="visa" name="name-visa" id="name-visa" placeholder="Name of card">
+                      <input
+                        type="text"
+                        class="visa"
+                        name="name-visa"
+                        id="name-visa"
+                        placeholder="Name of card"
+                      />
                     </div>
 
                     <!--  -->
                     <div class="number-visa">
-                      <input type="text" class="visa" name="number-visa" id="number-visa" placeholder="Card number">
+                      <input
+                        type="text"
+                        class="visa"
+                        name="number-visa"
+                        id="number-visa"
+                        placeholder="Card number"
+                      />
                     </div>
 
                     <!--  -->
                     <div>
-                      <p class="text-center fs-14 text-gray-fo">Expiration date</p>
+                      <p class="text-center fs-14 text-gray-fo">
+                        Expiration date
+                      </p>
                       <div class="d-flex justify-content-center gap-2">
                         <div class="month-visa">
                           <select name="month-visa">
@@ -587,7 +603,9 @@
                     </div>
 
                     <!--  -->
-                    <div class="add-card-visa"><button>Add your cart</button></div>
+                    <div class="add-card-visa">
+                      <button>Add your cart</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -618,12 +636,24 @@
                   >
                     <!--  -->
                     <div class="name-visa">
-                      <input type="text" class="visa" name="name-visa" id="name-visa" placeholder="Name of card">
+                      <input
+                        type="text"
+                        class="visa"
+                        name="name-visa"
+                        id="name-visa"
+                        placeholder="Name of card"
+                      />
                     </div>
 
                     <!--  -->
                     <div class="number-visa">
-                      <input type="text" class="visa" name="number-visa" id="number-visa" placeholder="Card number">
+                      <input
+                        type="text"
+                        class="visa"
+                        name="number-visa"
+                        id="number-visa"
+                        placeholder="Card number"
+                      />
                     </div>
 
                     <!--  -->
@@ -650,7 +680,9 @@
                     </div>
 
                     <!--  -->
-                    <div class="add-card-visa"><button>Add your cart</button></div>
+                    <div class="add-card-visa">
+                      <button>Add your cart</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -681,12 +713,24 @@
                   >
                     <!--  -->
                     <div class="name-visa">
-                      <input type="text" class="visa" name="name-visa" id="name-visa" placeholder="Name of card">
+                      <input
+                        type="text"
+                        class="visa"
+                        name="name-visa"
+                        id="name-visa"
+                        placeholder="Name of card"
+                      />
                     </div>
 
                     <!--  -->
                     <div class="number-visa">
-                      <input type="text" class="visa" name="number-visa" id="number-visa" placeholder="Card number">
+                      <input
+                        type="text"
+                        class="visa"
+                        name="number-visa"
+                        id="number-visa"
+                        placeholder="Card number"
+                      />
                     </div>
 
                     <!--  -->
@@ -713,7 +757,9 @@
                     </div>
 
                     <!--  -->
-                    <div class="add-card-visa"><button>Add your cart</button></div>
+                    <div class="add-card-visa">
+                      <button>Add your cart</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -734,7 +780,11 @@
               <div><p>TOTAL</p></div>
               <div><p>$800</p></div>
             </div>
-            <div class="button-checkout"><button class="btn-checkout">PROCEED TO CHECKOUT</button></div>
+            <div class="button-checkout">
+              <button id="checkout" class="btn-checkout">
+                PROCEED TO CHECKOUT
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -804,6 +854,10 @@
       </div>
     </footer>
 
+    <!-- toast -->
+    <div id="toasts"></div>
+
+    <!-- back to top -->
     <div class="back-to-top text-white position-fixed hvr-grow-rotate">
       <a class="text-none text-white" href="#"
         ><i class="bi bi-box-arrow-up"></i
