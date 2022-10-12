@@ -1,4 +1,4 @@
 # shop-vegetable-fruit
 
-* Project-link: https://jsonsv.herokuapp.com/
+* Project-link: https://tfruit.vercel.app/
 * Mock Api win json-server and herokua: https://jsonsv.herokuapp.com/
