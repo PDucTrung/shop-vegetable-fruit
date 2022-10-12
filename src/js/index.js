@@ -266,7 +266,10 @@ if (window.document.location.pathname == "/index.html") {
 
 //count
 
-if (window.document.location.pathname == "/index.html") {
+if (
+  window.document.location.pathname == "/index.html" ||
+  window.document.location.pathname == "/"
+) {
   let a = 0;
   $(window).scroll(function () {
     let oTop = $("#counter").offset().top - window.innerHeight;
