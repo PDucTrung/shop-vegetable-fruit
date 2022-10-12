@@ -268,7 +268,7 @@ if (window.document.location.pathname == "/index.html") {
 
 if (
   window.document.location.pathname == "/index.html" ||
-  window.document.location.pathname == ""
+  window.document.location.pathname == "/"
 ) {
   let a = 0;
   $(window).scroll(function () {
