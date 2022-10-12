@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import $ from "jquery";
+import $, { nodeName } from "jquery";
 import "jquery/dist/jquery.min.js";
 import "hover.css/css/hover.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick.min.js";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { Validator } from "./validator";
-import axios from "axios";
 import "../css/index.css";
 import "../css/global.css";
 import "../css/product.css";
@@ -416,20 +415,6 @@ if (window.document.location.pathname === "/product.html") {
 
 // quanlity /////////////////////////////////////////////////////////////////////////////////////////////////////
 if (window.document.location.pathname == "/cart.html") {
-  let counter = 0;
-
-  function increment() {
-    counter++;
-  }
-
-  function decrement() {
-    counter--;
-  }
-
-  function get() {
-    return counter;
-  }
-
   const inc = document.getElementById("increment");
   const input = document.getElementById("input");
   const dec = document.getElementById("decrement");
@@ -438,17 +423,11 @@ if (window.document.location.pathname == "/cart.html") {
   const but = document.querySelector(".btn-coupon");
 
   inc.addEventListener("click", () => {
-    increment();
-    input.value = get();
     total = input.value * price;
     document.getElementById("total").innerHTML = total;
   });
 
   dec.addEventListener("click", () => {
-    if (input.value > 0) {
-      decrement();
-    }
-    input.value = get();
     total = input.value * price;
     document.getElementById("total").innerHTML = total;
   });
@@ -461,6 +440,34 @@ if (window.document.location.pathname == "/cart.html") {
 
     document.getElementById("total-sum").innerHTML = sum;
   });
+
+  /////////////////// product +/-
+  $(document).ready(function () {
+    $(".num-in button").click(function () {
+      var $input = $(this).parents(".qty-cart").find("input.number-qty");
+      if ($(this).hasClass("minus")) {
+        var count = parseFloat($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        // if (count < 2) {
+        //   $(this).addClass("dis");
+        // } else {
+        //   $(this).removeClass("dis");
+        // }
+        $input.val(count);
+      } else {
+        var count = parseFloat($input.val()) + 1;
+        $input.val(count);
+
+        // if (count > 1) {
+        //   $(this).parents(".qty-cart").find(".minus").removeClass("dis");
+        // }
+      }
+
+      $input.change();
+      return false;
+    });
+  });
+  // product +/-
 }
 
 // check payment block
@@ -670,27 +677,33 @@ $(".slider-list-blog").slick({
 });
 
 // Toast function
+if (
+  window.document.location.pathname == "/index.html" ||
+  window.document.location.pathname == "/product.html" ||
+  window.document.location.pathname == "/checkout.html" ||
+  window.document.location.pathname == "/productdetail.html" ||
+  window.document.location.pathname == "/cart.html"
+) {
+  const button = document.getElementById("checkout");
+  const toasts = document.getElementById("toasts");
 
-const button = document.getElementById("checkout");
-const toasts = document.getElementById("toasts");
-const deleteToast = document.querySelector(".delete-icon");
+  button.addEventListener("click", () => createNotification());
 
-button.addEventListener("click", () => createNotification());
+  function createNotification() {
+    const notif = document.createElement("div");
+    notif.classList.add("toast");
 
-function createNotification() {
-  const notif = document.createElement("div");
-  notif.classList.add("toast");
-
-  notif.innerHTML = `<div>
+    notif.innerHTML = `<div>
       <div><span><i class="text-green bi bi-bag-check"></i></span> Success</div>
       <div class="delete-icon"><i class="bi bi-x"></i></div>
     </div>`;
 
-  toasts.appendChild(notif);
+    toasts.appendChild(notif);
 
-  setTimeout(() => {
-    notif.remove();
-  }, 3000);
+    setTimeout(() => {
+      notif.remove();
+    }, 3000);
+  }
 }
 
 // call api
@@ -780,30 +793,44 @@ document.addEventListener("DOMContentLoaded", function () {
 // sign in
 
 var signUp = document.getElementById("sign-up");
-signUp.addEventListener("click", () => signup());
+signUp.addEventListener("click", (e) => signup(e.preventDefault()));
 function signup() {
-  let fullname = document.getElementById("fullname");
-  let email = document.getElementById("email");
-  let password = document.getElementById("password");
-  localStorage.setItem("fullname", fullname.value);
-  localStorage.setItem("email", email.value);
-  localStorage.setItem("password", password.value);
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  let fullname = document.querySelector('input[name="fullname2"]');
+  let email = document.querySelector('input[name="email2"]');
+  let password = document.querySelector('input[name="password2"]');
+  const user = {
+    fullname: fullname.value,
+    email: email.value,
+    password: password.value,
+  };
+
+  users.push(user);
+  localStorage.setItem("users", JSON.stringify(users));
   alert("Your account has been created");
+  document.getElementById("regModal").style.display = "none";
 }
 
 // checking
 var signIn = document.getElementById("sign-in");
-signIn.addEventListener("click", () => signin());
+signIn.addEventListener("click", (e) => signin(e.preventDefault()));
 function signin() {
-  let storedEmail = localStorage.getItem("email");
-  let storedPw = localStorage.getItem("password");
-
-  let userEmail = document.getElementById("email");
-  let userPw = document.getElementById("password");
-
-  if (userEmail.value == storedEmail && userPw.value == storedPw) {
-    alert("You are logged in.");
+  let users = JSON.parse(localStorage.getItem("users"));
+  let userEmail = document.querySelector('input[name="email3"]');
+  let userPw = document.querySelector('input[name="password3"]');
+  let check = false;
+  for (let i = 0; i < users.length; i++) {
+    if (
+      userEmail.value == users[i].email &&
+      userPw.value == users[i].password
+    ) {
+      check = true;
+    }
+  }
+  if (check == true) {
+    alert("Successful login  \n\nWellcome to Tfruit shop");
+    document.getElementById("userModal").style.display = "none";
   } else {
-    alert("Error on login");
+    alert("you have failed to login");
   }
 }
