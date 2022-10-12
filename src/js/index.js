@@ -206,7 +206,10 @@ $slider_ini.on("afterChange", function (event, slick, currentSlide) {
 });
 
 // timedown ///////////////////////////////////////////////////////////////////////////////////////////////
-if (window.document.location.pathname == "/index.html") {
+if (
+  window.document.location.pathname == "/index.html" ||
+  window.document.location.pathname == "/"
+) {
   let countDownDate = new Date("october 30, 2022 23:59:59").getTime();
 
   setInterval(function () {
