@@ -207,92 +207,98 @@ $slider_ini.on("afterChange", function (event, slick, currentSlide) {
 });
 
 // timedown ///////////////////////////////////////////////////////////////////////////////////////////////
-let countDownDate = new Date("october 30, 2022 23:59:59").getTime();
+if (window.document.location.pathname == "/index.html") {
+  let countDownDate = new Date("october 30, 2022 23:59:59").getTime();
 
-setInterval(function () {
-  let now = new Date().getTime();
+  setInterval(function () {
+    let now = new Date().getTime();
 
-  let distance = countDownDate - now;
+    let distance = countDownDate - now;
 
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("timedown").innerHTML =
-    days +
-    "d " +
-    " : " +
-    hours +
-    "h " +
-    " : " +
-    minutes +
-    "m " +
-    " : " +
-    seconds +
-    "s ";
+    document.getElementById("timedown").innerHTML =
+      days +
+      "d " +
+      " : " +
+      hours +
+      "h " +
+      " : " +
+      minutes +
+      "m " +
+      " : " +
+      seconds +
+      "s ";
 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timedown").innerHTML = "End Deal";
-    document.getElementById("timedown2").innerHTML = "End Deal";
-    document.getElementById("days").innerHTML = "End Deal";
-    document.getElementById("hours").innerHTML = "End Deal";
-    document.getElementById("minutes").innerHTML = "End Deal";
-    document.getElementById("seconds").innerHTML = "End Deal";
-  }
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("timedown").innerHTML = "End Deal";
+      document.getElementById("timedown2").innerHTML = "End Deal";
+      document.getElementById("days").innerHTML = "End Deal";
+      document.getElementById("hours").innerHTML = "End Deal";
+      document.getElementById("minutes").innerHTML = "End Deal";
+      document.getElementById("seconds").innerHTML = "End Deal";
+    }
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
-  document.getElementById("timedown2").innerHTML =
-    days +
-    "d " +
-    " : " +
-    hours +
-    "h " +
-    " : " +
-    minutes +
-    "m " +
-    " : " +
-    seconds +
-    "s ";
-}, 1000);
+    document.getElementById("timedown2").innerHTML =
+      days +
+      "d " +
+      " : " +
+      hours +
+      "h " +
+      " : " +
+      minutes +
+      "m " +
+      " : " +
+      seconds +
+      "s ";
+  }, 1000);
+}
 
 //count
 
-let a = 0;
-$(window).scroll(function () {
-  let oTop = $("#counter").offset().top - window.innerHeight;
-  if (a == 0 && $(window).scrollTop() > oTop) {
-    $(".counter").each(function () {
-      let $this = $(this),
-        countTo = $this.attr("number");
-      $({
-        countNum: $this.text(),
-      }).animate(
-        {
-          countNum: countTo,
-        },
+if (window.document.location.pathname == "/index.html") {
+  let a = 0;
+  $(window).scroll(function () {
+    let oTop = $("#counter").offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+      $(".counter").each(function () {
+        let $this = $(this),
+          countTo = $this.attr("number");
+        $({
+          countNum: $this.text(),
+        }).animate(
+          {
+            countNum: countTo,
+          },
 
-        {
-          duration: 2000,
-          easing: "swing",
-          step: function () {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function () {
-            $this.text(this.countNum);
-            //alert('finished');
-          },
-        }
-      );
-    });
-    a = 1;
-  }
-});
+          {
+            duration: 2000,
+            easing: "swing",
+            step: function () {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+              $this.text(this.countNum);
+              //alert('finished');
+            },
+          }
+        );
+      });
+      a = 1;
+    }
+  });
+}
 
 // aos
 AOS.init({
@@ -689,25 +695,6 @@ function createNotification() {
 
 // call api
 
-// const axios = require("axios");
-
-// const fieldUserName = document.getElementById("fullname").value;
-// const fieldUserEmail = document.getElementById("email").value;
-// const fieldUserPass = document.getElementById("password").value;
-
-// axios
-//   .post("https://trungapi-xuantiennn.vercel.app/api/login/register", {
-//     email: fieldUserEmail,
-//     password: fieldUserPass,
-//     userName: fieldUserName,
-//   })
-//   .then(function (response) {
-//     console.log("response");
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
-
 // validator form ///////////////////////////////////////////////////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -730,32 +717,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Re-enter unknown password correctly"
       ),
     ],
-    onSubmit: function (data) {
-      console.log(data);
-      // const fieldUserName = document.getElementById("fullname").value;
-      // const fieldUserEmail = document.getElementById("email").value;
-      // const fieldUserPass = document.getElementById("password").value;
-      // console.log({ fieldUserName, fieldUserEmail, fieldUserPass });
-      // axios
-      //   .post(
-      //     "https://trungapi-2n4lhu26h-xuantiennn.vercel.app/api/login/register",
-      //     {
-      //       // https://trungapi-2n4lhu26h-xuantiennn.vercel.app/api/login
-      //       email: fieldUserEmail,
-      //       password: fieldUserPass,
-      //       userName: fieldUserName,
-      //     }
-      //   )
-      //   .then(function (response) {
-      //     console.log(response);
-      //     if (typeof response === "object") {
-      //       window.location.href = "/";
-      //     }
-      //   })
-      //   .catch(function (error) {
-      //     console.log(error);
-      //   });
-    },
   });
 
   Validator({
@@ -769,32 +730,6 @@ document.addEventListener("DOMContentLoaded", function () {
       Validator.isPasstext("#password"),
       // Validator.minLength("#password", 8),
     ],
-    onSubmit: function (data) {
-      console.log(data);
-      // const fieldUserName = document.getElementById("fullname").value;
-      // const fieldUserEmail = document.getElementById("email").value;
-      // const fieldUserPass = document.getElementById("password").value;
-      // console.log({ fieldUserName, fieldUserEmail, fieldUserPass });
-      // axios
-      //   .post(
-      //     "https://trungapi-2n4lhu26h-xuantiennn.vercel.app/api/login/register",
-      //     {
-      //       // https://trungapi-2n4lhu26h-xuantiennn.vercel.app/api/login
-      //       email: fieldUserEmail,
-      //       password: fieldUserPass,
-      //       userName: fieldUserName,
-      //     }
-      //   )
-      //   .then(function (response) {
-      //     console.log(response);
-      //     if (typeof response === "object") {
-      //       window.location.href = "/";
-      //     }
-      //   })
-      //   .catch(function (error) {
-      //     console.log(error);
-      //   });
-    },
   });
 
   Validator({
@@ -841,3 +776,34 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
+// sign in
+
+var signUp = document.getElementById("sign-up");
+signUp.addEventListener("click", () => signup());
+function signup() {
+  let fullname = document.getElementById("fullname");
+  let email = document.getElementById("email");
+  let password = document.getElementById("password");
+  localStorage.setItem("fullname", fullname.value);
+  localStorage.setItem("email", email.value);
+  localStorage.setItem("password", password.value);
+  alert("Your account has been created");
+}
+
+// checking
+var signIn = document.getElementById("sign-in");
+signIn.addEventListener("click", () => signin());
+function signin() {
+  let storedEmail = localStorage.getItem("email");
+  let storedPw = localStorage.getItem("password");
+
+  let userEmail = document.getElementById("email");
+  let userPw = document.getElementById("password");
+
+  if (userEmail.value == storedEmail && userPw.value == storedPw) {
+    alert("You are logged in.");
+  } else {
+    alert("Error on login");
+  }
+}
