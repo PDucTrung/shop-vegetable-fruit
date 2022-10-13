@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import $, { nodeName } from "jquery";
+import $ from "jquery";
 import "jquery/dist/jquery.min.js";
 import "hover.css/css/hover.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -698,7 +698,7 @@ $(".slider-list-blog").slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
-  fade:true,
+  fade: true,
   speed: 1000,
   cssEase: "linear",
   arrows: false,
