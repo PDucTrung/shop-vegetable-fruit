@@ -483,6 +483,13 @@ if (window.document.location.pathname == "/checkout.html") {
     if ($(this).is(":checked")) {
       $(".content-check").removeClass("check-none");
       $(".content-check").addClass("check-block");
+      //
+      $("#check-pay2").prop("checked", false);
+      $("#check-pay3").prop("checked", false);
+      $(".content-check2").addClass("check-none");
+      $(".content-check3").addClass("check-none");
+      $(".content-check2").removeClass("check-block");
+      $(".content-check3").removeClass("check-block");
     } else {
       $(".content-check").addClass("check-none");
       $(".content-check").removeClass("check-block");
@@ -493,6 +500,13 @@ if (window.document.location.pathname == "/checkout.html") {
     if ($(this).is(":checked")) {
       $(".content-check2").removeClass("check-none");
       $(".content-check2").addClass("check-block");
+      //
+      $("#check-pay").prop("checked", false);
+      $("#check-pay3").prop("checked", false);
+      $(".content-check").addClass("check-none");
+      $(".content-check3").addClass("check-none");
+      $(".content-check").removeClass("check-block");
+      $(".content-check3").removeClass("check-block");
     } else {
       $(".content-check2").addClass("check-none");
       $(".content-check2").removeClass("check-block");
@@ -503,6 +517,13 @@ if (window.document.location.pathname == "/checkout.html") {
     if ($(this).is(":checked")) {
       $(".content-check3").removeClass("check-none");
       $(".content-check3").addClass("check-block");
+      //
+      $("#check-pay").prop("checked", false);
+      $("#check-pay2").prop("checked", false);
+      $(".content-check").addClass("check-none");
+      $(".content-check2").addClass("check-none");
+      $(".content-check").removeClass("check-block");
+      $(".content-check2").removeClass("check-block");
     } else {
       $(".content-check3").addClass("check-none");
       $(".content-check3").removeClass("check-block");
@@ -677,6 +698,7 @@ $(".slider-list-blog").slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
+  fade:true,
   speed: 1000,
   cssEase: "linear",
   arrows: false,
