@@ -144,7 +144,7 @@ $slider_ini.on("init", function (event, slick, currentSlide, nextSlide) {
 $slider_ini.slick({
   autoplay: true,
   autoplaySpeed: 3000,
-  speed: 1000,
+  // speed: 1000,
   slidesToShow: 1,
   cssEase: "linear",
   slidesToScroll: 1,
