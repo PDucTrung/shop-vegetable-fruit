@@ -39,7 +39,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  animation: Move 6s linear infinite;
+  animation: Move 5s linear infinite;
 }
 .Advance-Slider .item {
   height: 100vh;
@@ -278,7 +278,7 @@
     transform-origin: 50% 50%;
   }
   to {
-    transform: scale(1.4, 1.5);
+    transform: scale(1.5, 1.6);
     transform-origin: 50% 0%;
   }
 }
