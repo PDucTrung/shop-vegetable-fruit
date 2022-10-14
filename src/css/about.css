@@ -51,10 +51,10 @@
   left: 50%;
   transform: translateX(-50%);
   top: 290px;
-  -webkit-animation: glowing 1500ms infinite;
+  /* -webkit-animation: glowing 1500ms infinite;
   -moz-animation: glowing 1500ms infinite;
   -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite; */
   cursor: pointer;
 }
 
@@ -154,4 +154,27 @@
 }
 
 @media screen and (min-width: 1400px) {
+}
+
+.dots-history.green {
+  background: green;
+  box-shadow: 0 0 0 0 green;
+  animation: pulse-green 1.5s infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 green;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+  }
 }
