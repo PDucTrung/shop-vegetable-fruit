@@ -8,6 +8,7 @@ import "animate.css/animate.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick.min.js";
 import "aos/dist/aos.css";
+import _ from "lodash";
 import AOS from "aos";
 import { Validator } from "./validator";
 import "../css/index.css";

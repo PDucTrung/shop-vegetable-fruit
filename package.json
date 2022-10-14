@@ -20,6 +20,7 @@
     "bootstrap-icons": "^1.9.1",
     "hover.css": "^2.3.2",
     "jquery": "^3.6.1",
+    "lodash": "^4.17.21",
     "nouislider": "^15.6.1",
     "popper.js": "^1.16.1",
     "react-hover-css": "^1.1.0",
