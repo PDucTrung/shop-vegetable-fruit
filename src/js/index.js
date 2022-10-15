@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.min.js";
 import "aos/dist/aos.css";
 import _ from "lodash";
 import AOS from "aos";
+import { products } from "./db";
 import { Validator } from "./validator";
 import "../css/index.css";
 import "../css/global.css";
@@ -422,61 +423,33 @@ if (window.document.location.pathname === "/product.html") {
 }
 
 // quanlity /////////////////////////////////////////////////////////////////////////////////////////////////////
-if (window.document.location.pathname == "/cart.html") {
-  const inc = document.getElementById("increment");
-  const input = document.getElementById("input");
-  const dec = document.getElementById("decrement");
-  let price = document.getElementById("price").textContent;
-  let total = document.getElementById("total").textContent;
-  const but = document.querySelector(".btn-coupon");
+// if (window.document.location.pathname == "/cart.html") {
+//   const inc = document.getElementById("increment");
+//   const input = document.getElementById("input");
+//   const dec = document.getElementById("decrement");
+//   let price = document.getElementById("price").textContent;
+//   let total = document.getElementById("total").textContent;
+//   const but = document.querySelector(".btn-coupon");
 
-  inc.addEventListener("click", () => {
-    total = input.value * price;
-    document.getElementById("total").innerHTML = total;
-  });
+//   inc.addEventListener("click", () => {
+//     total = input.value * price;
+//     document.getElementById("total").innerHTML = total;
+//   });
 
-  dec.addEventListener("click", () => {
-    total = input.value * price;
-    document.getElementById("total").innerHTML = total;
-  });
+//   dec.addEventListener("click", () => {
+//     total = input.value * price;
+//     document.getElementById("total").innerHTML = total;
+//   });
 
-  but.addEventListener("click", () => {
-    let total1 = document.getElementById("total");
-    let total2 = document.getElementById("total-2");
+//   but.addEventListener("click", () => {
+//     let total1 = document.getElementById("total");
+//     let total2 = document.getElementById("total-2");
 
-    let sum = Number(total1.textContent) + Number(total2.textContent);
+//     let sum = Number(total1.textContent) + Number(total2.textContent);
 
-    document.getElementById("total-sum").innerHTML = sum;
-  });
-
-  /////////////////// product +/-
-  $(document).ready(function () {
-    $(".num-in button").click(function () {
-      var $input = $(this).parents(".qty-cart").find("input.number-qty");
-      if ($(this).hasClass("minus")) {
-        var count = parseFloat($input.val()) - 1;
-        count = count < 1 ? 1 : count;
-        // if (count < 2) {
-        //   $(this).addClass("dis");
-        // } else {
-        //   $(this).removeClass("dis");
-        // }
-        $input.val(count);
-      } else {
-        var count = parseFloat($input.val()) + 1;
-        $input.val(count);
-
-        // if (count > 1) {
-        //   $(this).parents(".qty-cart").find(".minus").removeClass("dis");
-        // }
-      }
-
-      $input.change();
-      return false;
-    });
-  });
-  // product +/-
-}
+//     document.getElementById("total-sum").innerHTML = sum;
+//   });
+// }
 
 // check payment block
 if (window.document.location.pathname == "/checkout.html") {
@@ -553,37 +526,6 @@ $(".slider-nav").slick({
 });
 
 // quanlity product detail /////////////////////////////////////////////////////////////////////////////////////////////////////
-if (window.document.location.pathname == "/productdetail.html") {
-  let counter = 0;
-
-  function increment2() {
-    counter++;
-  }
-
-  function decrement2() {
-    counter--;
-  }
-
-  function get() {
-    return counter;
-  }
-
-  const inc = document.getElementById("increment2");
-  const input = document.getElementById("input");
-  const dec = document.getElementById("decrement2");
-
-  inc.addEventListener("click", () => {
-    increment2();
-    input.value = get();
-  });
-
-  dec.addEventListener("click", () => {
-    if (input.value > 0) {
-      decrement2();
-    }
-    input.value = get();
-  });
-}
 
 // slider product relative /////////////////////////////////////////////////////
 
@@ -707,13 +649,7 @@ $(".slider-list-blog").slick({
 });
 
 // Toast function
-if (
-  window.document.location.pathname == "/index.html" ||
-  window.document.location.pathname == "/product.html" ||
-  window.document.location.pathname == "/checkout.html" ||
-  window.document.location.pathname == "/productdetail.html" ||
-  window.document.location.pathname == "/cart.html"
-) {
+if (window.document.location.pathname == "/checkout.html") {
   const button = document.getElementById("checkout");
   const toasts = document.getElementById("toasts");
 

@@ -69,7 +69,7 @@
                           <label for="email" class="form-label">Email</label>
                           <input
                             id="email"
-                            name="email"
+                            name="email3"
                             type="text"
                             placeholder="VD: email@domain.com"
                             class="form-control"
@@ -83,7 +83,7 @@
                           >
                           <input
                             id="password"
-                            name="password"
+                            name="password3"
                             type="password"
                             placeholder="Enter your password"
                             class="form-control"
@@ -93,7 +93,7 @@
 
                         <a href="#" class="link">Forward your password ?</a>
 
-                        <button class="form-submit">Sign in</button>
+                        <button class="form-submit" id="sign-in">Sign in</button>
 
                         <p>
                           Do you have an account?
@@ -133,7 +133,7 @@
                           >
                           <input
                             id="fullname"
-                            name="fullname"
+                            name="fullname2"
                             type="text"
                             placeholder="VD: sunsan"
                             class="form-control"
@@ -145,7 +145,7 @@
                           <label for="email" class="form-label">Email</label>
                           <input
                             id="email"
-                            name="email"
+                            name="email2"
                             type="text"
                             placeholder="VD: email@domain.com"
                             class="form-control"
@@ -159,7 +159,7 @@
                           >
                           <input
                             id="password"
-                            name="password"
+                            name="password2"
                             type="password"
                             placeholder="Enter your password"
                             class="form-control"
@@ -181,7 +181,7 @@
                           <span class="form-message"></span>
                         </div>
 
-                        <button class="form-submit">Sign up</button>
+                        <button class="form-submit" id="sign-up">Sign up</button>
 
                         <p class="text-center text-black">OR</p>
 
@@ -356,119 +356,9 @@
         <div class="container">
           <!--  -->
           <div
-            class="d-flex align-items-center flex-column flex-md-row justify-content-md-center align-items-md-start gap-5"
+            class="non d-flex align-items-center flex-column flex-md-row justify-content-md-center align-items-md-start gap-5"
           >
-            <!-- pr detail -->
-            <div class="img-pr-detail">
-              <div class="slider-for">
-                <div class="img-slider-for">
-                  <img src="img/pr-detail-1.png" alt="zz" />
-                </div>
-                <div class="img-slider-for">
-                  <img src="img/pr-detail-2.png" alt="zz" />
-                </div>
-                <div class="img-slider-for">
-                  <img src="img/pr-detail-3.png" alt="zz" />
-                </div>
-                <div class="img-slider-for">
-                  <img src="img/pr-detail-1.png" alt="zz" />
-                </div>
-                <div class="img-slider-for">
-                  <img src="img/pr-detail-2.png" alt="zz" />
-                </div>
-                <div class="img-slider-for">
-                  <img src="img/pr-detail-3.png" alt="zz" />
-                </div>
-              </div>
-              <div class="slider-nav">
-                <div class="img-slider-nav">
-                  <img src="img/pr-detail-1.png" alt="ss" />
-                </div>
-                <div class="img-slider-nav">
-                  <img src="img/pr-detail-2.png" alt="ss" />
-                </div>
-                <div class="img-slider-nav">
-                  <img src="img/pr-detail-3.png" alt="ss" />
-                </div>
-                <div class="img-slider-nav">
-                  <img src="img/pr-detail-1.png" alt="ss" />
-                </div>
-                <div class="img-slider-nav">
-                  <img src="img/pr-detail-2.png" alt="ss" />
-                </div>
-                <div class="img-slider-nav">
-                  <img src="img/pr-detail-3.png" alt="ss" />
-                </div>
-              </div>
-            </div>
-
-            <!-- content pr detail -->
-            <div class="content-pr-detail">
-              <div class="tittle-pr-detail">
-                <div><p class="font-mali fs-40 fw-500">Bok Choy</p></div>
-                <div class="d-flex gap-3">
-                  <div><span class="font-mali fs-20">$ 3.25</span></div>
-                  <div
-                    class="list-star d-flex justify-content-center align-items-center gap-2"
-                  >
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
-                </div>
-                <div>
-                  <br />
-                  <p>
-                    Avocados have a round shape, but most of them look like a
-                    gourd, when ripe, some remain the same color as when they
-                    are still green, but some change to black purple, the inside
-                    is soft, yellow pale or light green, with a sweet, fatty
-                    taste.
-                  </p>
-                </div>
-              </div>
-              <div class="content-pr-detail">
-                <div class="properties-pr-detail">
-                  <div>
-                    <p>Unit: <span class="text-gray-fo">1 kg</span></p>
-                  </div>
-                  <div>
-                    <p>Category: <span class="text-gray-fo">Fruit</span></p>
-                  </div>
-                  <div>
-                    <p>SKU: <span class="text-gray-fo">fr001</span></p>
-                  </div>
-                </div>
-                <div
-                  class="quality-pr-detail d-flex align-items-center justify-content-between"
-                >
-                  <div class="qty-cart">
-                    <input
-                      class="number-qty"
-                      type="number"
-                      id="input"
-                      readonly
-                    />
-                    <div
-                      class="d-flex flex-column gap-2 align-items-center justify-content-center"
-                    >
-                      <button class="plus" id="increment2">
-                        <i class="fas fa-plus"></i>
-                      </button>
-                      <button class="minus" id="decrement2">
-                        <i class="fas fa-minus"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="add-cart-pr-detail">
-                    <div id="checkout" class="button button-2">Add to cart</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -806,5 +696,6 @@
     </div>
     <script type="module" src="js/validator.js"></script>
     <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/productdetail.js"></script>
   </body>
 </html>

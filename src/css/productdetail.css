@@ -2,31 +2,6 @@
 .section-product-detail {
   padding: 100px 0px;
 }
-.slider-for {
-  width: 360px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.slider-nav {
-  width: 360px;
-  gap: 20px;
-  padding: 0px 10px;
-}
-
-.slider-for .img-slider-for img {
-  width: 330px;
-  height: 330px;
-  cursor: pointer;
-}
-
-.slider-nav .img-slider-nav img {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
 
 /* commet product */
 .section-cmt-pr {
@@ -189,32 +164,65 @@
   justify-content: center;
 }
 
+.img-pr-top img {
+  width: 335px;
+  height: 335px;
+}
+
+.img-pr-bottom img {
+  width: 100px;
+  height: 100px;
+}
+
+.img-pr-detail{
+  padding-top: 30px;
+}
+
 @media screen and (min-width: 576px) {
+  .img-pr-top img {
+    width: 395px;
+    height: 395px;
+  }
+
+  .img-pr-bottom img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .img-pr-top img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .img-pr-bottom img {
+    width: 85px;
+    height: 85px;
+  }
 }
 
 @media screen and (min-width: 992px) {
+  .img-pr-top img {
+    width: 395px;
+    height: 395px;
+  }
+
+  .img-pr-bottom img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  .slider-for {
-    width: 500px;
+  .img-pr-top img {
+    width: 420px;
+    height: 420px;
   }
 
-  .slider-nav {
-    width: 500px;
-  }
-
-  .slider-for .img-slider-for img {
-    width: 470px;
-    height: 470px;
-  }
-
-  .slider-nav .img-slider-nav img {
-    width: 150px;
-    height: 150px;
+  .img-pr-bottom img {
+    width: 130px;
+    height: 130px;
   }
   .content-pr-detail {
     width: 500px;
@@ -222,23 +230,6 @@
 }
 
 @media screen and (min-width: 1400px) {
-  .slider-for {
-    width: 600px;
-  }
-
-  .slider-nav {
-    width: 600px;
-  }
-
-  .slider-for .img-slider-for img {
-    width: 570px;
-    height: 570px;
-  }
-
-  .slider-nav .img-slider-nav img {
-    width: 180px;
-    height: 180px;
-  }
   .content-pr-detail {
     width: 600px;
   }
