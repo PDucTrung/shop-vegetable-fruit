@@ -55,9 +55,9 @@ $(function () {
                 <div class="d-flex flex-column gap-3 align-items-center justify-content-center">
                   <div class="img-pr-top"><img src="${product.img}" alt="dsd"></div>
                   <div class="img-pr-bottom d-flex gap-3 align-items-center justify-content-center">
-                      <img src="img/pr-detail-1.png" alt="dsd">
-                      <img src="img/pr-detail-2.png" alt="dsd">
-                      <img src="img/pr-detail-3.png" alt="dsd">
+                      <img src="https://tfruit.vercel.app/assets/pr-detail-1.44fdfde8.png" alt="dsd">
+                      <img src="https://tfruit.vercel.app/assets/pr-detail-2.c06e90b1.png" alt="dsd">
+                      <img src="https://tfruit.vercel.app/assets/pr-detail-3.c138ef36.png" alt="dsd">
                   </div>
              </div>
             </div>
