@@ -150,6 +150,7 @@
 
 .related-product:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 20px;
 }
 
 .related-product-slider .slick-track {
@@ -174,7 +175,7 @@
   height: 100px;
 }
 
-.img-pr-detail{
+.img-pr-detail {
   padding-top: 30px;
 }
 

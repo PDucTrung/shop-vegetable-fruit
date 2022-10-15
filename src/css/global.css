@@ -963,3 +963,11 @@ footer {
   top: 5px;
   color: #000;
 }
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: orange;
+}
