@@ -93,7 +93,9 @@
 
                         <a href="#" class="link">Forward your password ?</a>
 
-                        <button class="form-submit" id="sign-in">Sign in</button>
+                        <button class="form-submit" id="sign-in">
+                          Sign in
+                        </button>
 
                         <p>
                           Do you have an account?
@@ -181,7 +183,9 @@
                           <span class="form-message"></span>
                         </div>
 
-                        <button class="form-submit" id="sign-up">Sign up</button>
+                        <button class="form-submit" id="sign-up">
+                          Sign up
+                        </button>
 
                         <p class="text-center text-black">OR</p>
 
@@ -237,7 +241,9 @@
                               class="rd-navbar-nav d-flex flex-column align-items-center"
                             >
                               <li class="rd-nav-item">
-                                <a href="index.html" class="rd-nav-link">Home</a>
+                                <a href="index.html" class="rd-nav-link"
+                                  >Home</a
+                                >
                               </li>
                               <li class="rd-nav-item active">
                                 <a href="product.html" class="rd-nav-link"
@@ -485,17 +491,16 @@
                 </template>
               </div>
 
-
               <!--  -->
               <div
                 class="product-in-cart d-flex align-items-center justify-content-between"
               >
                 <div class="total-checkout font-mali fs-16 fw-600">
-                  <p>Total:</p>
+                  <p>Total: <span></span></p>
                 </div>
                 <div class="total-cart">
                   <p class="font-mali fs-16 fw-600">
-                    $ <span id="total-sum">7.25</span>
+                    $ <span id="total-sum" class="sum-checkout">7.25</span>
                   </p>
                 </div>
               </div>
@@ -590,7 +595,7 @@
 
                     <!--  -->
                     <div class="add-card-visa">
-                      <button>Add your cart</button>
+                      <button id="checkout">Add your cart</button>
                     </div>
                   </div>
                 </div>
@@ -667,7 +672,7 @@
 
                     <!--  -->
                     <div class="add-card-visa">
-                      <button>Add your cart</button>
+                      <button id="checkout">Add your cart</button>
                     </div>
                   </div>
                 </div>
@@ -744,7 +749,7 @@
 
                     <!--  -->
                     <div class="add-card-visa">
-                      <button>Add your cart</button>
+                      <button id="checkout">Add your cart</button>
                     </div>
                   </div>
                 </div>
@@ -756,7 +761,7 @@
           <div class="cart-totals d-flex flex-column justify-content-between">
             <div class="cart-sub-totals d-flex justify-content-between">
               <div><p>CART SUBTOTAL</p></div>
-              <div>$7.25</div>
+              <div>$<span class="sum-checkout"></span></div>
             </div>
             <div class="shipping d-flex justify-content-between">
               <div><p>SHIPPING</p></div>
@@ -764,7 +769,9 @@
             </div>
             <div class="totals d-flex justify-content-between">
               <div><p>TOTAL</p></div>
-              <div><p>$800</p></div>
+              <div>
+                <p>$<span class="sum-checkout"></span></p>
+              </div>
             </div>
             <div class="button-checkout">
               <button id="checkout" class="btn-checkout">

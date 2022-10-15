@@ -1,32 +1,54 @@
-import $ from "jquery";
+import $, { event } from "jquery";
 import _ from "lodash";
 
 import { products } from "./db";
 
 const url = new URL(location.href);
 const id = Number(url.searchParams.get("id"));
-const product = _.find(products, { id });
-const cart = JSON.parse(localStorage.getItem("carts")) || [];
-const item = _.find(cart, { product: product.id });
+// const product = _.find(products, { id });
+// const cart = JSON.parse(localStorage.getItem("carts")) || [];
+// const item = _.find(cart, { product: product.id });
 
 // add to cart
 const addToCart = (event) => {
   event.preventDefault();
 
+  const product = _.find(products, { id });
+
+  const cart = JSON.parse(localStorage.getItem("carts")) || [];
+
+  const item = _.find(cart, { product: product.id });
+
+  let input = $(".non").find("input.number-qty").val();
+
+  let total = product.price;
+
   if (item) {
-    item.quantity += 1;
-  } else {
+    alert("! Sản phẩm đã có giỏ hàng");
+  } else if (product) {
+    alert("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
     cart.push({
-      product: event.data.id,
-      quantity: 1,
+      product: product.id,
+      quantity: Number(input),
+      total: Number(total * input),
     });
   }
+  // else {
+  //   alert("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
+  //   cart.push({
+  //     product: product.id,
+  //     quantity: 1,
+  //     total: total,
+  //   });
+  // }
 
   localStorage.setItem("carts", JSON.stringify(cart));
 };
 
 // render product detail
 $(function () {
+  const product = _.find(products, { id });
+
   $(".non").html(
     `
             <div class="img-pr-detail">
@@ -111,32 +133,17 @@ $(function () {
   );
 
   $(".non").find(".btn-add").on("click", addToCart);
+  $(".non")
+    .find(".plus")
+    .on("click", function () {
+      input.val(parseInt(input.val()) + 1);
+    });
+  $(".non")
+    .find(".minus")
+    .on("click", function () {
+      if (input.val() > 1) {
+        input.val(parseInt(input.val()) - 1);
+      }
+    });
+  let input = $(".non").find("input.number-qty");
 });
-
-//
-if (window.document.location.pathname == "/productdetail.html") {
-  /////////////////// product +/-
-  var input = $(".non").find(".number-qty"),
-    minValue = parseInt(input.attr("min")),
-    maxValue = parseInt(input.attr("max"));
-
-  let plus = $(".non").find(".plus");
-
-  plus.on("click", function () {
-    var inputValue = input.val();
-    if (inputValue < maxValue) {
-      input.val(parseInt(inputValue) + 1);
-    }
-  });
-
-  let minus = $(".non").find(".minus");
-
-  minus.on("click", function () {
-    var inputValue = input.val();
-    if (inputValue < maxValue) {
-      input.val(parseInt(inputValue) - 1);
-    }
-  });
-
-  // product +/-
-}

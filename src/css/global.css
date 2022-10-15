@@ -7,8 +7,10 @@
   margin: 0;
 }
 
+html,
 body {
   overflow-x: hidden;
+  width: 100%;
 }
 
 img {

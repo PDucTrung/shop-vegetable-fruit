@@ -93,7 +93,9 @@
 
                         <a href="#" class="link">Forward your password ?</a>
 
-                        <button class="form-submit" id="sign-in">Sign in</button>
+                        <button class="form-submit" id="sign-in">
+                          Sign in
+                        </button>
 
                         <p>
                           Do you have an account?
@@ -181,7 +183,9 @@
                           <span class="form-message"></span>
                         </div>
 
-                        <button class="form-submit" id="sign-up">Sign up</button>
+                        <button class="form-submit" id="sign-up">
+                          Sign up
+                        </button>
 
                         <p class="text-center text-black">OR</p>
 
@@ -367,21 +371,23 @@
             <div class="content-cart fs-16 fw-400 d-flex flex-column gap-3">
               <!--  -->
               <template id="item-cart">
-              <div
-                class="product-in-cart d-flex align-items-center justify-content-start"
-              >
                 <div
-                  class="pr-cart d-flex justify-content-between align-items-center gap-3"
+                  class="product-in-cart d-flex align-items-center justify-content-start"
                 >
-                  <div class="img-thumbail-cart">
-                    <img src="${ product.img }" alt="ss" />
+                  <div
+                    class="pr-cart d-flex justify-content-between align-items-center gap-3"
+                  >
+                    <div class="img-thumbail-cart">
+                      <img src="${ product.img }" alt="ss" />
+                    </div>
+                    <div class="name-pr-cart"><p>${ product.name }</p></div>
                   </div>
-                  <div class="name-pr-cart"><p>${ product.name }</p></div>
-                </div>
-                <div class="price-cart">
-                  <p>$<span class="price" id="price">${ product.price }</span></p>
-                </div>
-                <div class="qty-cart">
+                  <div class="price-cart">
+                    <p>
+                      $<span class="price" id="price">${ product.price }</span>
+                    </p>
+                  </div>
+                  <div class="qty-cart">
                     <button type="button" class="btn btn-secondary btn-down">
                       <i class="fas fa-minus"></i>
                     </button>
@@ -395,13 +401,13 @@
                     <button type="button" class="btn btn-secondary btn-up">
                       <i class="fas fa-plus"></i>
                     </button>
+                  </div>
+                  <div class="total-cart">
+                    <p>$<span class="total" id="total">${ total }</span></p>
+                  </div>
+                  <div class="trash"><i class="bi bi-trash"></i></div>
                 </div>
-                <div class="total-cart">
-                  <p>$<span class="total" id="total">3.25</span></p>
-                </div>
-                <div class="trash"><i class="bi bi-trash"></i></div>
-              </div>
-            </template>
+              </template>
             </div>
           </div>
         </div>
@@ -429,7 +435,10 @@
             <div class="total-sum">
               <p>
                 Total: <span class="fs-20">$</span
-                ><span class="font-mali fs-24 fw-500" id="total-sum"></span>
+                ><span
+                  class="sum font-mali fs-24 fw-500"
+                  id="total-sum"
+                ></span>
               </p>
             </div>
             <div class="cart-check">

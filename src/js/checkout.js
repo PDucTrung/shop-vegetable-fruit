@@ -19,4 +19,11 @@ $(function () {
       return dom;
     })
   );
+
+  let sum = 0;
+  for (let i = 0; i < cart.length; i++) {
+    sum += cart[i].total;
+  }
+
+  $(".sum-checkout").text(Math.round(sum * 100) / 100);
 });

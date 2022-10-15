@@ -10,12 +10,18 @@ const addToCart = (event) => {
 
   const item = _.find(cart, { product: event.data.id });
 
+  const action = _.find(products, { id: event.data.id });
+
+  let total = action.price;
+
   if (item) {
-    item.quantity += 1;
+    alert("! Sản phẩm đã có giỏ hàng");
   } else {
+    alert("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
     cart.push({
       product: event.data.id,
       quantity: 1,
+      total: total,
     });
   }
 
