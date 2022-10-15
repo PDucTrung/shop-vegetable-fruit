@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick.min.js";
 import "aos/dist/aos.css";
 import _ from "lodash";
 import AOS from "aos";
-import { products } from "./db";
 import { Validator } from "./validator";
 import "../css/index.css";
 import "../css/global.css";
@@ -422,35 +421,6 @@ if (window.document.location.pathname === "/product.html") {
   };
 }
 
-// quanlity /////////////////////////////////////////////////////////////////////////////////////////////////////
-// if (window.document.location.pathname == "/cart.html") {
-//   const inc = document.getElementById("increment");
-//   const input = document.getElementById("input");
-//   const dec = document.getElementById("decrement");
-//   let price = document.getElementById("price").textContent;
-//   let total = document.getElementById("total").textContent;
-//   const but = document.querySelector(".btn-coupon");
-
-//   inc.addEventListener("click", () => {
-//     total = input.value * price;
-//     document.getElementById("total").innerHTML = total;
-//   });
-
-//   dec.addEventListener("click", () => {
-//     total = input.value * price;
-//     document.getElementById("total").innerHTML = total;
-//   });
-
-//   but.addEventListener("click", () => {
-//     let total1 = document.getElementById("total");
-//     let total2 = document.getElementById("total-2");
-
-//     let sum = Number(total1.textContent) + Number(total2.textContent);
-
-//     document.getElementById("total-sum").innerHTML = sum;
-//   });
-// }
-
 // check payment block
 if (window.document.location.pathname == "/checkout.html") {
   $("#check-pay").change(function () {
@@ -524,8 +494,6 @@ $(".slider-nav").slick({
   arrows: false,
   dots: false,
 });
-
-// quanlity product detail /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // slider product relative /////////////////////////////////////////////////////
 
