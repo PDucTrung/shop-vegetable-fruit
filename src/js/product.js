@@ -26,6 +26,8 @@ const addToCart = (event) => {
   }
 
   localStorage.setItem("carts", JSON.stringify(cart));
+
+  $(".number").text(cart.length);
 };
 
 // render product

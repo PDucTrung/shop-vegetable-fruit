@@ -768,3 +768,11 @@ function signin() {
     alert("you have failed to login");
   }
 }
+
+// cout cart
+
+$(function () {
+  let cart = JSON.parse(localStorage.getItem("carts")) || [];
+
+  $(".number").text(cart.length);
+});
