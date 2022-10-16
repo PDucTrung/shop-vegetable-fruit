@@ -179,6 +179,11 @@
   padding-top: 30px;
 }
 
+.tab label {
+  font-size: 10px;
+  margin: 20px 0px;
+}
+
 @media screen and (min-width: 576px) {
   .img-pr-top img {
     width: 395px;
@@ -188,6 +193,11 @@
   .img-pr-bottom img {
     width: 120px;
     height: 120px;
+  }
+
+  .tab label {
+    font-size: 15px;
+    margin: 5px 0px;
   }
 }
 
@@ -200,6 +210,10 @@
   .img-pr-bottom img {
     width: 85px;
     height: 85px;
+  }
+  .tab label {
+    font-size: 18px;
+    margin: 0px;
   }
 }
 

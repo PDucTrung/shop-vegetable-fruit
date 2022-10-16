@@ -74,7 +74,7 @@ $(function () {
                 <div>
                   <br />
                   <p>
-                    Avocados have a round shape, but most of them look like a
+                    It have a round shape, but most of them look like a
                     gourd, when ripe, some remain the same color as when they
                     are still green, but some change to black purple, the inside
                     is soft, yellow pale or light green, with a sweet, fatty
@@ -85,13 +85,13 @@ $(function () {
               <div class="content-pr-detail">
                 <div class="properties-pr-detail">
                   <div>
-                    <p>Unit: <span class="text-gray-fo">1 kg</span></p>
+                    <p>Brand: <span class="text-gray-fo">TFruit</span></p>
                   </div>
                   <div>
                     <p>Category: <span class="text-gray-fo">Fruit</span></p>
                   </div>
                   <div>
-                    <p>SKU: <span class="text-gray-fo">fr001</span></p>
+                    <p>Weght: <span class="text-gray-fo">400g</span></p>
                   </div>
                 </div>
                 <div
@@ -140,4 +140,6 @@ $(function () {
       }
     });
   let input = $(".non").find("input.number-qty");
+
+  $(".name-pr-detail").text(product.name);
 });
