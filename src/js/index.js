@@ -618,7 +618,10 @@ $(".slider-list-blog").slick({
 });
 
 // Toast function
-if (window.document.location.pathname == "/checkout.html") {
+if (
+  window.document.location.pathname == "/checkout.html" ||
+  window.document.location.pathname == "/product.html"
+) {
   const toasts = document.getElementById("toasts");
 
   $(".checkout").on("click", () => createNotification());
