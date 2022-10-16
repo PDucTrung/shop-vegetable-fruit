@@ -33,16 +33,10 @@ const addToCart = (event) => {
       total: Number(total * input),
     });
   }
-  // else {
-  //   alert("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
-  //   cart.push({
-  //     product: product.id,
-  //     quantity: 1,
-  //     total: total,
-  //   });
-  // }
 
   localStorage.setItem("carts", JSON.stringify(cart));
+
+  $(".number").text(cart.length);
 };
 
 // render product detail
