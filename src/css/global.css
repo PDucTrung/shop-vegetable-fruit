@@ -675,9 +675,21 @@ footer {
 }
 
 @media screen and (min-width: 576px) {
+  .modal-content3 {
+    width: 400px;
+  }
+  .search-text {
+    width: 390px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .modal-content3 {
+    width: 600px;
+  }
+  .search-text {
+    width: 590px;
+  }
   .ft-3 {
     margin-top: 40px;
   }
