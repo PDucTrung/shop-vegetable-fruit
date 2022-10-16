@@ -618,10 +618,10 @@ $(".slider-list-blog").slick({
 
 // Toast function
 if (window.document.location.pathname == "/checkout.html") {
-  const button = document.getElementById("checkout");
+  
   const toasts = document.getElementById("toasts");
 
-  button.addEventListener("click", () => createNotification());
+  $(".checkout").on("click", () => createNotification());
 
   function createNotification() {
     const notif = document.createElement("div");
