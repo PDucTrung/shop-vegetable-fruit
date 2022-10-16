@@ -1067,7 +1067,7 @@
 
 /* abouthome */
 
-.text-cmthome-1 i{
+.text-cmthome-1 i {
   color: orange;
   font-size: 20px;
 }
@@ -1377,7 +1377,7 @@
 /* partners */
 
 .section-partners {
-  padding: 20px 20px 30px 20px;
+  padding: 20px 20px 60px 20px;
   width: 100%;
   background-color: #f1efeb;
   height: max-content;
