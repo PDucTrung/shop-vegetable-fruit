@@ -377,6 +377,7 @@ $(".slider-fruit").slick({
   dots: true,
   fade: true,
   cssEase: "linear",
+  arrows: false,
   prevArrow:
     "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-arrow-left' aria-hidden='true'></i></button>",
   nextArrow:
@@ -618,7 +619,6 @@ $(".slider-list-blog").slick({
 
 // Toast function
 if (window.document.location.pathname == "/checkout.html") {
-  
   const toasts = document.getElementById("toasts");
 
   $(".checkout").on("click", () => createNotification());
