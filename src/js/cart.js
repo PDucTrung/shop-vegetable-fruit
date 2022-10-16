@@ -22,7 +22,7 @@ const increment = (event) => {
   product.quantity += 1;
   const item = $(event.target.closest(".product-in-cart"));
   item.find(".number-qty").val(product.quantity);
-  product.total = Number(action.price * product.quantity);
+  product.total = (action.price * product.quantity).toFixed(2);
 
   item.find(".total").text(product.total);
   localStorage.setItem("carts", JSON.stringify(cart));
@@ -35,7 +35,7 @@ const decrement = (event) => {
   else product.quantity -= 1;
   const item = $(event.target.closest(".product-in-cart"));
   item.find(".number-qty").val(product.quantity);
-  product.total = Number(action.price * product.quantity);
+  product.total = (action.price * product.quantity).toFixed(2);
   item.find(".total").text(product.total);
   localStorage.setItem("carts", JSON.stringify(cart));
   // $(".total" + product.id).text(product.quantity);
@@ -67,5 +67,5 @@ $(".btn-coupon").on("click", function () {
     sum += Number(cart[i].total);
   }
 
-  $(".sum").text(sum);
+  $(".sum").text(sum.toFixed(2));
 });
