@@ -99,6 +99,14 @@ img {
 }
 
 /* heading header */
+.heading-header a {
+  color: white;
+}
+
+.heading-header a:hover {
+  color: orange;
+}
+
 .rd-navbar-brand .icon {
   font-size: 30px;
   color: black;
