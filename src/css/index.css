@@ -1067,6 +1067,11 @@
 
 /* abouthome */
 
+.text-cmthome-1 i{
+  color: orange;
+  font-size: 20px;
+}
+
 .abouthome {
   padding: auto;
   margin: auto;
