@@ -25,5 +25,5 @@ $(function () {
     sum += Number(cart[i].total);
   }
 
-  $(".sum-checkout").text(sum);
+  $(".sum-checkout").text(sum.toFixed(2));
 });
