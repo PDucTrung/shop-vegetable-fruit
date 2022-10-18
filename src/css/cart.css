@@ -117,7 +117,7 @@
 
 .total-cart,
 .price-cart {
-  width: 55px;
+  width: 70px;
   text-align: center;
 }
 
@@ -125,12 +125,12 @@
   width: 100%;
 }
 
-.product-in-cart .total-cart{
-  width: 100px;
+.product-in-cart .total-cart {
+  width: 70px;
 }
 
 .product-in-cart {
-  gap: 57px;
+  gap: 50px;
 }
 
 .product-in-cart .trash i {
