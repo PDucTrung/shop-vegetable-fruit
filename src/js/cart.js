@@ -12,6 +12,7 @@ const deleteItem = (event) => {
 
     event.target.closest(".product-in-cart").remove();
     $(".number").text(cart.length);
+    total();
   }
 };
 
@@ -26,6 +27,7 @@ const increment = (event) => {
 
   item.find(".total").text(product.total);
   localStorage.setItem("carts", JSON.stringify(cart));
+  total();
 };
 
 const decrement = (event) => {
@@ -39,6 +41,7 @@ const decrement = (event) => {
   item.find(".total").text(product.total);
   localStorage.setItem("carts", JSON.stringify(cart));
   // $(".total" + product.id).text(product.quantity);
+  total();
 };
 
 $(function () {
@@ -59,13 +62,25 @@ $(function () {
       return dom;
     })
   );
+
+  //
+  total();
 });
 
-$(".btn-coupon").on("click", function () {
+// $(".btn-coupon").on("click", function () {
+//   let sum = 0;
+//   for (let i = 0; i < cart.length; i++) {
+//     sum += Number(cart[i].total);
+//   }
+
+//   $(".sum").text(sum.toFixed(2));
+// });
+
+const total = () => {
   let sum = 0;
   for (let i = 0; i < cart.length; i++) {
     sum += Number(cart[i].total);
   }
 
   $(".sum").text(sum.toFixed(2));
-});
+};
