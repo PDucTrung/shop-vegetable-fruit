@@ -20,7 +20,7 @@ export const products = [
   {
     name: "Pepper",
     img: "https://tfruit.vercel.app/assets/pr-fr-4.21086135.png",
-    price: 5.79,
+    price: 2.79,
     id: 4,
   },
   {
