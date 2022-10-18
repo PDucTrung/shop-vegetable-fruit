@@ -67,14 +67,20 @@ $(function () {
   total();
 });
 
-// $(".btn-coupon").on("click", function () {
-//   let sum = 0;
-//   for (let i = 0; i < cart.length; i++) {
-//     sum += Number(cart[i].total);
-//   }
+//apply code 10%
+$(".btn-coupon").on("click", function () {
+  let sum = 0;
+  if (
+    $(".coupon-code").val() == "techmaster" ||
+    $(".coupon-code").val() == "mrtrung"
+  ) {
+    for (let i = 0; i < cart.length; i++) {
+      sum += Number(cart[i].total);
+    }
 
-//   $(".sum").text(sum.toFixed(2));
-// });
+    $(".sum").text((sum * 0.9).toFixed(2));
+  }
+});
 
 const total = () => {
   let sum = 0;
