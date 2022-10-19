@@ -267,8 +267,6 @@ page footer
   position: absolute;
 }
 
-/* Reset style for input range */
-
 .price-field input[type="range"] {
   width: 240px;
   height: 5px;
@@ -342,6 +340,7 @@ page footer
   color: orange;
   font-size: 15px;
   font-weight: 400;
+  margin-left: 30px;
 }
 
 .price-wrap-1,
@@ -365,7 +364,7 @@ page footer
 
 .price-wrap #one,
 .price-wrap #two {
-  width: 30px;
+  max-width: 30px;
   text-align: right;
   margin: 0;
   padding: 0;
@@ -374,8 +373,8 @@ page footer
   outline: 0;
   color: green;
   font-size: 15px;
-  line-height: 1.2em;
   font-weight: 400;
+  text-align: left;
 }
 
 .price-wrap label {
