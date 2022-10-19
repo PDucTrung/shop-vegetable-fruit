@@ -80,6 +80,7 @@ $(".btn-coupon").on("click", function () {
 
     $(".sum").text((sum * 0.9).toFixed(2));
   }
+  alert("Bạn được giảm giá 10% với mã này")
 });
 
 const total = () => {
