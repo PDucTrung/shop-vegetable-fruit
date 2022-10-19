@@ -333,7 +333,7 @@ $(".slider-partners").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 1500,
   cssEase: "linear",
   responsive: [
     {
