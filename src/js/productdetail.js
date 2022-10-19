@@ -30,7 +30,7 @@ const addToCart = (event) => {
     cart.push({
       product: product.id,
       quantity: Number(input),
-      total: Number(total * input),
+      total: Number(total * input).toFixed(2),
     });
   }
 
