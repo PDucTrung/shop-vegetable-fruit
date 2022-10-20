@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 import $ from "jquery";
 import "jquery/dist/jquery.min.js";
 import "hover.css/css/hover.css";
-import "bootstrap/dist/js/bootstrap.min.js";
 import "animate.css/animate.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick.min.js";

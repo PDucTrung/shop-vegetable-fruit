@@ -2,6 +2,10 @@ import $ from "jquery";
 import _ from "lodash";
 import { products } from "./db";
 
+const PRODUCTS_PER_PAGE = 3;
+
+const categories = [];
+
 // add to cart
 const addToCart = (event) => {
   event.preventDefault();
@@ -30,43 +34,96 @@ const addToCart = (event) => {
   $(".number").text(cart.length);
 };
 
+// pagination
+const pagination = (current, totalPage, prev, next) => {
+  const prevButton = $(`<li class="page-item">
+                              <a class="page-link"><i class="bi bi-arrow-left"></i></a>
+                          </li>`);
+  if (prev === 0) {
+    prevButton.addClass("disabled");
+  } else {
+    prevButton.find("a.page-link").attr("href", "?page=" + prev);
+  }
+
+  const nextButton = $(`<li class="page-item">
+                              <a class="page-link"><i class="bi bi-arrow-right"></i></a>
+                          </li>`);
+
+  if (next > totalPage) {
+    nextButton.addClass("disabled");
+  } else {
+    nextButton.find("a.page-link").attr("href", "?page=" + next);
+  }
+
+  const pages = [];
+
+  for (let i = 1; i <= totalPage; i++) {
+    const btn = $(`<li class="page-item">
+                          <a class="page-link">${i}</a>
+                      </li>`);
+
+    if (i == current) {
+      btn.addClass("disabled");
+    } else {
+      btn.find("a.page-link").attr("href", "?page=" + i);
+    }
+
+    pages.push(btn);
+  }
+
+  $(".pagination").html("");
+  $(".pagination").append(prevButton, pages, nextButton);
+};
 
 // filter by checkbox
 const filter = (event) => {
-  const categories = [];
-  // categories.length = 0;
+  categories.length = 0;
 
   $("input:checked").each(function () {
     categories.push(this.value);
   });
 
-  const filteredProducts = products.filter(
-    (p) => categories.length === 0 || categories.includes(p.category)
-  );
-
-  render(filteredProducts);
+  render();
 };
 
 // render
-const render = (products) => {
+const render = () => {
   const $listFruit = $(".list-fruit-product");
   const productTemplate = $("#product-pr").html();
   const product = _.template(productTemplate); // compile
 
+  const filteredProducts = products.filter(
+    (p) => categories.length === 0 || categories.includes(p.category)
+  );
+
+  const url = new URL(location.href);
+  const totalPage = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+  const current = url.searchParams.get("page") || 1;
+  const prev = current - 1;
+  const next = +current + 1;
+
   $listFruit.html("");
   $listFruit.append(
-    _.map(products, (pr) => {
-      const dom = $(product(pr));
+    _.map(
+      filteredProducts.slice(
+        (current - 1) * PRODUCTS_PER_PAGE,
+        current * PRODUCTS_PER_PAGE
+      ),
+      (pr) => {
+        const dom = $(product(pr));
 
-      dom.find(".btn-add").on("click", pr, addToCart);
+        dom.find(".btn-add").on("click", pr, addToCart);
 
-      return dom;
-    })
+        return dom;
+      }
+    )
   );
+
+  pagination(current, totalPage, prev, next);
 };
 
 $(function () {
-  render(products);
+  render();
 
   $(".list-category").append(
     _.uniq(products.map(({ category }) => category)).map((c) => {

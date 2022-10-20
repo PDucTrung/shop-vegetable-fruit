@@ -96,8 +96,27 @@ page footer
   height: 100%;
 }
 
+.list-fruit .nav-page {
+  margin-top: 100px;
+}
+
+.page-item .page-link {
+  padding: 10px 20px !important;
+  border-radius: 50% !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid orange;
+  color: #151515;
+}
 .seaction-fruit {
   padding-bottom: 150px;
+}
+
+.disabled .page-link {
+  background-color: antiquewhite;
 }
 
 .fruit-product {
@@ -109,7 +128,7 @@ page footer
 }
 
 /* slider list product - slick */
-.slider-fruit{
+.slider-fruit {
   padding-top: 20px;
 }
 
