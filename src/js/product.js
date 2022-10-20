@@ -2,7 +2,7 @@ import $ from "jquery";
 import _ from "lodash";
 import { products } from "./db";
 
-const PRODUCTS_PER_PAGE = 3;
+const PRODUCTS_PER_PAGE = 9;
 
 const categories = [];
 
@@ -131,7 +131,6 @@ $(function () {
       const template = _.template(categoryTemplate);
 
       const dom = $(template({ category: c }));
-
       return dom;
     })
   );
