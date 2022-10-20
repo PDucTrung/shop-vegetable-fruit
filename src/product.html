@@ -383,8 +383,7 @@
                   <div
                     class="list-fruit-product d-flex justify-content-center align-items-center gap-3 flex-wrap gap-xl-4 gap-xxl-5"
                   >
-                    <!-- <div>
-                  
+                    <!-- <div>       
                       <div
                         class="fruit-product d-flex flex-column justify-content-center align-items-center gap-3 position-relative"
                       >
@@ -544,7 +543,7 @@
                 </div>
 
                 <!-- slide 2 -->
-                <div>
+                <!-- <div>
                   <div
                     class="list-fruit-product2 d-flex justify-content-center align-items-center gap-3 flex-wrap gap-xl-4 gap-xxl-5"
                   >
@@ -697,10 +696,10 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- slide 3 -->
-                <div>
+                <!-- <div>
                   <div
                     class="list-fruit-product3 d-flex justify-content-center align-items-center gap-3 flex-wrap gap-xl-4 gap-xxl-5"
                   >
@@ -856,7 +855,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -882,11 +881,11 @@
 
               <!-- popular category -->
               <div class="popular-category d-flex">
-                <div class="title-category">
+                <form action="" class="title-category">
                   <p class="fs-20 fw-400">Popular categories</p>
                   <div class="list-category d-flex flex-column gap-3">
                     <!-- form category -->
-                    <div
+                    <!-- <div
                       class="form-category d-flex justify-content-between align-items-center"
                     >
                       <div
@@ -901,10 +900,10 @@
                         <label for="checkcate">Fruits</label>
                       </div>
                       <div class="number-category">11</div>
-                    </div>
+                    </div> -->
 
                     <!-- form category -->
-                    <div
+                    <!-- <div
                       class="form-category d-flex justify-content-between align-items-center"
                     >
                       <div
@@ -919,10 +918,10 @@
                         <label for="checkcate">Vegetables</label>
                       </div>
                       <div class="number-category">7</div>
-                    </div>
+                    </div> -->
 
                     <!-- form category -->
-                    <div
+                    <!-- <div
                       class="form-category d-flex justify-content-between align-items-center"
                     >
                       <div
@@ -937,9 +936,9 @@
                         <label for="checkcate">Exotic</label>
                       </div>
                       <div class="number-category">3</div>
-                    </div>
+                    </div> -->
                   </div>
-                </div>
+                </form>
               </div>
 
               <!-- filter price -->
@@ -1114,6 +1113,25 @@
         ><i class="bi bi-box-arrow-up"></i
       ></a>
     </div>
+
+    <script type="text/html" id="category-template">
+      <!-- form category -->
+      <div
+        class="form-category d-flex justify-content-between align-items-center"
+      >
+        <div class="d-flex justify-content-center gap-2 align-items-center">
+          <input
+            class="check-category"
+            type="checkbox"
+            name="category"
+            id="checkcate"
+            value="${ category }"
+          />
+          <label>${ category }</label>
+        </div>
+        <div class="number-category">9</div>
+      </div>
+    </script>
 
     <script type="text/html" id="product-pr">
       <!-- product gird -->

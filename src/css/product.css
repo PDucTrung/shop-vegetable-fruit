@@ -93,6 +93,7 @@ page footer
 .list-fruit {
   padding: 10px;
   width: 100%;
+  height: 100%;
 }
 
 .seaction-fruit {
@@ -107,7 +108,10 @@ page footer
   border-radius: 15px;
 }
 
-/* slider list product */
+/* slider list product - slick */
+.slider-fruit{
+  padding-top: 20px;
+}
 
 .slider-fruit .slick-dots {
   position: absolute !important;

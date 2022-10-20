@@ -30,12 +30,31 @@ const addToCart = (event) => {
   $(".number").text(cart.length);
 };
 
-// render product
-$(function () {
+
+// filter by checkbox
+const filter = (event) => {
+  const categories = [];
+  // categories.length = 0;
+
+  $("input:checked").each(function () {
+    categories.push(this.value);
+  });
+
+  const filteredProducts = products.filter(
+    (p) => categories.length === 0 || categories.includes(p.category)
+  );
+
+  render(filteredProducts);
+};
+
+// render
+const render = (products) => {
+  const $listFruit = $(".list-fruit-product");
   const productTemplate = $("#product-pr").html();
   const product = _.template(productTemplate); // compile
 
-  $(".list-fruit-product").append(
+  $listFruit.html("");
+  $listFruit.append(
     _.map(products, (pr) => {
       const dom = $(product(pr));
 
@@ -44,4 +63,21 @@ $(function () {
       return dom;
     })
   );
+};
+
+$(function () {
+  render(products);
+
+  $(".list-category").append(
+    _.uniq(products.map(({ category }) => category)).map((c) => {
+      const categoryTemplate = $("#category-template").html();
+      const template = _.template(categoryTemplate);
+
+      const dom = $(template({ category: c }));
+
+      return dom;
+    })
+  );
+
+  $("form.title-category").on("change", filter);
 });
