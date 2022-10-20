@@ -751,6 +751,7 @@ function signin() {
   if (check == true) {
     alert("Successful login  \n\nWellcome to Tfruit shop");
     document.getElementById("userModal").style.display = "none";
+    window.location.pathname = "/index.html";
   } else {
     alert("you have failed to login");
   }
