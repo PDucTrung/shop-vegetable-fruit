@@ -88,7 +88,7 @@ $(function () {
                     <p>Brand: <span class="text-gray-fo">TFruit</span></p>
                   </div>
                   <div>
-                    <p>Category: <span class="text-gray-fo">Fruit</span></p>
+                    <p>Category: <span class="text-gray-fo">${product.category}</span></p>
                   </div>
                   <div>
                     <p>Weght: <span class="text-gray-fo">400g</span></p>
