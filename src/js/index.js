@@ -367,22 +367,6 @@ $(".slider-partners").slick({
   ],
 });
 
-// sldier list product /////////////////////////////////////////////////////////////////////////////////////////////////
-// $(".slider-fruit").slick({
-//   infinite: true,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   speed: 1000,
-//   dots: true,
-//   fade: true,
-//   cssEase: "linear",
-//   arrows: false,
-//   prevArrow:
-//     "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-arrow-left' aria-hidden='true'></i></button>",
-//   nextArrow:
-//     "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-arrow-right' aria-hidden='true'></i></button>",
-// });
-
 // filter range ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 if (window.document.location.pathname === "/product.html") {
@@ -656,7 +640,8 @@ document.addEventListener("DOMContentLoaded", function () {
       Validator.isRequired("#email"),
       Validator.isEmail("#email"),
       Validator.isRequired("#password"),
-      // Validator.minLength("#password", 8),
+      Validator.minLength("#password", 8),
+      Validator.isPasstext("#password"),
       Validator.isRequired("#password_confirmation"),
       Validator.isConfirmed(
         "#password_confirmation",
@@ -676,8 +661,8 @@ document.addEventListener("DOMContentLoaded", function () {
       Validator.isRequired("#email"),
       Validator.isEmail("#email"),
       Validator.isRequired("#password"),
+      Validator.minLength("#password", 8),
       Validator.isPasstext("#password"),
-      // Validator.minLength("#password", 8),
     ],
   });
 

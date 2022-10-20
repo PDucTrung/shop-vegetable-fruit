@@ -169,21 +169,6 @@ Validator.isPhone = function (selector, message) {
   };
 };
 
-//pass
-Validator.isPasstext = function (selector, message) {
-  return {
-    selector: selector,
-    test: function (value) {
-      var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
-      return regex.test(value)
-        ? undefined
-        : message ||
-            "Password must consist of at least 8 letters and contain at least one uppercase letter, one lowercase letter and one number.";
-    },
-  };
-};
-
-
 // pass
 Validator.minLength = function (selector, min, message) {
   return {
@@ -192,6 +177,20 @@ Validator.minLength = function (selector, min, message) {
       return value.length >= min
         ? undefined
         : message || `Please enter at least ${min} characters`;
+    },
+  };
+};
+
+//pass
+Validator.isPasstext = function (selector, message) {
+  return {
+    selector: selector,
+    test: function (value) {
+      var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+      return regex.test(value)
+        ? undefined
+        : message ||
+            "Password must consist of at least 8 letters and contain at least one uppercase letter, one lowercase letter and one number.";
     },
   };
 };
@@ -207,4 +206,3 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
     },
   };
 };
-
