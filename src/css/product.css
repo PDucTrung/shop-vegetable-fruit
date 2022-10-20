@@ -201,6 +201,10 @@ page footer
 
 /* section filter */
 
+.filter-price-title{
+  margin-left: 20px;
+}
+
 .pr-search {
   padding: 10px;
 }
@@ -262,7 +266,7 @@ page footer
 }
 
 .filter-price {
-  width: 240px;
+  width: 220px;
   border: 0;
   padding: 0;
   margin: 0;
@@ -291,7 +295,7 @@ page footer
 }
 
 .price-field input[type="range"] {
-  width: 240px;
+  width: 220px;
   height: 5px;
   border: 0;
   outline: 0;

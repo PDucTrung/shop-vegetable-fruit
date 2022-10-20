@@ -49,7 +49,7 @@ $(function () {
                 <div class="d-flex flex-column gap-3 align-items-center justify-content-center">
                   <div class="img-pr-top"><img src="${product.img}" alt="dsd"></div>
                   <div class="img-pr-bottom d-flex gap-3 align-items-center justify-content-center">
-                      <img src="https://tfruit.vercel.app/assets/pr-detail-1.44fdfde8.png" alt="dsd">
+                      <img src="${product.img}" alt="dsd">
                       <img src="https://tfruit.vercel.app/assets/pr-detail-2.c06e90b1.png" alt="dsd">
                       <img src="https://tfruit.vercel.app/assets/pr-detail-3.c138ef36.png" alt="dsd">
                   </div>
@@ -74,11 +74,7 @@ $(function () {
                 <div>
                   <br />
                   <p>
-                    It have a round shape, but most of them look like a
-                    gourd, when ripe, some remain the same color as when they
-                    are still green, but some change to black purple, the inside
-                    is soft, yellow pale or light green, with a sweet, fatty
-                    taste.
+                    ${product.description}
                   </p>
                 </div>
               </div>
@@ -91,7 +87,7 @@ $(function () {
                     <p>Category: <span class="text-gray-fo">${product.category}</span></p>
                   </div>
                   <div>
-                    <p>Weght: <span class="text-gray-fo">400g</span></p>
+                    <p>Weght: <span class="text-gray-fo">${product.weight}g</span></p>
                   </div>
                 </div>
                 <div
@@ -142,4 +138,15 @@ $(function () {
   let input = $(".non").find("input.number-qty");
 
   $(".name-pr-detail").text(product.name);
+
+  clickImg();
 });
+
+const clickImg = () => {
+  const img = $(".img-pr-top img");
+  $(".img-pr-bottom")
+    .find("img")
+    .on("click", (i) => {
+      img.attr("src", i.target.src);
+    });
+};

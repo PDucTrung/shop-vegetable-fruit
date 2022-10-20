@@ -847,6 +847,7 @@
   width: max-content;
   height: max-content;
   display: none;
+  animation: btnFadeUp 0.6s ease-in-out;
 }
 
 .product:hover img {

@@ -173,6 +173,7 @@
 .img-pr-bottom img {
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 
 .img-pr-detail {
