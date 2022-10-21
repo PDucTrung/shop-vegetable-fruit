@@ -333,7 +333,7 @@ $(".slider-partners").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 1500,
+  autoplaySpeed: 1200,
   cssEase: "linear",
   responsive: [
     {
@@ -458,26 +458,6 @@ if (window.document.location.pathname == "/checkout.html") {
     }
   });
 }
-
-// slider detail product
-$(".slider-for").slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: ".slider-nav",
-});
-$(".slider-nav").slick({
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 1500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: ".slider-for",
-  focusOnSelect: true,
-  arrows: false,
-  dots: false,
-});
 
 // slider product relative /////////////////////////////////////////////////////
 
