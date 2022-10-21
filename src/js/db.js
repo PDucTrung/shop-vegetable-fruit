@@ -209,4 +209,34 @@ export const products = [
     description:
       "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds",
   },
+  {
+    name: "Lettuce",
+    img: "https://tfruit.vercel.app/assets/pr-fr-22.459166d0.jpg",
+    price: 6.99,
+    id: 22,
+    category: "Fruits",
+    weight: 1300,
+    description:
+      "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds",
+  },
+  {
+    name: "Tomato",
+    img: "https://tfruit.vercel.app/assets/pr-fr-22.459166d0.jpg",
+    price: 6.99,
+    id: 23,
+    category: "Fruits",
+    weight: 1300,
+    description:
+      "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds",
+  },
+  {
+    name: "Apple",
+    img: "https://tfruit.vercel.app/assets/pr-fr-22.459166d0.jpg",
+    price: 6.99,
+    id: 24,
+    category: "Fruits",
+    weight: 1300,
+    description:
+      "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds",
+  },
 ];
