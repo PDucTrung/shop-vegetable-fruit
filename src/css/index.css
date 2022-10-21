@@ -508,6 +508,12 @@
   }
 }
 
+@media screen and (min-width: 1680px){
+  .Advance-Slider .item .contain-wrapper {
+    margin-top: 5%;
+  }
+}
+
 /* offer */
 
 .section-offer {
