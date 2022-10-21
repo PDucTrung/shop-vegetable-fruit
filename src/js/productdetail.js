@@ -50,8 +50,8 @@ $(function () {
                   <div class="img-pr-top"><img src="${product.img}" alt="dsd"></div>
                   <div class="img-pr-bottom d-flex gap-3 align-items-center justify-content-center">
                       <img src="${product.img}" alt="dsd">
-                      <img src="https://tfruit.vercel.app/assets/pr-detail-2.c06e90b1.png" alt="dsd">
-                      <img src="https://tfruit.vercel.app/assets/pr-detail-3.c138ef36.png" alt="dsd">
+                      <img src="https://tfruit.vercel.app/assets/pr-fr-29.fffed05e.jpg" alt="dsd">
+                      <img src="https://tfruit.vercel.app/assets/pr-fr-9.961b2d61.png" alt="dsd">
                   </div>
              </div>
             </div>

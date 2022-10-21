@@ -383,14 +383,13 @@
                   class="list-fruit-product d-flex justify-content-center align-items-center gap-3 flex-wrap gap-xl-4 gap-xxl-5"
                 ></div>
                 <div class="row nav-page">
-                <nav aria-label="Page navigation example">
-                  <ul
-                    class="pagination d-flex justify-content-center gap-3"
-                  ></ul>
-                </nav>
+                  <nav aria-label="Page navigation example">
+                    <ul
+                      class="pagination d-flex justify-content-center gap-3"
+                    ></ul>
+                  </nav>
+                </div>
               </div>
-              </div>
-              
             </div>
           </div>
 
@@ -622,22 +621,24 @@
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1000"
       >
-        <div class="img-thumb-pr">
-          <img src="${img}" alt="sds" />
-        </div>
-        <div class="name-pr-fr">
-          <a
-            href="productdetail.html?id=${ id }"
-            class="fs-20 fw-400 text-decoration-none text-black"
-            >${name}</a
-          >
-        </div>
-        <div class="price-pr-fr">
-          <span class="fs-16 fw-400 text-green">$ ${price}</span>
-        </div>
-        <div class="add-cart position-absolute">
-          <div id="checkout" class="btn-add button button-2">Add to cart</div>
-        </div>
+        <a href="productdetail.html?id=${ id }">
+          <div class="img-thumb-pr">
+            <img src="${img}" alt="sds" />
+          </div>
+          <div class="name-pr-fr">
+            <a
+              href="productdetail.html?id=${ id }"
+              class="fs-20 fw-400 text-decoration-none text-black"
+              >${name}</a
+            >
+          </div>
+          <div class="price-pr-fr">
+            <span class="fs-16 fw-400 text-green">$ ${price}</span>
+          </div>
+          <div class="add-cart position-absolute">
+            <div id="checkout" class="btn-add button button-2">Add to cart</div>
+          </div>
+        </a>
       </div>
     </script>
 

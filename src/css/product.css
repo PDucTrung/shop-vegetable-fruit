@@ -122,6 +122,11 @@ page footer
 .fruit-product {
 }
 
+.img-thumb-pr {
+  background-color: #f4f5f7;
+  border-radius: 15px;
+}
+
 .img-thumb-pr img {
   max-width: 100%;
   border-radius: 15px;
@@ -201,7 +206,7 @@ page footer
 
 /* section filter */
 
-.filter-price-title{
+.filter-price-title {
   margin-left: 20px;
 }
 
