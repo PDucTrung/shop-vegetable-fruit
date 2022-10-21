@@ -270,6 +270,33 @@ header {
 }
 
 /* Modal Content 3 */
+/*  */
+.search-box-list {
+  background-color: #AAAAAA;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 88%;
+  width: 92%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 0px 0px 15px 15px;
+}
+
+.search-box-list li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.search-box-list a {
+  text-decoration: none;
+   color: white;
+}
+
+.search-box-list a:hover {
+  color: black;
+}
+/*  */
+
 .modal-content3 {
   margin: auto;
   padding: 10px;

@@ -21,6 +21,7 @@ import "../css/about.css";
 import "../css/blog.css";
 import "../css/blogdetail.css";
 import "../css/contact.css";
+import { products } from "./db";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {
@@ -708,3 +709,53 @@ $(function () {
 
   $(".number").text(cart.length);
 });
+
+// search
+
+$(function () {
+  search();
+});
+
+const renderName = function (event) {
+  const productTemplate = $("#search-box-list").html();
+  const productList = _.template(productTemplate);
+  $(".search-box-list").append(
+    _.map(event, (pr) => {
+      const dom = $(productList(pr));
+
+      return dom;
+    })
+  );
+};
+
+const search = () => {
+  $("input.search-text").on("keyup", () => {
+    let value = $("input.search-text").val().toString();
+    if (value.length == 0) {
+      $(".search-box-list").html("");
+    }
+  });
+
+  // $(".bi-search").on("click", function () {
+  //   let value = $("input.search-text").val().toString().toUpperCase();
+  //   const productName = products.filter(function (pr) {
+  //     return pr.name.toUpperCase().indexOf(value) > -1;
+  //   });
+  //   if ($("input.search-text").val() == "") {
+  //     $(".search-box-list").html("");
+  //   } else renderName(productName);
+  // });
+
+  $("input.search-text").keypress(function (event) {
+    var keycode = event.keyCode ? event.keyCode : event.which;
+    if (keycode == "13") {
+      let value = $("input.search-text").val().toString().toUpperCase();
+      const productName = products.filter(function (pr) {
+        return pr.name.toUpperCase().indexOf(value) > -1;
+      });
+      if ($("input.search-text").val() == "") {
+        $(".search-box-list").html("");
+      } else renderName(productName);
+    }
+  });
+};

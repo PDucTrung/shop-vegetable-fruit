@@ -136,4 +136,37 @@ $(function () {
   );
 
   $("form.title-category").on("change", filter);
+  // search
+  search();
 });
+
+const renderName = function (event) {
+  const productTemplate = $("#search-name").html();
+  const productList = _.template(productTemplate);
+  $(".text-to-search").append(
+    _.map(event, (pr) => {
+      const dom = $(productList(pr));
+
+      return dom;
+    })
+  );
+};
+
+const search = () => {
+  $("input.search-box-pr").on("keyup", () => {
+    let value = $("input.search-box-pr").val().toString();
+    if (value.length == 0) {
+      $(".text-to-search").html("");
+    }
+  });
+
+  $(".bi-search").on("click", function () {
+    let value = $("input.search-box-pr").val().toString().toUpperCase();
+    const productName = products.filter(function (pr) {
+      return pr.name.toUpperCase().indexOf(value) > -1;
+    });
+    if ($("input.search-box-pr").val() == "") {
+      $(".text-to-search").html("");
+    } else renderName(productName);
+  });
+};
