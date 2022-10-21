@@ -348,7 +348,10 @@
         <div class="title-page-fo text-center text-white position-absolute">
           <h1 class="font-mali name-pr-detail"></h1>
           <p class="fz-24 fw-400">
-            Home <span class="text-orange-fo">/ Shop / <span class="name-pr-detail"></span></span>
+            Home
+            <span class="text-orange-fo"
+              >/ Shop / <span class="name-pr-detail"></span
+            ></span>
           </p>
         </div>
       </div>
@@ -555,8 +558,7 @@
         <div class="fs-24 fw-500 text-center"><p>Related Products</p></div>
         <div class="spacer"></div>
         <div class="related-product-slider">
-          <!--  -->
-          <div>
+          <!-- <div>
             <div
               class="related-product d-flex flex-column gap-2 align-content-center justify-content-center"
             >
@@ -568,7 +570,6 @@
             </div>
           </div>
 
-          <!--  -->
           <div>
             <div
               class="related-product d-flex flex-column gap-2 align-content-center justify-content-center"
@@ -581,8 +582,7 @@
             </div>
           </div>
 
-          <!--  -->
-          <dv>
+          <div>
             <div
               class="related-product d-flex flex-column gap-2 align-content-center justify-content-center"
             >
@@ -592,9 +592,8 @@
               <div class="text-center name-related-pr">Cherry</div>
               <div class="text-center price-related-pr">$<span>3.00</span></div>
             </div>
-          </dv>
+          </div>
 
-          <!--  -->
           <div>
             <div
               class="related-product d-flex flex-column gap-2 align-content-center justify-content-center"
@@ -606,8 +605,7 @@
               <div class="text-center price-related-pr">$<span>2.00</span></div>
             </div>
           </div>
-
-          <!--  -->
+    
           <div>
             <div
               class="related-product d-flex flex-column gap-2 align-content-center justify-content-center"
@@ -618,7 +616,7 @@
               <div class="text-center name-related-pr">Brocoli</div>
               <div class="text-center price-related-pr">$<span>3.25</span></div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -695,6 +693,21 @@
         ><i class="bi bi-box-arrow-up"></i
       ></a>
     </div>
+
+    <!-- append product related -->
+    <script type="text/html" id="product-related">
+      <div>
+        <div
+          class="related-product d-flex flex-column gap-2 align-content-center justify-content-center"
+        >
+          <div class="img-related-pr">
+            <img src="${img}" alt="dsd" />
+          </div>
+          <div class="text-center name-related-pr">${name}</div>
+          <div class="text-center price-related-pr">$<span>${price}</span></div>
+        </div>
+      </div>
+    </script>
     <script type="module" src="js/validator.js"></script>
     <script type="module" src="js/index.js"></script>
     <script type="module" src="js/productdetail.js"></script>

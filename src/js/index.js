@@ -459,42 +459,6 @@ if (window.document.location.pathname == "/checkout.html") {
   });
 }
 
-// slider product relative /////////////////////////////////////////////////////
-
-$(".related-product-slider").slick({
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  speed: 1000,
-  cssEase: "linear",
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1400,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-});
-
 // slider history ////////////////////////////////////////////////////////
 $(".slider-history").slick({
   infinite: true,
