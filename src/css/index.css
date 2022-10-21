@@ -508,7 +508,7 @@
   }
 }
 
-@media screen and (min-width: 1680px){
+@media screen and (min-width: 1680px) {
   .Advance-Slider .item .contain-wrapper {
     margin-top: 5%;
   }
@@ -1395,22 +1395,9 @@
 /* partners */
 
 .section-partners {
-  padding: 20px 20px 60px 20px;
   width: 100%;
-  background-color: #f1efeb;
+  background-color: white;
   height: max-content;
-}
-
-.title-partners {
-  color: #000000;
-  font-size: 40px;
-  font-weight: 500;
-  top: 5px;
-  text-align: center;
-}
-
-.partners {
-  margin-top: 40px;
 }
 
 .partner img {
@@ -1436,6 +1423,10 @@
 }
 .slider-partners .slick-next {
   display: none !important;
+}
+
+.slider-partners .slick-slide {
+  padding: 20px 0px;
 }
 
 .product .add-cart a {
