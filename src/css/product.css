@@ -119,9 +119,6 @@ page footer
   background-color: antiquewhite;
 }
 
-.fruit-product {
-}
-
 .img-thumb-pr {
   background-color: #f4f5f7;
   border-radius: 15px;
@@ -135,65 +132,6 @@ page footer
 /* slider list product - slick */
 .slider-fruit {
   padding-top: 20px;
-}
-
-.slider-fruit .slick-dots {
-  position: absolute !important;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 60px);
-  display: flex !important;
-  align-items: center;
-  gap: 0 20px;
-  padding-right: 32px !important;
-}
-
-.slider-fruit .slick-dots button {
-  width: 30px;
-  height: 30px;
-  background-color: antiquewhite;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  transition: all 0.2s linear;
-}
-
-.slider-fruit .slick-dots .slick-active button {
-  background-color: rgba(128, 128, 128, 0.674);
-}
-
-.slider-fruit .slick-dots li {
-  list-style-type: none;
-}
-
-.slider-fruit .slick-prev {
-  position: absolute;
-  left: 27%;
-  bottom: -48px;
-  transform: translateX(-63%);
-  border: none;
-  width: 40px;
-  height: 40px;
-  background-color: gainsboro;
-}
-
-.slider-fruit .slick-next {
-  position: absolute;
-  right: 27%;
-  bottom: -48px;
-  transform: translateX(63%);
-  border: none;
-  width: 40px;
-  height: 40px;
-  background-color: gainsboro;
-}
-
-.slider-fruit .slick-prev:hover,
-.slider-fruit .slick-next:hover {
-  background-color: green;
-  border-radius: 50%;
-  transition: all 0.2s linear;
-  color: white;
 }
 
 .fruit-product:hover .img-thumb-pr img {

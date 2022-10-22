@@ -699,12 +699,28 @@ footer {
   color: #f5ab1e;
 }
 
+.title-page-fo h1 {
+  font-size: 14px;
+}
+
+.title-page-fo p {
+  font-size: 10px;
+}
+
 @media screen and (min-width: 576px) {
   .modal-content3 {
     width: 400px;
   }
   .search-text {
     width: 390px;
+  }
+
+  .title-page-fo h1 {
+    font-size: 20px;
+  }
+
+  .title-page-fo p {
+    font-size: 14px;
   }
 }
 
@@ -726,6 +742,13 @@ footer {
   .ft-2 p {
     text-align: left;
   }
+  .title-page-fo h1 {
+    font-size: 28px;
+  }
+
+  .title-page-fo p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -736,9 +759,24 @@ footer {
   .ft-2 {
     margin-top: 8.5px;
   }
+
+  .title-page-fo h1 {
+    font-size: 36px;
+  }
+
+  .title-page-fo p {
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .title-page-fo h1 {
+    font-size: 48px;
+  }
+
+  .title-page-fo p {
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
