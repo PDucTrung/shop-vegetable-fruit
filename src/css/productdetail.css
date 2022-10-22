@@ -86,6 +86,10 @@
 }
 
 .nutriton {
+  max-width: 100%;
+}
+
+.nutriton div{
   width: 100%;
 }
 
