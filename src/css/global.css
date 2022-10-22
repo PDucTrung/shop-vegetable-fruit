@@ -272,6 +272,12 @@ header {
 
 /* Modal Content 3 */
 /*  */
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .search-box-list {
   position: absolute;
   left: 50%;
@@ -297,9 +303,8 @@ header {
 /*  */
 
 .modal-content3 {
-  margin: auto;
-  padding: 10px;
-  width: 350px;
+  margin: 0 auto;
+  width: max-content;
 }
 
 .search-text {
@@ -307,8 +312,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px;
-  padding-left: 20px;
   width: 340px;
   height: 60px;
   flex: none;
@@ -321,6 +324,7 @@ header {
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
   color: white;
+  margin: 0 auto;
 }
 
 .search-box {
@@ -329,14 +333,8 @@ header {
 }
 
 .close3 {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  right: 0;
-  top: 7px;
   display: none;
 }
-
 .close3:hover,
 .close3:focus {
   color: gray;
