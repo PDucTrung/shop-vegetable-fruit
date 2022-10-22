@@ -580,6 +580,21 @@ if (
 }
 
 // call api
+// var cartApi = "https://jsonsv.herokuapp.com/cart";
+
+// function start() {
+//   getCart(rendercart);
+// }
+
+// start();
+
+// function getCart(callback) {
+//   fetch(cartApi)
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(callback);
+// }
 
 // validator form ///////////////////////////////////////////////////////////////////////////////////////////
 
