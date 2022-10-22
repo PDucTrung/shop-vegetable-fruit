@@ -140,6 +140,7 @@ $(function () {
   search();
 });
 
+// render name by input
 const renderName = function (event) {
   const productTemplate = $("#search-name").html();
   const productList = _.template(productTemplate);
@@ -152,6 +153,7 @@ const renderName = function (event) {
   );
 };
 
+// search function
 const search = () => {
   $("input.search-box-pr").on("keyup", () => {
     let value = $("input.search-box-pr").val().toString().toUpperCase();
@@ -179,6 +181,7 @@ const search = () => {
   });
 };
 
+// clear content search
 $(window).on("click", (e) => {
   if (
     $(e.target).is(".section-shop") ||
