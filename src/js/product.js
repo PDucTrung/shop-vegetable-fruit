@@ -178,28 +178,7 @@ const search = () => {
       });
   });
 
-  // $(".bi-search").on("click", function () {
-  //   let obj = {};
-  //   let value = $("input.search-box-pr").val().toString().toUpperCase();
-  //   const productName = products.filter((pr) => {
-  //     if (pr.name.toUpperCase().indexOf(value) == -1) {
-  //       $(".text-to-search").html("");
-  //     } else return pr.name.toUpperCase().indexOf(value) > -1;
-  //   });
-
-  //   if (value == "") {
-  //     $(".text-to-search").html("");
-  //   } else renderName(productName);
-
-  //   $(".text-to-search")
-  //     .find("li")
-  //     .each(function () {
-  //       var text = $(this).text();
-  //       if (obj[text]) {
-  //         $(this).remove();
-  //       } else {
-  //         obj[text] = true;
-  //       }
-  //     });
-  // });
+  $("input.search-box-pr").on("blur", () => {
+    $(".text-to-search").html("");
+  });
 };

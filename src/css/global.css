@@ -282,7 +282,7 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 92%;
+  width: 98%;
   box-shadow: 0 10px 20px orange, 0 6px 6px orange;
   border-radius: 0px 0px 15px 15px;
 }
