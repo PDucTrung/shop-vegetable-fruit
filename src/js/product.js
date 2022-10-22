@@ -157,16 +157,31 @@ const search = () => {
     let value = $("input.search-box-pr").val().toString();
     if (value.length == 0) {
       $(".text-to-search").html("");
-    }
+    } else renderName(productName);
   });
 
   $(".bi-search").on("click", function () {
+    let obj = {};
     let value = $("input.search-box-pr").val().toString().toUpperCase();
-    const productName = products.filter(function (pr) {
-      return pr.name.toUpperCase().indexOf(value) > -1;
+    const productName = products.filter((pr) => {
+      if (pr.name.toUpperCase().indexOf(value) == -1) {
+        $(".text-to-search").html("");
+      } else return pr.name.toUpperCase().indexOf(value) > -1;
     });
-    if ($("input.search-box-pr").val() == "") {
+
+    if (value == "") {
       $(".text-to-search").html("");
     } else renderName(productName);
+
+    $(".text-to-search")
+      .find("li")
+      .each(function () {
+        var text = $(this).text();
+        if (obj[text]) {
+          $(this).remove();
+        } else {
+          obj[text] = true;
+        }
+      });
   });
 };

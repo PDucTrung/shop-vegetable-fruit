@@ -1230,7 +1230,9 @@
 
     <!--  -->
     <script type="text/html" id="search-box-list">
-      <li><a href="productdetail.html?id=${ id }">${name} - $${price}</a></li>
+      <li class="li-${id}">
+        <a href="productdetail.html?id=${ id }">${name} - $${price}</a>
+      </li>
     </script>
     <!--  -->
     <script type="module" src="js/validator.js"></script>

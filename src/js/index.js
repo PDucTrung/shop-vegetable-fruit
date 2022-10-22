@@ -730,32 +730,26 @@ const renderName = function (event) {
 
 const search = () => {
   $("input.search-text").on("keyup", () => {
-    let value = $("input.search-text").val().toString();
+    let value = $("input.search-text").val().toString().toUpperCase();
+    let obj = {};
+    const productName = products.filter(function (pr) {
+      if (pr.name.toUpperCase().indexOf(value) == -1) {
+        $(".search-box-list").html("");
+      } else return pr.name.toUpperCase().indexOf(value) > -1;
+    });
     if (value.length == 0) {
       $(".search-box-list").html("");
-    }
-  });
+    } else renderName(productName);
 
-  // $(".bi-search").on("click", function () {
-  //   let value = $("input.search-text").val().toString().toUpperCase();
-  //   const productName = products.filter(function (pr) {
-  //     return pr.name.toUpperCase().indexOf(value) > -1;
-  //   });
-  //   if ($("input.search-text").val() == "") {
-  //     $(".search-box-list").html("");
-  //   } else renderName(productName);
-  // });
-
-  $("input.search-text").keypress(function (event) {
-    var keycode = event.keyCode ? event.keyCode : event.which;
-    if (keycode == "13") {
-      let value = $("input.search-text").val().toString().toUpperCase();
-      const productName = products.filter(function (pr) {
-        return pr.name.toUpperCase().indexOf(value) > -1;
+    $(".search-box-list")
+      .find("li")
+      .each(function () {
+        var text = $(this).text();
+        if (obj[text]) {
+          $(this).remove();
+        } else {
+          obj[text] = true;
+        }
       });
-      if ($("input.search-text").val() == "") {
-        $(".search-box-list").html("");
-      } else renderName(productName);
-    }
   });
 };
