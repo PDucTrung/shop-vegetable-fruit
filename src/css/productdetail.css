@@ -55,6 +55,7 @@
   color: white;
 }
 .tab-content {
+  width: 100%;
   height: max-content;
   position: absolute;
   z-index: 1;
@@ -192,7 +193,25 @@
   margin: 20px 0px;
 }
 
+.name-user {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-cmt {
+  font-size: 10px;
+}
+
 @media screen and (min-width: 576px) {
+  .name-user {
+    font-size: 20px;
+  }
+
+  .time-cmt {
+    font-size: 16px;
+  }
   .img-pr-top img {
     width: 395px;
     height: 395px;
