@@ -267,23 +267,23 @@ header {
   overflow: hidden;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.862);
+  overflow: auto;
 }
 
 /* Modal Content 3 */
 /*  */
 .search-box-list {
-  background-color: #aaaaaa;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 92%;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 20px orange, 0 6px 6px orange;
   border-radius: 0px 0px 15px 15px;
 }
 
 .search-box-list li {
   list-style-type: none;
-  padding: 5px;
+  padding: 10px;
 }
 
 .search-box-list a {
@@ -292,7 +292,7 @@ header {
 }
 
 .search-box-list a:hover {
-  color: black;
+  color: orange;
 }
 /*  */
 
