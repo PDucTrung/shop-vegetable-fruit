@@ -35,13 +35,13 @@
   color: black;
 }
 
-.number-qty {
+.qty-cart .number-qty {
   border: 1px solid gray;
   width: 50px;
   height: 38px;
-  padding-left: 13px;
   text-align: center;
   border-radius: 5px;
+  padding-left: 4%;
 }
 
 /* coupon code*/
@@ -173,7 +173,6 @@
   .qty-cart {
     width: 330px;
   }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -195,7 +194,6 @@
   .qty-cart {
     width: 330px;
   }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -217,7 +215,6 @@
   .qty-cart {
     width: 330px;
   }
-
 }
 
 @media screen and (min-width: 1400px) {

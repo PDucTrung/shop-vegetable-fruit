@@ -90,7 +90,7 @@
 }
 
 .nutriton div{
-  width: 100%;
+  width: max-content;
 }
 
 .list-star i {
@@ -99,6 +99,10 @@
 
 .user-cmt .img-user img {
   border-radius: 50%;
+}
+
+.quality-pr-detail .qty-cart .number-qty{
+  padding-left: 12%;
 }
 
 /* form */
