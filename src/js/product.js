@@ -177,9 +177,15 @@ const search = () => {
         }
       });
   });
+};
 
-  $("input.search-box-pr").on("blur", () => {
+$(window).on("click", (e) => {
+  if (
+    $(e.target).is(".section-shop") ||
+    $(e.target).is(".section-filter") ||
+    $(e.target).is(".filter-content")
+  ) {
     $(".text-to-search").html("");
     $("input.search-box-pr").val("");
-  });
-};
+  }
+});
