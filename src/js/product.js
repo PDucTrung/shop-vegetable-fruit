@@ -180,5 +180,6 @@ const search = () => {
 
   $("input.search-box-pr").on("blur", () => {
     $(".text-to-search").html("");
+    $("input.search-box-pr").val("");
   });
 };

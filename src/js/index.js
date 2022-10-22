@@ -109,6 +109,8 @@ btn3.onclick = function () {
 
 $(window).on("click", (e) => {
   if ($(e.target).is(".modal3")) {
+    $(".search-box-list").html("");
+    $("input.search-text").val("");
     $(".modal3").css("display", "none");
   }
 });
