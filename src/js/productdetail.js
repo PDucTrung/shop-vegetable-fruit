@@ -43,7 +43,7 @@ const addToCart = (event) => {
 $(function () {
   const product = _.find(products, { id });
 
-  $(".non").html(
+  $(".pr-dt").html(
     `
             <div class="img-pr-detail">
                 <div class="d-flex flex-column gap-3 align-items-center justify-content-center">

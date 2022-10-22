@@ -89,7 +89,7 @@
   max-width: 100%;
 }
 
-.nutriton div{
+.nutriton div {
   width: max-content;
 }
 
@@ -101,7 +101,7 @@
   border-radius: 50%;
 }
 
-.quality-pr-detail .qty-cart .number-qty{
+.quality-pr-detail .qty-cart .number-qty {
   padding-left: 12%;
 }
 
@@ -177,6 +177,8 @@
 .related-product .img-related-pr img {
   width: 270px;
   height: 270px;
+  border-radius: 15px;
+  background-color: #f4f5f7;
 }
 
 .img-pr-top img {
