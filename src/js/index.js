@@ -56,11 +56,11 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+$(window).on("click", (e) => {
+  if ($(e.target).is(".modal")) {
+    $(".modal").css("display", "none");
   }
-};
+});
 
 // modal2 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -79,11 +79,11 @@ span2.onclick = function () {
   modal2.style.display = "none";
 };
 
-window.onclick = function (event) {
-  if (event.target == modal2) {
-    modal2.style.display = "none";
+$(window).on("click", (e) => {
+  if ($(e.target).is(".modal2")) {
+    $(".modal2").css("display", "none");
   }
-};
+});
 
 // modal3 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -91,21 +91,27 @@ let modal3 = document.getElementById("searchModal");
 
 let btn3 = document.getElementById("searchBtn");
 
-let span3 = document.getElementsByClassName("close3")[0];
+// let span3 = document.getElementsByClassName("close3")[0];
 
 btn3.onclick = function () {
   modal3.style.display = "block";
 };
 
-span3.onclick = function () {
-  modal3.style.display = "none";
-};
+// span3.onclick = function () {
+//   modal3.style.display = "none";
+// };
 
-window.onclick = function (event) {
-  if (event.target == modal3) {
-    modal3.style.display = "none";
+// $(document).ready(function () {
+//   $("input.search-text").on("blur", () => {
+//     $(".modal3").css("display", "none");
+//   });
+// });
+
+$(window).on("click", (e) => {
+  if ($(e.target).is(".modal3")) {
+    $(".modal3").css("display", "none");
   }
-};
+});
 
 // modal4 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -123,11 +129,11 @@ span4.onclick = function () {
   modal4.style.display = "none";
 };
 
-window.onclick = function (event) {
-  if (event.target == modal4) {
-    modal4.style.display = "none";
+$(window).on("click", (e) => {
+  if ($(e.target).is(".modal4")) {
+    $(".modal4").css("display", "none");
   }
-};
+});
 
 // slider ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let $slider_ini = $(".Advance-Slider");

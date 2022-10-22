@@ -335,6 +335,7 @@ header {
   font-weight: bold;
   right: 0;
   top: 7px;
+  display: none;
 }
 
 .close3:hover,
