@@ -40,6 +40,12 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
+$(() => {
+  $(".rd-nav-item.active a").on("click.disable", function (e) {
+    e.preventDefault();
+  });
+});
+
 // modal1 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let modal = document.getElementById("userModal");
