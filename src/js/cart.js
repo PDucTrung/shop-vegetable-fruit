@@ -70,17 +70,25 @@ $(function () {
 //apply code 10%
 $(".btn-coupon").on("click", function () {
   let sum = 0;
-  if (
-    $(".coupon-code").val() == "techmaster" ||
-    $(".coupon-code").val() == "mrtrung"
-  ) {
+  let codeName = $(".coupon-code").val().toString().toUpperCase();
+  let code = [
+    { id: 1, name: "techmaster" },
+    { id: 2, name: "mrtrung" },
+    { id: 3, name: "tfruit" },
+  ];
+  const action = _.filter(code, (pr) => {
+    return pr.name.toUpperCase().includes(codeName);
+  });
+  if (action.length == 1) {
     for (let i = 0; i < cart.length; i++) {
       sum += Number(cart[i].total);
     }
 
     $(".sum").text((sum * 0.9).toFixed(2));
+    alert("Bạn được giảm giá 10% với mã này");
+  } else {
+    alert("Mã giảm giá không tồn tại");
   }
-  alert("Bạn được giảm giá 10% với mã này")
 });
 
 const total = () => {
