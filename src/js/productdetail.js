@@ -19,7 +19,7 @@ const addToCart = (event) => {
 
   const item = _.find(cart, { product: product.id });
 
-  let input = $(".non").find("input.number-qty").val();
+  let input = $(".pr-dt").find("input.number-qty").val();
 
   let total = product.price;
 
@@ -122,20 +122,20 @@ $(function () {
     `
   );
 
-  $(".non").find(".btn-add").on("click", addToCart);
-  $(".non")
+  $(".pr-dt").find(".btn-add").on("click", addToCart);
+  $(".pr-dt")
     .find(".plus")
     .on("click", function () {
       input.val(parseInt(input.val()) + 1);
     });
-  $(".non")
+  $(".pr-dt")
     .find(".minus")
     .on("click", function () {
       if (input.val() > 1) {
         input.val(parseInt(input.val()) - 1);
       }
     });
-  let input = $(".non").find("input.number-qty");
+  let input = $(".pr-dt").find("input.number-qty");
 
   $(".name-pr-detail").text(product.name);
 

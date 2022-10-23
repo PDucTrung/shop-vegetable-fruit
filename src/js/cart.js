@@ -19,7 +19,6 @@ const deleteItem = (event) => {
 const increment = (event) => {
   const product = _.find(cart, { product: event.data.product.id });
   const action = _.find(products, { id: event.data.product.id });
-  console.log(action);
   product.quantity += 1;
   const item = $(event.target.closest(".product-in-cart"));
   item.find(".number-qty").val(product.quantity);
