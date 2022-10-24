@@ -138,6 +138,9 @@ $(function () {
   $("form.title-category").on("change", filter);
   // search
   search();
+
+  // sort
+  $(".sort-price").on("change", sort);
 });
 
 // render name by input
@@ -192,3 +195,27 @@ $(window).on("click", (e) => {
     $("input.search-box-pr").val("");
   }
 });
+
+// sort function
+let productCopy = [];
+Array.prototype.push.apply(productCopy, products);
+
+const sort = () => {
+  console.log(productCopy);
+  let value = $(".sort-price option:selected").text();
+  if (value == "Price ascending") {
+    render(products.sort((a, b) => a.price - b.price));
+  } else if (value == "Price descending") {
+    render(products.sort((a, b) => b.price - a.price));
+  } else if (value == "Name") {
+    render(
+      products.sort((a, b) =>
+        a.name !== b.name ? (a.name < b.name ? -1 : 1) : 0
+      )
+    );
+  } else {
+    products.length = [];
+    Array.prototype.push.apply(products, productCopy);
+    render();
+  }
+};
