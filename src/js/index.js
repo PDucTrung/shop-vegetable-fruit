@@ -714,17 +714,25 @@ function signup() {
   let fullname = document.querySelector('input[name="fullname2"]');
   let email = document.querySelector('input[name="email2"]');
   let password = document.querySelector('input[name="password2"]');
-  const user = {
-    fullname: fullname.value,
-    email: email.value,
-    password: password.value,
-    login: false,
-  };
+  const checkEmail = users.filter((pr) => pr.email == email.value);
+  console.log(ngu);
+  if (fullname.value == "" || email.value == "" || password.value == "") {
+    alert("You have filled out missing information");
+  } else if (checkEmail.length > 0) {
+    alert("Email already exists");
+  } else {
+    const user = {
+      fullname: fullname.value,
+      email: email.value,
+      password: password.value,
+      login: false,
+    };
 
-  users.push(user);
-  localStorage.setItem("users", JSON.stringify(users));
-  alert("Your account has been created");
-  document.getElementById("regModal").style.display = "none";
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("Your account has been created");
+    document.getElementById("regModal").style.display = "none";
+  }
 }
 
 // checking

@@ -186,6 +186,14 @@ header {
   overflow: auto;
 }
 
+.modal a.link{
+  color: gray;
+}
+
+.modal a.link:hover{
+  color: orange;
+}
+
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;

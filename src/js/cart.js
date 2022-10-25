@@ -82,7 +82,6 @@ $(".btn-coupon").on("click", function () {
     for (let i = 0; i < cart.length; i++) {
       sum += Number(cart[i].total);
     }
-
     $(".sum").text((sum * 0.9).toFixed(2));
     alert("Bạn được giảm giá 10% với mã này");
   } else {
