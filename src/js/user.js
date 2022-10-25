@@ -11,19 +11,19 @@ $(function () {
         <div class="d-flex flex-column gap-4">
           <div>
             <p class="font-mali fw-500">Full name:</p>
-            <input class="name-account" type="text" name="" id="" value="${userLogin.fullname}" />
+            <input class="name-account" type="text" name="" id="" value="${userLogin.fullname}" disabled/>
           </div>
           <div>
             <p class="font-mali fw-500">Email:</p>
-            <input class="email-account" type="text" name="" id="" value="${userLogin.email}" />
+            <input class="email-account" type="text" name="" id="" value="${userLogin.email}" disabled/>
           </div>
           <div>
             <p class="font-mali fw-500">Password:</p>
             <div class="d-flex flex-column gap-3">
                 <input
                   class="pass-account"
-                  type="text"
-                  name="password"
+                  type="password"
+                  name=""
                   id=""
                   value="${userLogin.password}"
                 />
