@@ -715,7 +715,6 @@ function signup() {
   let email = document.querySelector('input[name="email2"]');
   let password = document.querySelector('input[name="password2"]');
   const checkEmail = users.filter((pr) => pr.email == email.value);
-  console.log(ngu);
   if (fullname.value == "" || email.value == "" || password.value == "") {
     alert("You have filled out missing information");
   } else if (checkEmail.length > 0) {
