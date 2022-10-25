@@ -18,6 +18,14 @@ $(function () {
             <input class="email-account" type="text" name="" id="" value="${userLogin.email}" disabled/>
           </div>
           <div>
+            <p class="font-mali fw-500">Phone:</p>
+            <input class="phone-account" type="text" name="" id="" value="" />
+            </div>
+            <div>
+            <p class="font-mali fw-500">Bank account number:</p>
+            <input class="email-account" type="text" name="" id="" value="" />
+            </div>
+          <div>
             <p class="font-mali fw-500">Password:</p>
             <div class="d-flex flex-column gap-3">
                 <input
@@ -28,7 +36,7 @@ $(function () {
                   value="${userLogin.password}"
                 />
                 <button class="change-pass font-mali">Change password</button>
-            </div>
+            </div>            
           </div>
         </div>   
 
