@@ -23,6 +23,8 @@ import "../css/blogdetail.css";
 import "../css/contact.css";
 import "../css/user.css";
 import { products } from "./db";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(window).on("load", function () {
@@ -63,7 +65,6 @@ if (userLogin) {
     btn.onclick = function () {
       modal.style.display = "block";
     };
-    alert("successful logout");
     cart.length = 0;
     localStorage.setItem("carts", JSON.stringify(cart));
     window.location.pathname = "/index.html";
@@ -579,32 +580,6 @@ $(".slider-list-blog").slick({
   dots: true,
 });
 
-// Toast function
-if (
-  window.document.location.pathname == "/checkout.html" ||
-  window.document.location.pathname == "/product.html"
-) {
-  const toasts = document.getElementById("toasts");
-
-  $(".checkout").on("click", () => createNotification());
-
-  function createNotification() {
-    const notif = document.createElement("div");
-    notif.classList.add("toast");
-
-    notif.innerHTML = `<div>
-      <div><span><i class="text-green bi bi-bag-check"></i></span> Success</div>
-      <div class="delete-icon"><i class="bi bi-x"></i></div>
-    </div>`;
-
-    toasts.appendChild(notif);
-
-    setTimeout(() => {
-      notif.remove();
-    }, 3000);
-  }
-}
-
 // call api
 // var cartApi = "https://jsonsv.herokuapp.com/cart";
 
@@ -716,7 +691,8 @@ function signup() {
   let password = document.querySelector('input[name="password2"]');
   const checkEmail = users.filter((pr) => pr.email == email.value);
   if (fullname.value == "" || email.value == "" || password.value == "") {
-    alert("You have filled out missing information");
+    toastr["success"]("You have filled out missing information");
+    // alert("You have filled out missing information");
   } else if (checkEmail.length > 0) {
     alert("Email already exists");
   } else {
@@ -755,11 +731,30 @@ function signin() {
   }
   if (check == true) {
     const userLogin = _.find(users, { login: true });
-    alert("Wellcome " + userLogin.fullname.toUpperCase() + " to Tfruit shop");
+
+    // alert("Wellcome " + userLogin.fullname.toUpperCase() + " to Tfruit shop");
     document.getElementById("userModal").style.display = "none";
-    window.location.pathname = "/index.html";
+    // window.location.pathname = "/index.html";
+    //
+    $(".btnLogOut").css("display", "block");
+    $(".btnLogOut").on("click", () => {
+      userLogin.login = false;
+      localStorage.setItem("users", JSON.stringify(users));
+      $(".btnLogOut").css("display", "none");
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      cart.length = 0;
+      localStorage.setItem("carts", JSON.stringify(cart));
+      window.location.pathname = "/index.html";
+    });
+    //
+    toastr["info"](
+      "Wellcome " + userLogin.fullname.toUpperCase() + " to Tfruit shop"
+    );
   } else {
-    alert("you have failed to login");
+    toastr["error"]("you have failed to login");
+    // alert("you have failed to login");
   }
 }
 
@@ -814,3 +809,24 @@ const search = () => {
       });
   });
 };
+
+// toastr
+$(() => {
+  toastr.options = {
+    closeButton: true,
+    debug: false,
+    newestOnTop: true,
+    progressBar: true,
+    positionClass: "toast-top-right",
+    preventDuplicates: false,
+    onclick: null,
+    showDuration: "300",
+    hideDuration: "1000",
+    timeOut: "5000",
+    extendedTimeOut: "1000",
+    showEasing: "swing",
+    hideEasing: "linear",
+    showMethod: "fadeIn",
+    hideMethod: "fadeOut",
+  };
+});

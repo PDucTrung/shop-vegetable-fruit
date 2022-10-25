@@ -25,7 +25,8 @@
     "popper.js": "^1.16.1",
     "react-hover-css": "^1.1.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^8.4.2"
+    "swiper": "^8.4.2",
+    "toastr": "^2.1.4"
   },
   "description": "web ban hoa qua",
   "main": "vite.config.js",

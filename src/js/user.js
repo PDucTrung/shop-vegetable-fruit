@@ -1,6 +1,8 @@
 import $ from "jquery";
 import _ from "lodash";
 import { products } from "./db";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 const users = JSON.parse(localStorage.getItem("users"));
 const userLogin = _.find(users, { login: true });
@@ -46,6 +48,7 @@ $(function () {
   $(".change-pass").on("click", () => {
     userLogin.password = $("input.pass-account").val();
     localStorage.setItem("users", JSON.stringify(users));
+    toastr["success"]("Đổi mật khẩu thành công")
   });
 });
 

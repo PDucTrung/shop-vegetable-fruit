@@ -1,6 +1,8 @@
 import $ from "jquery";
 import _ from "lodash";
 import { products } from "./db";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 const PRODUCTS_PER_PAGE = 9;
 
@@ -23,9 +25,11 @@ const addToCart = (event) => {
     let total = action.price;
 
     if (item) {
-      alert("! Sản phẩm đã có giỏ hàng");
+      toastr["warning"]("! Sản phẩm đã có giỏ hàng");
+      // alert("! Sản phẩm đã có giỏ hàng");
     } else {
-      alert("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
+      toastr["success"]("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
+      // alert("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
       cart.push({
         product: event.data.id,
         quantity: 1,
@@ -37,7 +41,8 @@ const addToCart = (event) => {
 
     $(".number").text(cart.length);
   } else {
-    alert("You need to login to perform this function");
+    toastr["warning"]("You need to login to perform this function");
+    // alert("You need to login to perform this function");
     $(".modal").css("display", "block");
   }
 };

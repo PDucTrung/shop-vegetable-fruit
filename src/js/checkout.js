@@ -1,6 +1,8 @@
 import $ from "jquery";
 import _ from "lodash";
 import { products } from "./db";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 const cart = JSON.parse(localStorage.getItem("carts")) || [];
 
@@ -26,4 +28,8 @@ $(function () {
   }
 
   $(".sum-checkout").text(sum.toFixed(2));
+
+  $(".btn-checkout").on("click", () => {
+    toastr["success"]("Đặt hàng thành công");
+  });
 });

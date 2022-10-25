@@ -165,7 +165,7 @@ header {
   color: white;
 }
 
-.btnLogOut:hover{
+.btnLogOut:hover {
   color: orange;
 }
 /* modal sign in */
@@ -186,11 +186,11 @@ header {
   overflow: auto;
 }
 
-.modal a.link{
+.modal a.link {
   color: gray;
 }
 
-.modal a.link:hover{
+.modal a.link:hover {
   color: orange;
 }
 
@@ -1044,45 +1044,11 @@ footer {
 
 /* ======= Toast message ======== */
 
-#toasts {
-  position: fixed;
-  top: 120px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 9999;
-  height: max-content;
-}
-
-.toast {
+.toast .btn {
+  border: 1px solid white;
   background-color: white;
-  color: orange;
-  border-radius: 5px;
-  padding: 15px 40px;
-  margin: 0.5rem;
-  width: max-content;
-  border: none;
-  font-size: 18px;
-  font-family: "mali";
-  position: relative;
 }
 
-.toast:not(.show) {
-  display: block;
-}
-
-.delete-icon {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  color: #000;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: orange;
+.toast .btn:hover {
+  background-color: green;
 }

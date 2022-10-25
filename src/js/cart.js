@@ -1,18 +1,26 @@
 import $ from "jquery";
 import _, { sum } from "lodash";
 import { products } from "./db";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 let cart = JSON.parse(localStorage.getItem("carts")) || [];
 
 const deleteItem = (event) => {
-  if (confirm("Chắc chắn xóa không?")) {
-    cart = _.filter(cart, (item) => item.product !== event.data.product.id);
+  if (
+    toastr["warning"](
+      'Bạn có chắc muốn xóa ?<br /><br /><button type="button" class="btn clear">Yes</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" class="btn">No</button>'
+    )
+  ) {
+    $(".toast button.clear").on("click", () => {
+      cart = _.filter(cart, (item) => item.product !== event.data.product.id);
 
-    localStorage.setItem("carts", JSON.stringify(cart));
+      localStorage.setItem("carts", JSON.stringify(cart));
 
-    event.target.closest(".product-in-cart").remove();
-    $(".number").text(cart.length);
-    total();
+      event.target.closest(".product-in-cart").remove();
+      $(".number").text(cart.length);
+      total();
+    });
   }
 };
 
@@ -83,9 +91,9 @@ $(".btn-coupon").on("click", function () {
       sum += Number(cart[i].total);
     }
     $(".sum").text((sum * 0.9).toFixed(2));
-    alert("Bạn được giảm giá 10% với mã này");
+    toastr["success"]("Bạn được giảm giá 10% với mã này");
   } else {
-    alert("Mã giảm giá không tồn tại");
+    toastr["error"]("Mã giảm giá không tồn tại");
   }
 });
 
