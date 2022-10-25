@@ -694,7 +694,7 @@ function signup() {
     toastr["success"]("You have filled out missing information");
     // alert("You have filled out missing information");
   } else if (checkEmail.length > 0) {
-    alert("Email already exists");
+    toastr["error"]("Email already exists");
   } else {
     const user = {
       fullname: fullname.value,
@@ -705,7 +705,8 @@ function signup() {
 
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
-    alert("Your account has been created");
+    toastr["success"]("Your account has been created");
+    // alert("Your account has been created");
     document.getElementById("regModal").style.display = "none";
   }
 }
@@ -748,6 +749,10 @@ function signin() {
       localStorage.setItem("carts", JSON.stringify(cart));
       window.location.pathname = "/index.html";
     });
+    btn.onclick = function () {
+      modal.style.display = "none";
+      window.location.pathname = "/user.html";
+    };
     //
     toastr["info"](
       "Wellcome " + userLogin.fullname.toUpperCase() + " to Tfruit shop"
