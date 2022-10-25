@@ -691,7 +691,7 @@ function signup() {
   let password = document.querySelector('input[name="password2"]');
   const checkEmail = users.filter((pr) => pr.email == email.value);
   if (fullname.value == "" || email.value == "" || password.value == "") {
-    toastr["success"]("You have filled out missing information");
+    toastr["error"]("You have filled out missing information");
     // alert("You have filled out missing information");
   } else if (checkEmail.length > 0) {
     toastr["error"]("Email already exists");
