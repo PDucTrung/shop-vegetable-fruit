@@ -1,0 +1,29 @@
+.section-users {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.section-users input {
+  padding: 10px 20px;
+}
+
+.change-pass {
+  padding: 10px 20px;
+  font-weight: 600;
+  border: 2px solid green;
+  color: green;
+  background-color: white;
+}
+
+.change-pass:hover {
+  background: green;
+  color: white;
+  transition: all 0.3s linear;
+}
+
+.user-acc {
+  width: max-content;
+}

@@ -21,6 +21,7 @@ import "../css/about.css";
 import "../css/blog.css";
 import "../css/blogdetail.css";
 import "../css/contact.css";
+import "../css/user.css";
 import { products } from "./db";
 
 // Page loader //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,6 +70,7 @@ if (userLogin) {
   });
   btn.onclick = function () {
     modal.style.display = "none";
+    window.location.pathname = "/user.html";
   };
 } else {
   btn.onclick = function () {

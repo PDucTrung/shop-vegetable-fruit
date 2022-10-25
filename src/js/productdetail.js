@@ -1,6 +1,5 @@
 import $, { event } from "jquery";
 import _ from "lodash";
-
 import { products } from "./db";
 
 const url = new URL(location.href);

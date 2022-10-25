@@ -17,6 +17,7 @@ export default defineConfig({
         productdetail: resolve(__dirname, "src/productdetail.html"),
         blog: resolve(__dirname, "src/blog.html"),
         blogdetail: resolve(__dirname, "src/blogdetail.html"),
+        user: resolve(__dirname, "src/user.html"),
       },
     },
   },
