@@ -141,6 +141,9 @@ $(function () {
 
   // sort
   $(".sort-price").on("change", sort);
+
+  // filter number
+  $(".price-wrap").find(".price-title").on("click", filterRange);
 });
 
 // render name by input
@@ -218,4 +221,23 @@ const sort = () => {
     Array.prototype.push.apply(products, productCopy);
     render();
   }
+};
+
+// filter number
+
+const filterRange = () => {
+  const lower = $(".price-wrap").find("input#one").val();
+  const upper = $(".price-wrap").find("input#two").val();
+  const productFilterRange = products.filter((pr) => {
+    return pr.price >= Number(lower) && pr.price <= Number(upper);
+  });
+  // product[] = product filter
+  products.length = [];
+  Array.prototype.push.apply(products, productFilterRange);
+  // render product after filter
+  render();
+
+  // after filter return product default
+  products.length = [];
+  Array.prototype.push.apply(products, productCopy);
 };
