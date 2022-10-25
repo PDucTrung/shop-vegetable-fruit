@@ -37,6 +37,7 @@ const addToCart = (event) => {
 
     $(".number").text(cart.length);
   } else {
+    alert("You need to login to perform this function");
     $(".modal").css("display", "block");
   }
 };
