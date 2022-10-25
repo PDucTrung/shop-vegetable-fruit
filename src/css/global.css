@@ -158,6 +158,16 @@ header {
   max-width: 100%;
 }
 
+.btnLogOut {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.btnLogOut:hover{
+  color: orange;
+}
 /* modal sign in */
 
 /* The Modal (background) */

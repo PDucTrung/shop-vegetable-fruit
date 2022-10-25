@@ -5,38 +5,41 @@ import { products } from "./db";
 
 const url = new URL(location.href);
 const id = Number(url.searchParams.get("id"));
-// const product = _.find(products, { id });
-// const cart = JSON.parse(localStorage.getItem("carts")) || [];
-// const item = _.find(cart, { product: product.id });
+const users = JSON.parse(localStorage.getItem("users"));
 
 // add to cart
 const addToCart = (event) => {
-  event.preventDefault();
+  const userLogin = _.find(users, { login: true });
+  if (userLogin) {
+    event.preventDefault();
 
-  const product = _.find(products, { id });
+    const product = _.find(products, { id });
 
-  const cart = JSON.parse(localStorage.getItem("carts")) || [];
+    const cart = JSON.parse(localStorage.getItem("carts")) || [];
 
-  const item = _.find(cart, { product: product.id });
+    const item = _.find(cart, { product: product.id });
 
-  let input = $(".pr-dt").find("input.number-qty").val();
+    let input = $(".pr-dt").find("input.number-qty").val();
 
-  let total = product.price;
+    let total = product.price;
 
-  if (item) {
-    alert("! Sản phẩm đã có giỏ hàng");
-  } else if (product) {
-    alert("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
-    cart.push({
-      product: product.id,
-      quantity: Number(input),
-      total: Number(total * input).toFixed(2),
-    });
+    if (item) {
+      alert("! Sản phẩm đã có giỏ hàng");
+    } else if (product) {
+      alert("Sản phẩm đã được thêm vào giỏ hàng trong giỏ hàng");
+      cart.push({
+        product: product.id,
+        quantity: Number(input),
+        total: Number(total * input).toFixed(2),
+      });
+    }
+
+    localStorage.setItem("carts", JSON.stringify(cart));
+
+    $(".number").text(cart.length);
+  } else {
+    $(".modal").css("display", "block");
   }
-
-  localStorage.setItem("carts", JSON.stringify(cart));
-
-  $(".number").text(cart.length);
 };
 
 // render product detail

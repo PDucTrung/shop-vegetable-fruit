@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import $ from "jquery";
+import $, { event } from "jquery";
 import "jquery/dist/jquery.min.js";
 import "hover.css/css/hover.css";
 import "animate.css/animate.min.css";
@@ -47,16 +47,34 @@ $(() => {
 });
 
 // modal1 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+const users = JSON.parse(localStorage.getItem("users"));
+const userLogin = _.find(users, { login: true });
+const cart = JSON.parse(localStorage.getItem("carts")) || [];
 let modal = document.getElementById("userModal");
-
 let btn = document.getElementById("userBtn");
-
 let span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function () {
-  modal.style.display = "block";
-};
+if (userLogin) {
+  $(".btnLogOut").css("display", "block");
+  $(".btnLogOut").on("click", () => {
+    userLogin.login = false;
+    localStorage.setItem("users", JSON.stringify(users));
+    $(".btnLogOut").css("display", "none");
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+    alert("successful logout");
+    cart.length = 0;
+    localStorage.setItem("carts", JSON.stringify(cart));
+    window.location.pathname = "/index.html";
+  });
+  btn.onclick = function () {
+    modal.style.display = "none";
+  };
+} else {
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+}
 
 span.onclick = function () {
   modal.style.display = "none";
@@ -698,6 +716,7 @@ function signup() {
     fullname: fullname.value,
     email: email.value,
     password: password.value,
+    login: false,
   };
 
   users.push(user);
@@ -710,7 +729,7 @@ function signup() {
 var signIn = document.getElementById("sign-in");
 signIn.addEventListener("click", (e) => signin(e.preventDefault()));
 function signin() {
-  let users = JSON.parse(localStorage.getItem("users"));
+  const users = JSON.parse(localStorage.getItem("users"));
   let userEmail = document.querySelector('input[name="email3"]');
   let userPw = document.querySelector('input[name="password3"]');
   let check = false;
@@ -720,10 +739,14 @@ function signin() {
       userPw.value == users[i].password
     ) {
       check = true;
+      const userLogin = _.find(users, { email: userEmail.value });
+      userLogin.login = true;
+      localStorage.setItem("users", JSON.stringify(users));
     }
   }
   if (check == true) {
-    alert("Successful login  \n\nWellcome to Tfruit shop");
+    const userLogin = _.find(users, { login: true });
+    alert("Wellcome " + userLogin.fullname.toUpperCase() + " to Tfruit shop");
     document.getElementById("userModal").style.display = "none";
     window.location.pathname = "/index.html";
   } else {
@@ -731,7 +754,7 @@ function signin() {
   }
 }
 
-// cout cart
+// count cart
 
 $(function () {
   let cart = JSON.parse(localStorage.getItem("carts")) || [];
