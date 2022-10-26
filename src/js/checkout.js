@@ -29,9 +29,18 @@ $(function () {
 
   $(".sum-checkout").text(sum.toFixed(2));
 
-  // $(".btn-checkout").on("click", () => {
-  //   toastr["success"]("Đặt hàng thành công");
-  // });
+  $(".btn-checkout").on("click", () => {
+    const form = document.getElementById("form-4");
+    let text = "";
+    for (let i = 0; i < form.length; i++) {
+      text = form.elements[i].value;
+    }
+    if (text !== "") {
+      toastr["success"]("Đặt hàng thành công");
+    } else {
+      toastr["warning"]("Vui lòng điền đầy đủ thông tin");
+    }
+  });
 
   $(".add-card-visa .checkout").on("click", () => {
     toastr["success"]("Thêm thẻ thành công");
