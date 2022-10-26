@@ -29,9 +29,9 @@ $(function () {
 
   $(".sum-checkout").text(sum.toFixed(2));
 
-  $(".btn-checkout").on("click", () => {
-    toastr["success"]("Đặt hàng thành công");
-  });
+  // $(".btn-checkout").on("click", () => {
+  //   toastr["success"]("Đặt hàng thành công");
+  // });
 
   $(".add-card-visa .checkout").on("click", () => {
     toastr["success"]("Thêm thẻ thành công");

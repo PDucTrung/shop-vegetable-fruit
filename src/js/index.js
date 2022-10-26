@@ -663,9 +663,18 @@ document.addEventListener("DOMContentLoaded", function () {
       Validator.isRequired("#email"),
       Validator.isEmail("#email"),
     ],
-    onSubmit: function (data) {
-      console.log(data);
-    },
+    onSubmit: $(".btn-checkout").on("click", () => {
+      const form = document.getElementById("form-4");
+      let text = "";
+      for (let i = 0; i < form.length; i++) {
+        text = form.elements[i].value;
+      }
+      if (text !== "") {
+        toastr["success"]("Đặt hàng thành công");
+      } else {
+        toastr["warning"]("Vui lòng điền đầy đủ thông tin");
+      }
+    }),
   });
 
   Validator({
