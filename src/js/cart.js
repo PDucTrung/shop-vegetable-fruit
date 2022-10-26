@@ -18,6 +18,7 @@ const deleteItem = (event) => {
       localStorage.setItem("carts", JSON.stringify(cart));
 
       event.target.closest(".product-in-cart").remove();
+      checkProductInCart();
       $(".number").text(cart.length);
       total();
     });
