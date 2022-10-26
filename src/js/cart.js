@@ -72,7 +72,16 @@ $(function () {
 
   //
   total();
+  checkProductInCart();
 });
+
+const checkProductInCart = () => {
+  if ($(".content-cart").find(".product-in-cart").length == 0) {
+    $(".title-cart").html(`<div class="no-pr">No products in cart</div>`);
+  } else {
+    $(".title-cart").html();
+  }
+};
 
 //apply code 10%
 $(".btn-coupon").on("click", function () {

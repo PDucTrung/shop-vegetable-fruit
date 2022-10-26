@@ -11,6 +11,10 @@
   margin: 40px auto;
 }
 
+.no-pr{
+  margin: 0 auto;
+}
+
 .img-thumbail-cart img {
   width: 140px;
   height: 140px;
