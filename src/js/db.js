@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    img: "https://tfruit.vercel.app/assets/pr-fr-1.98e57d6f.png",
+    img: "/img/pr-fr-1.png",
     name: "Red cabbage",
     price: 3.29,
     category: "Fruits",
