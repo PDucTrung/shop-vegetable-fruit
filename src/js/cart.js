@@ -115,3 +115,15 @@ const total = () => {
 
   $(".sum").text(sum.toFixed(2));
 };
+
+$("button.btn-next-to-checkout").on("click", (event) => {
+  const users = JSON.parse(localStorage.getItem("users"));
+  const userLogin = _.find(users, { login: true });
+  if (userLogin) {
+    window.location.pathname = "/checkout.html";
+  } else {
+    toastr["warning"]("You need to login to perform this function");
+    // alert("You need to login to perform this function");
+    $(".modal").css("display", "block");
+  }
+});
