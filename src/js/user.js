@@ -45,9 +45,20 @@ $(function () {
     `
   );
 
-  $(".change-pass").on("click", () => {
+  $(".change-pass").on("click", checkPass);
+});
+
+const checkPass = () => {
+  const input = document.querySelector("input.pass-account").value;
+  console.log(input);
+  let regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+  if (regex.test(input) == false) {
+    toastr["error"](
+      "Password must consist of at least 8 letters and contain at least one uppercase letter, one lowercase letter and one number."
+    );
+  } else {
     userLogin.password = $("input.pass-account").val();
     localStorage.setItem("users", JSON.stringify(users));
-    toastr["success"]("Đổi mật khẩu thành công")
-  });
-});
+    toastr["success"]("Đổi mật khẩu thành công");
+  }
+};
