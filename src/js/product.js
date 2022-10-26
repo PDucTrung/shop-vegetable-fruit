@@ -89,13 +89,20 @@ const pagination = (current, totalPage, prev, next) => {
 
 // filter by checkbox
 const filter = (event) => {
+  // filter by check box
   categories.length = 0;
 
   $("input:checked").each(function () {
     categories.push(this.value);
+    render(products);
   });
 
-  render();
+  // filter by select
+  sort();
+
+  // filter by number
+
+  filterRange();
 };
 
 // render
@@ -147,15 +154,17 @@ $(function () {
     })
   );
 
-  $("form.title-category").on("change", filter);
-  // search
-  search();
-
   // sort
-  $(".sort-price").on("change", sort);
+  $(".sort-price").on("change", filter);
+
+  // filter by checkbox
+  $("form.title-category").on("change", filter);
 
   // filter number
-  $(".price-wrap").find(".price-title").on("click", filterRange);
+  $(".price-wrap").find(".price-title").on("click", filter);
+
+  // search
+  search();
 });
 
 // render name by input
@@ -216,16 +225,21 @@ let productCopy = [];
 Array.prototype.push.apply(productCopy, products);
 
 const sort = () => {
-  console.log(productCopy);
   let value = $(".sort-price option:selected").text();
   if (value == "Price ascending") {
     render(products.sort((a, b) => a.price - b.price));
   } else if (value == "Price descending") {
     render(products.sort((a, b) => b.price - a.price));
-  } else if (value == "Name") {
+  } else if (value == "Name ascending") {
     render(
       products.sort((a, b) =>
         a.name !== b.name ? (a.name < b.name ? -1 : 1) : 0
+      )
+    );
+  } else if (value == "Name descending") {
+    render(
+      products.sort((a, b) =>
+        a.name !== b.name ? (a.name > b.name ? -1 : 1) : 0
       )
     );
   } else {
