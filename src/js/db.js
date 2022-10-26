@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    img: "img/pr-fr-1.png",
+    img: "/img/pr-fr-1.png",
     name: "Red cabbage",
     price: 3.29,
     category: "Fruits",
