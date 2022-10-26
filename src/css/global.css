@@ -830,6 +830,14 @@ footer {
   opacity: 1;
 }
 
+.gird-footer2 a {
+  text-decoration: none;
+}
+
+.gird-footer2 a:hover {
+  color: orange;
+}
+
 .text-orange-fo {
   color: orange;
 }
