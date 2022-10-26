@@ -11,7 +11,7 @@ export const products = [
   },
   {
     name: "Pea",
-    img: "https://tfruit.vercel.app/assets/pr-fr-2.02e575be.png",
+    img: "/img/pr-fr-2.png",
     price: 3.99,
     id: 2,
     category: "Vegetables",
@@ -21,7 +21,7 @@ export const products = [
   },
   {
     name: "Cherry",
-    img: "https://tfruit.vercel.app/assets/pr-fr-3.1dd96813.png",
+    img: "/img/pr-fr-3.png",
     price: 2.99,
     id: 3,
     category: "Exotic",
@@ -31,7 +31,7 @@ export const products = [
   },
   {
     name: "Pepper",
-    img: "https://tfruit.vercel.app/assets/pr-fr-4.21086135.png",
+    img: "/img/pr-fr-4.png",
     price: 2.79,
     id: 4,
     category: "Vegetables",
@@ -41,7 +41,7 @@ export const products = [
   },
   {
     name: "Kiwi",
-    img: "https://tfruit.vercel.app/assets/pr-fr-5.c306bfdc.png",
+    img: "/img/pr-fr-5.png",
     price: 4.99,
     id: 5,
     category: "Exotic",
@@ -51,7 +51,7 @@ export const products = [
   },
   {
     name: "Orange",
-    img: "https://tfruit.vercel.app/assets/pr-fr-6.16b835d7.png",
+    img: "/img/pr-fr-6.png",
     price: 5.99,
     id: 6,
     category: "Fruits",
@@ -61,7 +61,7 @@ export const products = [
   },
   {
     name: "Cucumber",
-    img: "https://tfruit.vercel.app/assets/pr-fr-7.77a3970b.png",
+    img: "/img/pr-fr-7.png",
     price: 1.99,
     id: 7,
     category: "Vegetables",
@@ -71,7 +71,7 @@ export const products = [
   },
   {
     name: "Pineaple",
-    img: "https://tfruit.vercel.app/assets/pr-fr-8.d9a490c2.png",
+    img: "/img/pr-fr-8.png",
     price: 6.99,
     id: 8,
     category: "Fruits",
@@ -81,7 +81,7 @@ export const products = [
   },
   {
     name: "Broccoli",
-    img: "https://tfruit.vercel.app/assets/pr-fr-9.961b2d61.png",
+    img: "/img/pr-fr-9.png",
     price: 2.99,
     id: 9,
     category: "Vegetables",
@@ -91,7 +91,7 @@ export const products = [
   },
   {
     name: "Alphonsos Mango",
-    img: "https://tfruit.vercel.app/assets/pr-fr-10.5247acb7.jpg",
+    img: "/img/pr-fr-10.jpg",
     price: 3.99,
     id: 10,
     category: "Fruits",
@@ -101,7 +101,7 @@ export const products = [
   },
   {
     name: "Avocado",
-    img: "https://tfruit.vercel.app/assets/pr-fr-11.355e00a0.jpg",
+    img: "/img/pr-fr-11.jpg",
     price: 5.99,
     id: 11,
     category: "Exotic",
@@ -111,7 +111,7 @@ export const products = [
   },
   {
     name: "Brown Onion",
-    img: "https://tfruit.vercel.app/assets/pr-fr-12.7dfde039.jpg",
+    img: "/img/pr-fr-12.jpg",
     price: 0.99,
     id: 12,
     category: "Vegetables",
@@ -121,7 +121,7 @@ export const products = [
   },
   {
     name: "Carrot",
-    img: "https://tfruit.vercel.app/assets/pr-fr-13.6b66dd8b.jpg",
+    img: "/img/pr-fr-13.jpg",
     price: 2.29,
     id: 13,
     category: "Vegetables",
@@ -131,7 +131,7 @@ export const products = [
   },
   {
     name: "Eggplant",
-    img: "https://tfruit.vercel.app/assets/pr-fr-14.a8dc7f03.jpg",
+    img: "/img/pr-fr-14.jpg",
     price: 1.99,
     id: 14,
     category: "Vegetables",
@@ -141,7 +141,7 @@ export const products = [
   },
   {
     name: "Grapes Black Globe",
-    img: "https://tfruit.vercel.app/assets/pr-fr-15.2433d81d.jpg",
+    img: "/img/pr-fr-15.jpg",
     price: 4.99,
     id: 15,
     category: "Exotic",
@@ -151,7 +151,7 @@ export const products = [
   },
   {
     name: "Grapes Green Globe",
-    img: "https://tfruit.vercel.app/assets/pr-fr-16.7c615a1f.jpg",
+    img: "/img/pr-fr-16.jpg",
     price: 4.59,
     id: 16,
     category: "Fruits",
@@ -161,7 +161,7 @@ export const products = [
   },
   {
     name: "Grapes Red Globe",
-    img: "https://tfruit.vercel.app/assets/pr-fr-17.22ce340c.jpg",
+    img: "/img/pr-fr-17.jpg",
     price: 5.99,
     id: 17,
     category: "Exotic",
@@ -171,7 +171,7 @@ export const products = [
   },
   {
     name: "Mango",
-    img: "https://tfruit.vercel.app/assets/pr-fr-18.b0e6f75e.jpg",
+    img: "/img/pr-fr-18.jpg",
     price: 1.99,
     id: 18,
     category: "Fruits",
@@ -181,7 +181,7 @@ export const products = [
   },
   {
     name: "Pomegranate",
-    img: "https://tfruit.vercel.app/assets/pr-fr-19.ad1565b4.jpg",
+    img: "/img/pr-fr-19.jpg",
     price: 6.99,
     id: 19,
     category: "Fruits",
@@ -191,7 +191,7 @@ export const products = [
   },
   {
     name: "Raddish",
-    img: "https://tfruit.vercel.app/assets/pr-fr-20.89d74146.jpg",
+    img: "/img/pr-fr-20.jpg",
     price: 2.99,
     id: 20,
     category: "Vegetables",
@@ -201,7 +201,7 @@ export const products = [
   },
   {
     name: "Watermelon",
-    img: "https://tfruit.vercel.app/assets/pr-fr-22.459166d0.jpg",
+    img: "/img/pr-fr-22.jpg",
     price: 6.99,
     id: 21,
     category: "Fruits",
@@ -211,7 +211,7 @@ export const products = [
   },
   {
     name: "Lettuce",
-    img: "https://tfruit.vercel.app/assets/pr-fr-29.fffed05e.jpg",
+    img: "/img/pr-fr-29.jpg",
     price: 2.99,
     id: 22,
     category: "Vegetables",
@@ -221,7 +221,7 @@ export const products = [
   },
   {
     name: "Tomato",
-    img: "https://tfruit.vercel.app/assets/pr-fr-28.e9a93073.png",
+    img: "/img/pr-fr-28.png",
     price: 3.99,
     id: 23,
     category: "Fruits",
@@ -231,7 +231,7 @@ export const products = [
   },
   {
     name: "Apple",
-    img: "https://tfruit.vercel.app/assets/pr-fr-30.31526442.jpg",
+    img: "/img/pr-fr-30.jpg",
     price: 4.29,
     id: 24,
     category: "Fruits",
