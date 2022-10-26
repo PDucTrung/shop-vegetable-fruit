@@ -10,6 +10,7 @@ const users = JSON.parse(localStorage.getItem("users"));
 
 // add to cart
 const addToCart = (event) => {
+  const users = JSON.parse(localStorage.getItem("users"));
   const userLogin = _.find(users, { login: true });
   if (userLogin) {
     event.preventDefault();

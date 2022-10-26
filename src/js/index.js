@@ -58,6 +58,7 @@ let btn = document.getElementById("userBtn");
 let span = document.getElementsByClassName("close")[0];
 if (userLogin) {
   $(".btnLogOut").css("display", "block");
+  // log out
   $(".btnLogOut").on("click", () => {
     userLogin.login = false;
     localStorage.setItem("users", JSON.stringify(users));
@@ -711,8 +712,6 @@ function signup() {
 // checking
 
 function signin() {
-  let s = $(this).parents("form").find(".form-message").val();
-  console.log(s);
   const users = JSON.parse(localStorage.getItem("users"));
   let userEmail = document.querySelector('input[name="email3"]');
   let userPw = document.querySelector('input[name="password3"]');
@@ -731,7 +730,6 @@ function signin() {
   if (check == true) {
     const userLogin = _.find(users, { login: true });
 
-    // alert("Wellcome " + userLogin.fullname.toUpperCase() + " to Tfruit shop");
     document.getElementById("userModal").style.display = "none";
     // window.location.pathname = "/index.html";
     //
