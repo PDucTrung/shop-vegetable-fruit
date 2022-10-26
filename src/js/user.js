@@ -51,4 +51,3 @@ $(function () {
     toastr["success"]("Đổi mật khẩu thành công")
   });
 });
-

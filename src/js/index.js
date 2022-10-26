@@ -620,6 +620,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Re-enter unknown password correctly"
       ),
     ],
+    onSubmit: signup,
   });
 
   Validator({
@@ -633,6 +634,7 @@ document.addEventListener("DOMContentLoaded", function () {
       Validator.minLength("#password", 8),
       Validator.isPasstext("#password"),
     ],
+    onSubmit: signin,
   });
 
   Validator({
@@ -682,18 +684,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // sign in
 
-var signUp = document.getElementById("sign-up");
-signUp.addEventListener("click", (e) => signup(e.preventDefault()));
 function signup() {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   let fullname = document.querySelector('input[name="fullname2"]');
   let email = document.querySelector('input[name="email2"]');
   let password = document.querySelector('input[name="password2"]');
   const checkEmail = users.filter((pr) => pr.email == email.value);
-  if (fullname.value == "" || email.value == "" || password.value == "") {
-    toastr["error"]("You have filled out missing information");
-    // alert("You have filled out missing information");
-  } else if (checkEmail.length > 0) {
+  if (checkEmail.length > 0) {
     toastr["error"]("Email already exists");
   } else {
     const user = {
@@ -712,9 +709,10 @@ function signup() {
 }
 
 // checking
-var signIn = document.getElementById("sign-in");
-signIn.addEventListener("click", (e) => signin(e.preventDefault()));
+
 function signin() {
+  let s = $(this).parents("form").find(".form-message").val();
+  console.log(s);
   const users = JSON.parse(localStorage.getItem("users"));
   let userEmail = document.querySelector('input[name="email3"]');
   let userPw = document.querySelector('input[name="password3"]');
