@@ -102,7 +102,8 @@
 }
 
 .quality-pr-detail .qty-cart .number-qty {
-  padding-left: 12%;
+  text-align: center;
+  font-size: 24px;
 }
 
 /* form */
@@ -212,6 +213,17 @@
 
 .time-cmt {
   font-size: 10px;
+}
+
+.quality-pr-detail .qty-cart .number-qty {
+  text-align: center;
+  font-size: 24px;
+}
+
+@media screen and (min-width: 400px) {
+  .quality-pr-detail .qty-cart .number-qty {
+    padding-left: 14px;
+  }
 }
 
 @media screen and (min-width: 576px) {

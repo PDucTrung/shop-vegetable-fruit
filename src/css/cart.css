@@ -45,7 +45,6 @@
   height: 38px;
   text-align: center;
   border-radius: 5px;
-  padding-left: 4%;
 }
 
 /* coupon code*/
@@ -155,7 +154,14 @@
   padding-bottom: 15px;
 }
 
+@media screen and (min-width: 400px) {
+  .qty-cart .number-qty{
+    padding-left: 13px;;
+  }
+}
+
 @media screen and (min-width: 576px) {
+  
 }
 
 @media screen and (min-width: 768px) {
