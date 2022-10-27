@@ -182,7 +182,7 @@ export const products = [
   {
     name: "Pomegranate",
     img: "/img/pr-fr-19.jpg",
-    price: 6.99,
+    price: 6.89,
     id: 19,
     category: "Fruits",
     weight: 390,
@@ -202,7 +202,7 @@ export const products = [
   {
     name: "Watermelon",
     img: "/img/pr-fr-22.jpg",
-    price: 6.99,
+    price: 6.79,
     id: 21,
     category: "Fruits",
     weight: 1300,
