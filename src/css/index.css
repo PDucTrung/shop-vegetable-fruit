@@ -584,9 +584,17 @@
   padding: 5px;
 }
 
+.shopnow a {
+  color: #006400;
+}
+
 .shopnow:hover {
   border: 2px solid #006400;
   cursor: pointer;
+}
+
+.shopnow:hover a {
+  color: orange;
 }
 
 .offer img:hover {
@@ -1002,6 +1010,14 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.content-sale .but-sale a {
+  color: white;
+}
+
+.content-sale .but-sale a:hover {
+  color: orange;
 }
 
 .p-sale-1 {
