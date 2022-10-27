@@ -51,7 +51,12 @@ $(function () {
 
   $(".change-pass").on("click", checkPass);
 
-  $(".choose-img").on("change", loadFile);
+  // choose avatar user
+  $(".choose-img").on("change", (e) => {
+    userLogin.img = URL.createObjectURL(e.target.files[0]);
+    localStorage.setItem("users", JSON.stringify(users));
+    $("img#output").attr("src", userLogin.img);
+  });
 });
 
 const checkPass = () => {
@@ -67,13 +72,4 @@ const checkPass = () => {
     localStorage.setItem("users", JSON.stringify(users));
     toastr["success"]("Đổi mật khẩu thành công");
   }
-};
-
-// chose img
-
-const loadFile = (event) => {
-  let image = document.getElementById("output");
-  image.src = URL.createObjectURL(event.target.files[0]);
-  userLogin.img = image.src;
-  localStorage.setItem("users", JSON.stringify(users));
 };

@@ -125,16 +125,6 @@ btn3.onclick = function () {
   modal3.style.display = "block";
 };
 
-// span3.onclick = function () {
-//   modal3.style.display = "none";
-// };
-
-// $(document).ready(function () {
-//   $("input.search-text").on("blur", () => {
-//     $(".modal3").css("display", "none");
-//   });
-// });
-
 $(window).on("click", (e) => {
   if ($(e.target).is(".modal3")) {
     $(".search-box-list").html("");
@@ -305,6 +295,7 @@ if (
       "s ";
   }, 1000);
 }
+
 
 //count
 
@@ -829,3 +820,5 @@ $(() => {
     hideMethod: "fadeOut",
   };
 });
+
+

@@ -9,7 +9,7 @@ const PRODUCTS_PER_PAGE = 9;
 const categories = [];
 
 // add to cart
-const addToCart = (event) => {
+function addToCart(event) {
   const users = JSON.parse(localStorage.getItem("users"));
   const userLogin = _.find(users, { login: true });
   if (userLogin) {
@@ -44,7 +44,7 @@ const addToCart = (event) => {
     // alert("You need to login to perform this function");
     $(".modal").css("display", "block");
   }
-};
+}
 
 // pagination
 const pagination = (current, totalPage, prev, next) => {
@@ -267,3 +267,5 @@ const filterRange = () => {
   products.length = [];
   Array.prototype.push.apply(products, productCopy);
 };
+
+
