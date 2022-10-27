@@ -29,15 +29,10 @@
 }
 
 /* img user */
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-
 img .output {
+  max-width: 100%;
   width: 200px;
   height: 200px;
-  max-width: 100%;
   vertical-align: middle;
 }
 

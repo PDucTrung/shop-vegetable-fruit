@@ -1,4 +1,4 @@
-import $ from "jquery";
+import $, { event } from "jquery";
 import _ from "lodash";
 import { products } from "./db";
 import toastr from "toastr";
@@ -12,16 +12,12 @@ $(function () {
     `
         <div class="d-flex flex-column gap-4">
           <div class="profile-pic">
-            <label class="-label" for="file">
-              <span class="glyphicon glyphicon-camera"></span>
-              <span>Change Image</span>
-            </label>
-            <input id="file" type="file" onchange="loadFile(event)"/>
-          <img src="${userLogin.img}" id="output"/>
-          </div>
-          <div>
-            <p class="font-mali fw-500">Full name:</p>
-            <input class="name-account" type="text" name="" id="" value="${userLogin.fullname}" disabled/>
+          <label class="-label" for="file">
+          <span><i class="bi bi-camera"></i></span>
+          <span class="font-mali">Change Image</span>
+          </label>
+          <input class="choose-img" id="file" type="file"/>
+           <img src="${userLogin.img}" id="output"/>
           </div>
           <div>
             <p class="font-mali fw-500">Email:</p>
@@ -55,7 +51,7 @@ $(function () {
 
   $(".change-pass").on("click", checkPass);
 
-  $("#file").on("change", choseImg);
+  $(".choose-img").on("change", loadFile);
 });
 
 const checkPass = () => {
@@ -73,7 +69,11 @@ const checkPass = () => {
   }
 };
 
-const choseImg = () => {
-  userLogin.img = URL.createObjectURL(event.target.files[0]);
+// chose img
+
+const loadFile = (event) => {
+  let image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+  userLogin.img = image.src;
   localStorage.setItem("users", JSON.stringify(users));
 };
