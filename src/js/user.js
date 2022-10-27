@@ -20,7 +20,7 @@ $(function () {
            <img src="${userLogin.img}" id="output"/>
           </div>
           <div>
-            <p class="font-mali fw-500">Name:</p>
+            <p class="font-mali fw-500">User name:</p>
             <input class="name-account" type="text" name="" id="" value="${userLogin.fullname}" disabled/>
           </div>
           <div>
