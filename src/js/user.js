@@ -21,7 +21,7 @@ $(function () {
           </div>
           <div>
             <p class="font-mali fw-500">Name:</p>
-            <input class="email-account" type="text" name="" id="" value="${userLogin.fullname}" disabled/>
+            <input class="name-account" type="text" name="" id="" value="${userLogin.fullname}" disabled/>
           </div>
           <div>
             <p class="font-mali fw-500">Email:</p>
@@ -33,7 +33,7 @@ $(function () {
             </div>
             <div>
             <p class="font-mali fw-500">Bank account number:</p>
-            <input class="email-account" type="text" name="" id="" value="" />
+            <input class="bank-account" type="text" name="" id="" value="" />
             </div>
           <div>
             <p class="font-mali fw-500">Password:</p>
