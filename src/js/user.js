@@ -11,6 +11,14 @@ $(function () {
   $(".user-acc").html(
     `
         <div class="d-flex flex-column gap-4">
+          <div class="profile-pic">
+            <label class="-label" for="file">
+              <span class="glyphicon glyphicon-camera"></span>
+              <span>Change Image</span>
+            </label>
+            <input id="file" type="file" onchange="loadFile(event)"/>
+          <img src="${userLogin.img}" id="output"/>
+          </div>
           <div>
             <p class="font-mali fw-500">Full name:</p>
             <input class="name-account" type="text" name="" id="" value="${userLogin.fullname}" disabled/>
@@ -46,6 +54,8 @@ $(function () {
   );
 
   $(".change-pass").on("click", checkPass);
+
+  $("#file").on("change", choseImg);
 });
 
 const checkPass = () => {
@@ -61,4 +71,9 @@ const checkPass = () => {
     localStorage.setItem("users", JSON.stringify(users));
     toastr["success"]("Đổi mật khẩu thành công");
   }
+};
+
+const choseImg = () => {
+  userLogin.img = URL.createObjectURL(event.target.files[0]);
+  localStorage.setItem("users", JSON.stringify(users));
 };

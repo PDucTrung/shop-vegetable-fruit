@@ -695,6 +695,7 @@ function signup() {
       fullname: fullname.value,
       email: email.value,
       password: password.value,
+      img: "/img/user-img.jpg",
       login: false,
     };
 
