@@ -267,5 +267,3 @@ const filterRange = () => {
   products.length = [];
   Array.prototype.push.apply(products, productCopy);
 };
-
-

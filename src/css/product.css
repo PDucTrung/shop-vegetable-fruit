@@ -157,6 +157,7 @@ page footer
 .text-to-search li {
   list-style-type: none;
   padding: 5px;
+  font-family: "Mali", cursive;
 }
 
 .text-to-search a {

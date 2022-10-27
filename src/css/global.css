@@ -308,6 +308,7 @@ header {
 .search-box-list li {
   list-style-type: none;
   padding: 10px;
+  font-family: "Mali", cursive;
 }
 
 .search-box-list a {
