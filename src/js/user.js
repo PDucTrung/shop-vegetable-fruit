@@ -12,7 +12,7 @@ $(function () {
     `
         <div class="d-flex flex-column gap-4">
           <div class="profile-pic">
-          <label class="-label" for="file">
+          <label class="img-label" for="file">
           <span><i class="bi bi-camera"></i></span>
           <span class="font-mali">Change Image</span>
           </label>

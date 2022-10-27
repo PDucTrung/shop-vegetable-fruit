@@ -34,6 +34,8 @@ img .output {
   width: 200px;
   height: 200px;
   vertical-align: middle;
+  border-radius: 50%;
+  overflow: auto;
 }
 
 .profile-pic {
@@ -54,15 +56,16 @@ img .output {
   width: 165px;
   height: 165px;
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
-  border-radius: 100px;
+  border-radius: 50%;
   z-index: 0;
+  overflow: hidden;
 }
-.profile-pic .-label {
+.profile-pic .img-label {
   cursor: pointer;
   height: 165px;
   width: 165px;
 }
-.profile-pic:hover .-label {
+.profile-pic:hover .img-label {
   display: flex;
   justify-content: center;
   align-items: center;
