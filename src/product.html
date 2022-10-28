@@ -607,12 +607,16 @@
 
     <!--  -->
     <script type="text/html" id="search-box-list">
-      <li><a href="productdetail.html?id=${ id }">${name} - $${price}</a></li>
+      <li>
+        <a href="productdetail.html?id=${ id }"
+          ><img src="${img}" alt="" /> &nbsp;&nbsp; ${name} - $${price}</a
+        >
+      </li>
     </script>
     <!--  -->
 
     <script type="text/html" id="search-name">
-      <li><a href="productdetail.html?id=${ id }">${name} - $${price}</a></li>
+      <li><a href="productdetail.html?id=${ id }">${name} - <span class="fw-600">$${price}</span></a></li>
     </script>
 
     <script type="text/html" id="category-template">

@@ -258,7 +258,11 @@
                                 >
                               </li>
                               <li class="rd-nav-item">
-                                <a href="blog.html" class="rd-nav-link text-pink-red">Blog</a>
+                                <a
+                                  href="blog.html"
+                                  class="rd-nav-link text-pink-red"
+                                  >Blog</a
+                                >
                               </li>
                               <li class="rd-nav-item">
                                 <a href="contact.html" class="rd-nav-link"
@@ -287,7 +291,9 @@
                         <a href="about.html" class="rd-nav-link">About</a>
                       </li>
                       <li class="rd-nav-item">
-                        <a href="blog.html" class="rd-nav-link text-pink-red">Blog</a>
+                        <a href="blog.html" class="rd-nav-link text-pink-red"
+                          >Blog</a
+                        >
                       </li>
                       <li class="rd-nav-item">
                         <a href="contact.html" class="rd-nav-link">Contact</a>
@@ -755,11 +761,14 @@
 
     <!--  -->
     <script type="text/html" id="search-box-list">
-      <li><a href="productdetail.html?id=${ id }">${name} - $${price}</a></li>
+      <li>
+        <a href="productdetail.html?id=${ id }"
+          ><img src="${img}" alt="" /> &nbsp;&nbsp; ${name} - $${price}</a
+        >
+      </li>
     </script>
     <!--  -->
     <script type="module" src="js/validator.js"></script>
     <script type="module" src="js/index.js"></script>
-    
   </body>
 </html>
