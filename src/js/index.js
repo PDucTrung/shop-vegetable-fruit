@@ -297,7 +297,6 @@ if (
   }, 1000);
 }
 
-
 //count
 
 if (
@@ -681,7 +680,7 @@ function signup() {
   let password = document.querySelector('input[name="password2"]');
   const checkEmail = users.filter((pr) => pr.email == email.value);
   if (checkEmail.length > 0) {
-    toastr["error"]("Email already exists");
+    toastr["error"]("Email " + email.value + " already exists");
   } else {
     const user = {
       fullname: fullname.value,
@@ -744,7 +743,7 @@ function signin() {
       "Wellcome " + userLogin.fullname.toUpperCase() + " to Tfruit shop"
     );
   } else {
-    toastr["error"]("you have failed to login");
+    toastr["error"]("Incorrect username or password");
     // alert("you have failed to login");
   }
 }
@@ -821,5 +820,3 @@ $(() => {
     hideMethod: "fadeOut",
   };
 });
-
-
