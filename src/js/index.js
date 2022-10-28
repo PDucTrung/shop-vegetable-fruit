@@ -43,6 +43,7 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
+// disable
 $(() => {
   $(".rd-nav-item.active a").on("click.disable", function (e) {
     e.preventDefault();

@@ -21,6 +21,7 @@ export const Validator = function Validator(options) {
     var rules = selectorRules[rule.selector];
 
     for (var i = 0; i < rules.length; ++i) {
+      // trường hợp dùng thẻ input khác
       switch (inputElement.type) {
         case "radio":
         case "checkbox":
@@ -72,6 +73,7 @@ export const Validator = function Validator(options) {
             values,
             input
           ) {
+            // trường hợp dùng thẻ input khác
             switch (input.type) {
               case "radio":
                 values[input.name] = formElement.querySelector(
