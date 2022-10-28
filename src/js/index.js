@@ -175,7 +175,7 @@ $slider_ini.slick({
   autoplaySpeed: 3000,
   // speed: 1000,
   slidesToShow: 1,
-  cssEase: "linear",
+  // cssEase: "linear",
   slidesToScroll: 1,
   dots: true,
   pauseOnHover: false,
