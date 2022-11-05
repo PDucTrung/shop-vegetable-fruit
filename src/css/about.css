@@ -11,12 +11,12 @@
 /* tabs */
 .tabs-about .tab-content {
   border: none;
-  padding: 20px;
+  padding: 20px 10px;
   width: 100%;
 }
 
-.pl-20 {
-  padding-left: 20px;
+.pl-10 {
+  padding-left: 10px;
 }
 
 .tabs-about .tab-switch:checked + .tab-label {
@@ -60,7 +60,7 @@
 
 .dots-history:hover {
   border-radius: 0%;
-  transition: all 0.2s linear;
+  transition: all 1.5s linear;
 }
 
 .history img {
@@ -134,7 +134,7 @@
 }
 
 .slider-team .slick-dots .slick-active button {
-  background-color: #99ccff;
+  background-color: black;
   transition: all 0.2s linear;
 }
 
@@ -159,7 +159,7 @@
 .dots-history.green {
   background: green;
   box-shadow: 0 0 0 0 green;
-  animation: pulse-green 1.5s infinite;
+  animation: pulse-green 2s infinite;
 }
 
 @keyframes pulse-green {

@@ -22,6 +22,7 @@
   margin: 3rem 0;
   background: white;
   height: 100%;
+  padding: 0 10px;
 }
 .tabs::before,
 .tabs::after {
@@ -37,23 +38,30 @@
 .tab-switch {
   display: none;
 }
+
 .tab-label {
   position: relative;
   display: block;
   line-height: 2.75em;
   height: 3em;
-  padding: 0 1.618em;
+  padding: 0 24px;
   color: black;
   cursor: pointer;
   top: 0;
   transition: all 0.25s;
+  font-weight: 500;
 }
 .tab-label:hover {
-  top: -0.25rem;
-  transition: top 0.25s;
+  /* top: -0.25rem;
+  transition: top 0.25s; */
   background-color: green;
   color: white;
 }
+
+.cmt-pr .tabs {
+  padding: 0;
+}
+
 .tab-content {
   width: 100%;
   height: max-content;
@@ -200,8 +208,8 @@
 }
 
 .tab label {
-  font-size: 10px;
-  margin: 20px 0px;
+  font-size: 16px;
+  margin: 0px;
 }
 
 .name-user {
@@ -243,11 +251,6 @@
     width: 120px;
     height: 120px;
   }
-
-  .tab label {
-    font-size: 15px;
-    margin: 5px 0px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -259,10 +262,6 @@
   .img-pr-bottom img {
     width: 85px;
     height: 85px;
-  }
-  .tab label {
-    font-size: 16px;
-    margin: 0px;
   }
 }
 

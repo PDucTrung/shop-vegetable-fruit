@@ -162,7 +162,6 @@ let total_slide = 0;
 $slider_ini.on("init", function (event, slick, currentSlide, nextSlide) {
   $("button.slick-arrow").append('<div class="thumb"></div>');
   total_slide = slick.slideCount;
-  console.log(total_slide);
   let next_img = $(slick.$slides[1]).find("img").attr("src");
   let prev_img = $(slick.$slides[total_slide - 1])
     .find("img")
@@ -172,7 +171,7 @@ $slider_ini.on("init", function (event, slick, currentSlide, nextSlide) {
 });
 $slider_ini.slick({
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 7000,
   speed: 1000,
   slidesToShow: 1,
   // cssEase: "linear",
@@ -182,7 +181,6 @@ $slider_ini.slick({
   infinite: true,
   customPaging: function (slider, i) {
     var thumb = $(slider.$slides[i]).find(".dots-img").attr("src");
-    console.log(thumb);
     return (
       '<button><div class="mextrix"><a><img src="' +
       thumb +
@@ -203,8 +201,6 @@ $("button.slick-arrow , .Advance-Slider ul.slick-dots li button").hover(
 );
 
 $slider_ini.on("afterChange", function (event, slick, currentSlide) {
-  console.log("afterChange: " + currentSlide);
-
   let prev_img = $(slick.$slides[currentSlide - 1])
     .find("img")
     .attr("src");
@@ -219,7 +215,6 @@ $slider_ini.on("afterChange", function (event, slick, currentSlide) {
   }
 
   if (currentSlide == 0) {
-    console.log("if call");
     prev_img = $(slick.$slides[total_slide - 1])
       .find("img")
       .attr("src");
@@ -361,7 +356,7 @@ $(".slider-partners").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 1200,
+  autoplaySpeed: 7000,
   cssEase: "linear",
   responsive: [
     {
@@ -493,7 +488,7 @@ $(".slider-history").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 7000,
   speed: 1000,
   cssEase: "linear",
   arrows: false,
@@ -528,7 +523,7 @@ $(".slider-team").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 7000,
   speed: 1000,
   cssEase: "linear",
   arrows: false,
@@ -564,7 +559,7 @@ $(".slider-list-blog").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 7000,
   fade: true,
   speed: 1000,
   cssEase: "linear",
@@ -820,3 +815,4 @@ $(() => {
     hideMethod: "fadeOut",
   };
 });
+

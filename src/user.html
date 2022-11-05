@@ -8,18 +8,6 @@
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <!-- preloader -->
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-        <div class="logo-load">
-          <img src="/img/logoloading.png" alt="ss" />
-        </div>
-      </div>
-    </div>
-
     <!-- page -->
     <div class="page-2">
       <!-- page header -->
@@ -482,7 +470,11 @@
 
     <!--  -->
     <script type="text/html" id="search-box-list">
-      <li><a href="productdetail.html?id=${ id }"><img src="${img}" alt=""> &nbsp;&nbsp; ${name} - $${price}</a></li>
+      <li>
+        <a href="productdetail.html?id=${ id }"
+          ><img src="${img}" alt="" /> &nbsp;&nbsp; ${name} - $${price}</a
+        >
+      </li>
     </script>
     <!--  -->
     <script type="module" src="js/validator.js"></script>

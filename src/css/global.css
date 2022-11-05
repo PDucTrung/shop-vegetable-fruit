@@ -175,15 +175,14 @@ header {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .modal a.link {
@@ -230,14 +229,14 @@ header {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  overflow: auto;
+  overflow-y: auto;
 }
 
 /* Modal Content 2 */
@@ -565,7 +564,7 @@ header {
   color: black;
 }
 .rd-nav-link:hover {
-  color: #dc143c;
+  color: green;
   text-decoration: none;
 }
 
@@ -576,21 +575,21 @@ header {
   width: 0%;
   height: 4px;
   bottom: 0px;
-  background: #dc143c;
+  background: green;
   border-radius: 5px;
 }
 
 .rd-nav-link:before {
   left: 0;
 }
-.rd-nav-link:after {
+/* .rd-nav-link:after {
   right: 0;
-  background: #dc143c;
+  background: green;
   transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
+} */
 
 .rd-nav-link:hover:before {
-  background: #dc143c;
+  background: green;
   width: 100%;
   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -608,11 +607,11 @@ header {
 }
 
 .rd-nav-item.active a {
-  color: #dc143c;
+  color: green;
 }
 
 .text-pink-red {
-  color: #dc143c;
+  color: green;
 }
 
 .icon {
@@ -1067,4 +1066,17 @@ footer {
 
 .toast .btn:hover {
   background-color: green;
+}
+
+/*  */
+@media screen and (min-width: 576px) {
+  .modal::-webkit-scrollbar,
+  .modal2::-webkit-scrollbar {
+    display: none;
+  }
+  .modal,
+  .modal2 {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
