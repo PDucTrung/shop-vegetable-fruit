@@ -235,7 +235,7 @@ if (
   window.document.location.pathname == "/index.html" ||
   window.document.location.pathname == "/"
 ) {
-  let countDownDate = new Date("november 11, 2022 23:59:59").getTime();
+  let countDownDate = new Date("february 11, 2023 23:59:59").getTime();
 
   setInterval(function () {
     let now = new Date().getTime();
@@ -815,4 +815,3 @@ $(() => {
     hideMethod: "fadeOut",
   };
 });
-

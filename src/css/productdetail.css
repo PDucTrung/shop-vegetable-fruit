@@ -52,8 +52,6 @@
   font-weight: 500;
 }
 .tab-label:hover {
-  /* top: -0.25rem;
-  transition: top 0.25s; */
   background-color: green;
   color: white;
 }

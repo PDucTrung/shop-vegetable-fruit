@@ -1,9 +1,5 @@
 .box-infor i {
   font-size: 70px;
-  /* -webkit-animation: textfl 700ms infinite;
-  -moz-animation: textfl 700ms infinite;
-  -o-animation: textfl 700ms infinite;
-  animation: textfl 700ms infinite; */
   transition: all 0.2s linear;
   cursor: pointer;
 }
