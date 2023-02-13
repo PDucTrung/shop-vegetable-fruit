@@ -378,11 +378,14 @@
               </div>
             </div>
             <div class="list-fruit">
+              <!-- slide container -->
               <div class="slider-fruit">
-                <!-- slide 1 -->
+                <!-- slide -->
                 <div
                   class="list-fruit-product d-flex justify-content-center align-items-center gap-3 flex-wrap gap-xl-4 gap-xxl-5"
                 ></div>
+
+                <!-- panigation -->
                 <div class="row nav-page">
                   <nav aria-label="Page navigation example">
                     <ul
@@ -604,7 +607,11 @@
     <!--  -->
 
     <script type="text/html" id="search-name">
-      <li><a href="productdetail.html?id=${ id }">${name} - <span class="fw-600">$${price}</span></a></li>
+      <li>
+        <a href="productdetail.html?id=${ id }"
+          >${name} - <span class="fw-600">$${price}</span></a
+        >
+      </li>
     </script>
 
     <script type="text/html" id="category-template">
