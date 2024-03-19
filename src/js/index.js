@@ -235,7 +235,7 @@ if (
   window.document.location.pathname == "/index.html" ||
   window.document.location.pathname == "/"
 ) {
-  let countDownDate = new Date("dec 31, 2023 23:59:59").getTime();
+  let countDownDate = new Date("feb 27, 2027 23:59:59").getTime();
 
   setInterval(function () {
     let now = new Date().getTime();
